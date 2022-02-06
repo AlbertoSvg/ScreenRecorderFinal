@@ -803,13 +803,41 @@ bool Recorder::isEndVideo(){
 void Recorder::endVideo() {
     lock_guard<mutex> lg_videoEnd(_videoEnd);
     videoEnd = true;
+    if (audio)
+        cv_audio.notify_all();
 }
+
+void Recorder::endAudio() {
+    lock_guard<mutex> lg(_audio);
+    audioEnd = true;
+}
+
+bool Recorder::AudioReady() {
+    lock_guard<mutex> lg(_audio);
+    return audioReady;
+}
+
+bool Recorder::VideoReady() {
+    lock_guard<mutex> lg(_video);
+    return videoReady;
+}
+
 
 void Recorder::decodeVideoStream() {
     AVPacket *pPacket;
     PrepareVideoDecEnc();
     int retValue;
     int remainingPackets = 30; // to add the packets after end is pressed
+
+    if (audio) {
+        unique_lock<mutex> ul_videoSynch(_video);
+        videoReady = true;
+        std::cout << "Video Ready" << endl;
+        cv_video.wait(ul_videoSynch, [this]() { return AudioReady(); });
+        cv_audio.notify_all();
+        ul_videoSynch.unlock();
+        std::cout << "Video Started" << endl;
+    }
 
     while (remainingPackets != 0) {
         if (pauseRecording) {
@@ -861,10 +889,6 @@ void Recorder::encodeVideoStream() {
             cv_pause.notify_all();
         }
 
-//        if (stopRecording) {
-//            //break;
-//        }
-
         unique_lock<mutex> ul_queue(queue_lock);
         if (!ReadRawPacketsQ.empty()) {
             pPacket = ReadRawPacketsQ.front();
@@ -905,6 +929,8 @@ void Recorder::encodeVideoStream() {
 
                     retReceive = avcodec_receive_packet(EncoderCodecCtx, outPacket);
                     if (retReceive == 0) {
+                        if(!firstVideoPacket)
+                            firstVideoPacket = true;
                         outPacket->pts = (int64_t) i * (int64_t) 30 * (int64_t) 30 * (int64_t) 100 / (int64_t) fps;
                         outPacket->dts = (int64_t) i * (int64_t) 30 * (int64_t) 30 * (int64_t) 100 / (int64_t) fps;
                         outPacket->stream_index = outVideoStreamIndx;
@@ -979,6 +1005,8 @@ int Recorder::AudioDecEnc() {
 
     SwrContext *resampleContext;
 
+    bool beforeValidVideo = true;
+
     avformat_close_input(&AudioInFCtx); //clear the internal buffer
 #ifdef WIN32
     value = avformat_open_input(&AudioInFCtx, "audio=Microfono (Realtek Audio)", audioIFormat, &AudioOptions);
@@ -995,6 +1023,14 @@ int Recorder::AudioDecEnc() {
     PrepareAudioDecEnc(&audio_fifo, &pAudioPacket, &outAudioPacket, &pAudioFrame, &outAudioFrame, &resampleContext);
 
     int j = 0;
+
+    unique_lock<mutex> ul_audioSynch(_audio);
+    audioReady = true;
+    cout << "Audio Ready to start" << endl;
+    cv_audio.wait(ul_audioSynch, [this]() { return VideoReady(); });
+    cv_video.notify_all();
+    ul_audioSynch.unlock();
+    cout << "Audio Started!" << endl;
 
     while (true) {
         if (pauseRecording) {
@@ -1020,14 +1056,20 @@ int Recorder::AudioDecEnc() {
                 cout << "Cannot open Audio input\n";
                 exit(10);
             }
-
-
         }
 
-
+        unique_lock<mutex> ul_stopAudio(_lock);
         if (stopRecording) {
+            endAudio();
+            ul_stopAudio.unlock();
+            // wait for video acquire thread to terminate
+            ul_audioSynch.lock();
+            cv_audio.wait(ul_audioSynch, [this]() { return isEndVideo(); });
+            ul_audioSynch.unlock();
             break;
         }
+        ul_stopAudio.unlock();
+
         if (av_read_frame(AudioInFCtx, pAudioPacket) >= 0) {
             if (pAudioPacket->stream_index == AudioStreamIndx) {
                 av_packet_rescale_ts(outAudioPacket, AudioInFCtx->streams[AudioStreamIndx]->time_base,
@@ -1150,8 +1192,13 @@ int Recorder::AudioDecEnc() {
                                 lock_guard<mutex> w_lk(write_lock);
                                 outFile << "Write audio frame " << j << "(size= " << outAudioPacket->size / 1000
                                         << " )" << endl;
-                                if (av_write_frame(oFormatCtx, outAudioPacket) != 0) {
-                                    cerr << "Error in writing audio frame\n";
+                                if(firstVideoPacket){
+                                    if(!beforeValidVideo){
+                                        if (av_write_frame(oFormatCtx, outAudioPacket) != 0) {
+                                            cerr << "Error in writing audio frame\n";
+                                        }
+                                    }else
+                                        beforeValidVideo = false;
                                 }
                             }
                             av_packet_unref(outAudioPacket);

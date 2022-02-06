@@ -114,14 +114,20 @@ class Recorder {
     bool stopRecording = false;
     bool startRecording = false;
     bool pauseRecording = false;
+    bool videoReady = false;
+    bool audioReady = false;
     bool videoEnd = false;
+    bool audioEnd = false;
+    bool firstVideoPacket = false;
 
     mutex _lock;
     mutex write_lock;
     mutex pause_lock;
     mutex queue_lock;
     mutex _videoEnd;
-    condition_variable cv_start, cv_pause;
+    mutex _audio;
+    mutex _video;
+    condition_variable cv_start, cv_pause, cv_video, cv_audio;
 
     /** LOG **/
     ofstream outFile{ "./log.txt", ios::out };
@@ -150,11 +156,13 @@ public:
     int InitializeVideoDecoder();
     int SetUp_VideoEncoder();
     void PrepareVideoDecEnc();
-    void finish();
     void decodeVideoStream();
     void encodeVideoStream();
     bool isEndVideo();
     void endVideo();
+    bool AudioReady();
+    bool VideoReady();
+    void endAudio();
 
     /** AUDIO **/
     int OpenAudioDevice();
