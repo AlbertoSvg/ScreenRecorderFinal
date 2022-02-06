@@ -71,7 +71,7 @@ class Recorder {
     bool audio=false;
     int offset_x, offset_y;
     int offset_x_v2, offset_y_v2;
-    int fps = 15;
+    int fps = 30;
 
     AVFormatContext *iFormatCtx;
     AVFormatContext *oFormatCtx;

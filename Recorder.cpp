@@ -299,13 +299,14 @@ int Recorder::OpenVideoDevice() {
 #ifdef WIN32
     av_dict_set(&options, "offset_x", to_string(offset_x).c_str(), 0);
     av_dict_set(&options, "offset_y", to_string(offset_y).c_str(), 0);
+#elif defined linux
+    av_dict_set(&options, "show_region", "1", 0);
 #endif
     av_dict_set(&options, "video_size", video_size.c_str(), 0);
     av_dict_set(&options, "probesize", "30M", 0);
     av_dict_set(&options, "framerate", to_string(fps).c_str(), 0);
     av_dict_set(&options, "preset", "ultrafast", 0);
-    av_dict_set(&options, "pixel_format", "uyvy422", 0);
-    av_dict_set(&options, "show_region", "1", 0);
+
 
     iFormatCtx = avformat_alloc_context();
     if (iFormatCtx == nullptr) {
@@ -522,18 +523,10 @@ int Recorder::OpenAudioDevice() {
         exit(1);
     }
 
-    av_dict_set(&AudioOptions, "sample_rate", "44100", 0);
-    if (value < 0) {
-        cout << "Cannot set Audio Options\n";
-        exit(1);
-    }
     av_dict_set(&AudioOptions, "async", "25", 0);
-    if (value < 0) {
-        cout << "Cannot set Audio Options\n";
-        exit(1);
-    }
 #ifdef WIN32
     audioIFormat = av_find_input_format("dshow");
+    av_dict_set(&AudioOptions, "sample_rate", "44100", 0);
     value = avformat_open_input(&AudioInFCtx, "audio=Microfono (Realtek Audio)", audioIFormat, &AudioOptions);
     if (value < 0) {
         cout << "Cannot open Audio input Windows\n";
@@ -541,7 +534,8 @@ int Recorder::OpenAudioDevice() {
     }
 #elif defined linux
     audioIFormat = av_find_input_format("alsa");
-    value = avformat_open_input(&AudioInFCtx, "hw:0,0", audioIFormat,&AudioOptions);
+    av_dict_set(&AudioOptions, "sample_rate", "64100", 0);
+    value = avformat_open_input(&AudioInFCtx, "hw:0,0", audioIFormat, &AudioOptions);
     if(value < 0 ){
         cout << "Cannot open Audio input\n";
         exit(10);
@@ -562,7 +556,6 @@ int Recorder::InitializeAudioDecoder() {
         cout << "Failed to retrieve input audio stream info\n";
         exit(1);
     }
-    //av_dump_format(AudioInFCtx, 0, ":0.0", 0);
 
     AudioStreamIndx = -1;
     /* find the first video stream index . Also there is an API available to do the below operations */
@@ -646,16 +639,15 @@ int Recorder::SetUp_AudioEncoder() {
                                                                       : AV_SAMPLE_FMT_FLTP;
     AudioEncoderCodecCtx->channels = AudioDecoderCodecCtx->channels;
     AudioEncoderCodecCtx->channel_layout = av_get_default_channel_layout(AudioEncoderCodecCtx->channels);
-    AudioEncoderCodecCtx->bit_rate = 96000;
+    AudioEncoderCodecCtx->bit_rate = 128000; //96000
     AudioEncoderCodecCtx->time_base = (AVRational) {1, AudioDecoderCodecCtx->sample_rate};
     AudioEncoderCodecCtx->strict_std_compliance = FF_COMPLIANCE_EXPERIMENTAL;
 
     audio_stream->time_base = (AVRational) {1, AudioDecoderCodecCtx->sample_rate};
-
     /** Already in Video Encoder SetUp **/
-//    if (oFormatCtx->oformat->flags & AVFMT_GLOBALHEADER) {
-//        oFormatCtx->flags |= AV_CODEC_FLAG_GLOBAL_HEADER;
-//    }
+    if (oFormatCtx->oformat->flags & AVFMT_GLOBALHEADER) {
+        oFormatCtx->flags |= AV_CODEC_FLAG_GLOBAL_HEADER;
+    }
 
     if (avcodec_open2(AudioEncoderCodecCtx, AudioEncoderCodec, nullptr) < 0) {
         cout << "Error in opening the audio encoder codec!\n";
