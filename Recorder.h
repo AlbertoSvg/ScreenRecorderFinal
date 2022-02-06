@@ -12,6 +12,7 @@
 #include <mutex>
 #include <condition_variable>
 #include <queue>
+#include <regex>
 
 //#define __STDC_CONSTANT_MACROS
 

@@ -323,8 +323,11 @@ int Recorder::OpenVideoDevice() {
 #elif defined linux
     iformat = av_find_input_format("x11grab");
     if(const char* env = std::getenv("DISPLAY")) {
+        regex rgx(":[0-9].[0-9]");
         string display = env;
-        value = avformat_open_input(&iFormatCtx, (display+".0+" + to_string(offset_x) + "," + to_string(offset_y)).c_str(),
+        if(!regex_match(display,rgx))
+            display = display + ".0";
+        value = avformat_open_input(&iFormatCtx, (display+"+" + to_string(offset_x) + "," + to_string(offset_y)).c_str(),
                                     iformat, &options);
         if (value < 0) {
             cout << "Cannot open input device\n";
