@@ -124,7 +124,7 @@ class Recorder {
     condition_variable cv_start, cv_pause;
 
     /** LOG **/
-    ofstream outFile{ "../log.txt", ios::out };
+    ofstream outFile{ "./log.txt", ios::out };
 
     queue<AVPacket *> ReadRawPacketsQ;
 
