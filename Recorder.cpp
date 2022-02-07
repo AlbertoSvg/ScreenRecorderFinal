@@ -529,7 +529,7 @@ int Recorder::OpenAudioDevice() {
     }
 #elif defined linux
     audioIFormat = av_find_input_format("alsa");
-    av_dict_set(&AudioOptions, "sample_rate", "64100", 0);
+    av_dict_set(&AudioOptions, "sample_rate", "44100", 0);
     //Linux = hw:0,0
     value = avformat_open_input(&AudioInFCtx, audio_device.c_str(), audioIFormat, &AudioOptions);
     if(value < 0 ){
@@ -831,9 +831,9 @@ void Recorder::acquireVideoFrames() {
     if (iFormatCtx != nullptr) {
         exit(-1);
     }
-    OpenVideoDevice();
 
     synchWithAudio();
+    OpenVideoDevice();
 
     while (remainingPackets != 0) {
         if (pauseRecording) {
@@ -844,11 +844,11 @@ void Recorder::acquireVideoFrames() {
             }
             cv_pause.wait(ul_pause, [this]() { return !pauseRecording || stopRecording; });
 
-            OpenVideoDevice();
-
             ul_pause.unlock();
             cv_pause.notify_all();
+
             synchWithAudio();
+            OpenVideoDevice();
         }
 
         unique_lock<mutex> ul_stop(_lock);
@@ -1009,14 +1009,8 @@ int Recorder::AudioDecEnc() {
         exit(-1);
     }
 
-    OpenAudioDevice();
-
     synchWithVideo();
-
-    if (value < 0) {
-        cout << "Cannot open Audio input\n";
-        exit(10);
-    }
+    OpenAudioDevice();
 
     while (true) {
         if (pauseRecording) {
@@ -1026,16 +1020,11 @@ int Recorder::AudioDecEnc() {
 
             cv_pause.wait(ul_pause, [this]() { return !pauseRecording || stopRecording; });
 
-            //reopen input audio
-            OpenAudioDevice();
-
-            if (value < 0) {
-                cout << "Cannot open Audio input\n";
-                exit(10);
-            }
             ul_pause.unlock();
             cv_pause.notify_all();
             synchWithVideo();
+            //reopen input audio
+            OpenAudioDevice();
         }
 
         unique_lock<mutex> ul_stopAudio(_lock);
