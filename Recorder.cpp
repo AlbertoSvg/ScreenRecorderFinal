@@ -59,7 +59,7 @@ void Recorder::menu() {
     getline(cin, audio_dev);
     endl(cout);
 
-    this->audio_device = audio_dev;
+    this->audio_device = "audio="+audio_dev;
 
     cout << "Specify an output file: ";
     cin >> output_file;
@@ -473,24 +473,11 @@ int Recorder::SetUp_VideoEncoder() {
 
     if (stream->codecpar->codec_id == AV_CODEC_ID_H264) {
         av_opt_set(EncoderCodecCtx, "preset", "ultrafast", 0);
-        av_opt_set(EncoderCodecCtx, "tune", "zerolatency", 0);
-        av_opt_set(EncoderCodecCtx, "cabac", "1", 0);
-        av_opt_set(EncoderCodecCtx, "ref", "3", 0);
-        av_opt_set(EncoderCodecCtx, "deblock", "1:0:0", 0);
-        av_opt_set(EncoderCodecCtx, "analyse", "0x3:0x113", 0);
-        av_opt_set(EncoderCodecCtx, "subme", "7", 0);
-        av_opt_set(EncoderCodecCtx, "chroma_qp_offset", "4", 0);
-        av_opt_set(EncoderCodecCtx, "rc", "crf", 0);
-        av_opt_set(EncoderCodecCtx, "rc_lookahead", "40", 0);
-        av_opt_set(EncoderCodecCtx, "crf", "10.0", 0);
-        av_opt_set(EncoderCodecCtx, "threads", "8", 0);
     }
 
     if (oFormatCtx->oformat->flags & AVFMT_GLOBALHEADER) {
         oFormatCtx->flags |= AV_CODEC_FLAG_GLOBAL_HEADER;
     }
-
-    //av_dump_format(oFormatCtx, 0, output_file, 1);
 
     value = avcodec_open2(EncoderCodecCtx, EncoderCodec, nullptr);
     if (value < 0) {
@@ -530,7 +517,7 @@ int Recorder::OpenAudioDevice() {
 #ifdef WIN32
     audioIFormat = const_cast<AVInputFormat*>(av_find_input_format("dshow"));
     av_dict_set(&AudioOptions, "sample_rate", "44100", 0);
-    //Windows = audio=Microfono (Realtek Audio)
+    //Windows = Microfono (Realtek Audio)
     value = avformat_open_input(&AudioInFCtx, audio_device.c_str(), audioIFormat, &AudioOptions);
     if (value < 0) {
         cout << "Cannot open Audio input Windows\n";
@@ -803,75 +790,61 @@ void Recorder::endVideo() {
     if (audio)
         cv_audio.notify_all();
 }
-
 void Recorder::endAudio() {
     lock_guard<mutex> lg(_audio);
     audioEnd = true;
 }
 
-bool Recorder::AudioReady() {
-    lock_guard<mutex> lg(_audio);
-    return audioReady;
+void Recorder::synchWithAudio() {
+    if (audio) {
+        unique_lock<mutex> ul_videoSynch(_video);
+        videoReady = true;
+        std::cout << "Video Ready" << endl;
+        cv_video.wait(ul_videoSynch, [this]() { return audioReady; });
+        cv_audio.notify_all();
+        ul_videoSynch.unlock();
+        std::cout << "Video Started" << endl;
+    }
 }
 
-bool Recorder::VideoReady() {
-    lock_guard<mutex> lg(_video);
-    return videoReady;
+void Recorder::synchWithVideo() {
+    unique_lock<mutex> ul_audioSynch(_audio);
+    audioReady = true;
+    cout << "Audio Ready to start" << endl;
+    cv_audio.wait(ul_audioSynch, [this]() { return videoReady; });
+    cv_video.notify_all();
+    ul_audioSynch.unlock();
+    cout << "Audio Started!" << endl;
 }
 
-
-void Recorder::decodeVideoStream() {
+void Recorder::acquireVideoFrames() {
     AVPacket *pPacket;
     PrepareVideoDecEnc();
     int retValue;
     int remainingPackets = 30; // to add the packets after end is pressed
 
-    if (audio) {
-        unique_lock<mutex> ul_videoSynch(_video);
-        videoReady = true;
-        std::cout << "Video Ready" << endl;
-        cv_video.wait(ul_videoSynch, [this]() { return AudioReady(); });
-        cv_audio.notify_all();
-        ul_videoSynch.unlock();
-        std::cout << "Video Started" << endl;
+    avformat_close_input(&iFormatCtx);
+    if (iFormatCtx != nullptr) {
+        exit(-1);
     }
+    OpenVideoDevice();
+
+    synchWithAudio();
 
     while (remainingPackets != 0) {
         if (pauseRecording) {
             unique_lock<mutex> ul_pause(pause_lock);
-#if defined linux
             avformat_close_input(&iFormatCtx);
             if (iFormatCtx != nullptr) {
                exit(-1);
             }
-#endif
             cv_pause.wait(ul_pause, [this]() { return !pauseRecording || stopRecording; });
-#if defined linux
-            string video_size = to_string(width) + "*" + to_string(height);
-            if(const char* env = std::getenv("DISPLAY")) {
-                regex rgx(":[0-9].[0-9]");
-                string display = env;
-                if(!regex_match(display,rgx))
-                    display = display + ".0";
-                av_dict_set(&options, "show_region", "1", 0);
-                av_dict_set(&options, "video_size", video_size.c_str(), 0);
-                av_dict_set(&options, "probesize", "30M", 0);
-                av_dict_set(&options, "framerate", to_string(fps).c_str(), 0);
-                av_dict_set(&options, "preset", "ultrafast", 0);
-                value = avformat_open_input(&iFormatCtx, (display+"+" + to_string(offset_x) + "," + to_string(offset_y)).c_str(),
-                                            iformat, &options);
-                if (value < 0) {
-                    cout << "Cannot open input device\n";
-                    exit(1);
-                }
-            }
-            else {
-                cerr << "Cannot open input device\n";
-                exit(2);
-            }
-#endif
+
+            OpenVideoDevice();
+
             ul_pause.unlock();
             cv_pause.notify_all();
+            synchWithAudio();
         }
 
         unique_lock<mutex> ul_stop(_lock);
@@ -899,7 +872,7 @@ void Recorder::decodeVideoStream() {
     endVideo();
 }
 
-void Recorder::encodeVideoStream() {
+void Recorder::encodeDecodeVideoStream() {
     AVPacket *pPacket;
     AVPacket *outPacket;
     int i = 1, j = 1, retSend, retReceive;
@@ -926,7 +899,7 @@ void Recorder::encodeVideoStream() {
                 // use sws_scale just like before.
                 sws_scale(sws_ctx, pFrame->data, pFrame->linesize, 0, DecoderCodecCtx->height, pict->data,
                           pict->linesize);
-                pict->pts = (int64_t) j * (int64_t) 30 * (int64_t) 30 * (int64_t) 100 / (int64_t) fps;
+                pict->pts = (int64_t) j * stream->time_base.den / (int64_t) fps;
                 j++;
                 pict->format = EncoderCodecCtx->pix_fmt;
                 pict->width = EncoderCodecCtx->width;
@@ -947,8 +920,8 @@ void Recorder::encodeVideoStream() {
                     if (retReceive == 0) {
                         if(!firstVideoPacket)
                             firstVideoPacket = true;
-                        outPacket->pts = (int64_t) i * (int64_t) 30 * (int64_t) 30 * (int64_t) 100 / (int64_t) fps;
-                        outPacket->dts = (int64_t) i * (int64_t) 30 * (int64_t) 30 * (int64_t) 100 / (int64_t) fps;
+                        outPacket->pts = (int64_t) i * stream->time_base.den / (int64_t) fps;
+                        outPacket->dts = (int64_t) i * stream->time_base.den / (int64_t) fps;
                         outPacket->stream_index = outVideoStreamIndx;
 
                         {
@@ -983,8 +956,8 @@ void Recorder::encodeVideoStream() {
                     for (int k = i;; k++) {
                         avcodec_send_frame(EncoderCodecCtx, nullptr);
                         if (avcodec_receive_packet(EncoderCodecCtx, pkt) == 0) {
-                            pkt->pts = (int64_t) k * (int64_t) 30 * (int64_t) 30 * (int64_t) 100 / (int64_t) fps;
-                            pkt->dts = (int64_t) k * (int64_t) 30 * (int64_t) 30 * (int64_t) 100 / (int64_t) fps;
+                            pkt->pts = (int64_t) k * stream->time_base.den / (int64_t) fps;
+                            pkt->dts = (int64_t) k * stream->time_base.den / (int64_t) fps;
                             pkt->stream_index = outVideoStreamIndx;
                             av_interleaved_write_frame(oFormatCtx, pkt);
                             outFile << "--- flushing video encoder ---" << endl;
@@ -1027,22 +1000,15 @@ int Recorder::AudioDecEnc() {
 
     int j = 0;
 
-    unique_lock<mutex> ul_audioSynch(_audio);
-    audioReady = true;
-    cout << "Audio Ready to start" << endl;
-    cv_audio.wait(ul_audioSynch, [this]() { return VideoReady(); });
-    cv_video.notify_all();
-    ul_audioSynch.unlock();
-    cout << "Audio Started!" << endl;
-
     avformat_close_input(&AudioInFCtx); //clear the internal buffer
-#ifdef WIN32
-    value = avformat_open_input(&AudioInFCtx, audio_device.c_str(), audioIFormat, &AudioOptions);
-#elif linux
-    value = avformat_open_input(&AudioInFCtx, audio_device.c_str(), audioIFormat, &AudioOptions);
-#else
+    if(AudioInFCtx != nullptr){
+        exit(-1);
+    }
 
-#endif
+    OpenAudioDevice();
+
+    synchWithVideo();
+
     if (value < 0) {
         cout << "Cannot open Audio input\n";
         exit(10);
@@ -1056,21 +1022,16 @@ int Recorder::AudioDecEnc() {
 
             cv_pause.wait(ul_pause, [this]() { return !pauseRecording || stopRecording; });
 
-            ul_pause.unlock();
-            cv_pause.notify_all();
-
             //reopen input audio
-#ifdef WIN32
-            value = avformat_open_input(&AudioInFCtx, audio_device.c_str(), audioIFormat,
-                                        &AudioOptions);
-#elif linux
-            value = avformat_open_input(&AudioInFCtx, audio_device.c_str(), audioIFormat, &AudioOptions);
-#else
-#endif
+            OpenAudioDevice();
+
             if (value < 0) {
                 cout << "Cannot open Audio input\n";
                 exit(10);
             }
+            ul_pause.unlock();
+            cv_pause.notify_all();
+            synchWithVideo();
         }
 
         unique_lock<mutex> ul_stopAudio(_lock);
@@ -1078,7 +1039,7 @@ int Recorder::AudioDecEnc() {
             endAudio();
             ul_stopAudio.unlock();
             // wait for video acquire thread to terminate
-            ul_audioSynch.lock();
+            unique_lock<mutex> ul_audioSynch(_audio);
             cv_audio.wait(ul_audioSynch, [this]() { return isEndVideo(); });
             ul_audioSynch.unlock();
             break;
@@ -1232,13 +1193,11 @@ int Recorder::AudioDecEnc() {
 
 void Recorder::startCapture() {
 
-    auto decodeVideo = [this]() -> void {
-//        VideoDecEnc();
-//        finish();
-        decodeVideoStream();
+    auto acquireFrames = [this]() -> void {
+        acquireVideoFrames();
     };
-    auto encodeVideo = [this]() -> void {
-        encodeVideoStream();
+    auto encodeDecodeVideo = [this]() -> void {
+        encodeDecodeVideoStream();
     };
     auto captureAudio = [this]() -> void {
         AudioDecEnc();
@@ -1271,8 +1230,8 @@ void Recorder::startCapture() {
 
     lastSetUp();
 
-    thread t1(decodeVideo);
-    thread t2(encodeVideo);
+    thread t1(acquireFrames);
+    thread t2(encodeDecodeVideo);
     thread t3;
     if (audio)
         t3 = thread(captureAudio);

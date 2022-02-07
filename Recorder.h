@@ -157,13 +157,13 @@ public:
     int InitializeVideoDecoder();
     int SetUp_VideoEncoder();
     void PrepareVideoDecEnc();
-    void decodeVideoStream();
-    void encodeVideoStream();
+    void acquireVideoFrames();
+    void encodeDecodeVideoStream();
     bool isEndVideo();
     void endVideo();
-    bool AudioReady();
-    bool VideoReady();
     void endAudio();
+    void synchWithAudio();
+    void synchWithVideo();
 
     /** AUDIO **/
     int OpenAudioDevice();
