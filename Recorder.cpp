@@ -852,6 +852,11 @@ void Recorder::decodeVideoStream() {
                 string display = env;
                 if(!regex_match(display,rgx))
                     display = display + ".0";
+                av_dict_set(&options, "show_region", "1", 0);
+                av_dict_set(&options, "video_size", video_size.c_str(), 0);
+                av_dict_set(&options, "probesize", "30M", 0);
+                av_dict_set(&options, "framerate", to_string(fps).c_str(), 0);
+                av_dict_set(&options, "preset", "ultrafast", 0);
                 value = avformat_open_input(&iFormatCtx, (display+"+" + to_string(offset_x) + "," + to_string(offset_y)).c_str(),
                                             iformat, &options);
                 if (value < 0) {
