@@ -53,6 +53,13 @@ void Recorder::menu() {
     string output_file;
     char audio;
     int x1 = 0, x2 = 0, y1 = 0, y2 = 0;
+    string audio_dev;
+
+    cout << "Specify an audio device: ";
+    getline(cin, audio_dev);
+    endl(cout);
+
+    this->audio_device = audio_dev;
 
     cout << "Specify an output file: ";
     cin >> output_file;
@@ -62,14 +69,14 @@ void Recorder::menu() {
     output_file.copy(this->output_file, output_file.length());
 
     do {
-        cout << "Do you want audio recording? (Y,N): ";
+        cout << "Do you want audio recording? (Y,N):";
         cin >> audio;
         endl(cout);
     } while (audio != 'Y' && audio != 'y' && audio != 'N' && audio != 'n');
 
     this->audio = audio == 'Y' || audio == 'y';
 
-    cout << " Insert offset X1: ";
+    cout << "Insert offset X1:";
     cin >> x1;
     while (!cin || x1 < 0 || x1 % 2 != 0) {
         if (!cin) // or if(cin.fail())
@@ -82,12 +89,12 @@ void Recorder::menu() {
         } else
             cout << "Offset X1 out of range!" << endl;
 
-        cout << "Insert offset X1: ";
+        cout << "Insert offset X1:";
         cin >> x1;
     }
 
 
-    cout << "Insert offset Y1: ";
+    cout << "Insert offset Y1:";
     cin >> y1;
     while (!cin || y1 < 0 || y1 % 2 != 0) {
         if (!cin) // or if(cin.fail())
@@ -101,11 +108,11 @@ void Recorder::menu() {
             cout << "Offset Y1 out of range!" << endl;
 
 
-        cout << "Insert offset Y1: ";
+        cout << "Insert offset Y1:";
         cin >> y1;
     }
 
-    cout << "Insert offset X2: ";
+    cout << "Insert offset X2:";
     cin >> x2;
     while (!cin || x2 < 0 || x2 % 2 != 0) {
         if (!cin) // or if(cin.fail())
@@ -118,11 +125,11 @@ void Recorder::menu() {
         } else
             cout << "Offset X2 out of range!" << endl;
 
-        cout << "Insert offset X2: ";
+        cout << "Insert offset X2:";
         cin >> x2;
     }
 
-    cout << "Insert offset Y2: ";
+    cout << "Insert offset Y2:";
     cin >> y2;
     while (!cin || y2 < 0 || y2 % 2 != 0) {
         if (!cin) // or if(cin.fail())
@@ -135,7 +142,7 @@ void Recorder::menu() {
         } else
             cout << "Offset Y2 out of range!" << endl;
 
-        cout << "Insert offset Y2: ";
+        cout << "Insert offset Y2:";
         cin >> y2;
     }
 
@@ -143,7 +150,7 @@ void Recorder::menu() {
 
         cout << "Offsets NOT valid! Please insert again" << endl;
 
-        cout << "Insert offset X1: ";
+        cout << "Insert offset X1:";
         cin >> x1;
         while (!cin || x1 < 0 || x1 % 2 != 0) {
             if (!cin) // or if(cin.fail())
@@ -156,11 +163,11 @@ void Recorder::menu() {
             } else
                 cout << "Offset X1 out of range!" << endl;
 
-            cout << "Insert offset X1: ";
+            cout << "Insert offset X1:";
             cin >> x1;
         }
 
-        cout << "Insert offset Y1: ";
+        cout << "Insert offset Y1:";
         cin >> y1;
         cout.flush();
         while (!cin || y1 < 0 || y1 % 2 != 0) {
@@ -174,12 +181,12 @@ void Recorder::menu() {
             } else
                 cout << "Offset Y1 out of range!" << endl;
 
-            cout << "Insert offset Y1: ";
+            cout << "Insert offset Y1:";
             cin >> y1;
             cout.flush();
         }
 
-        cout << "Insert offset X2: ";
+        cout << "Insert offset X2:";
         cin >> x2;
         cout.flush();
         while (!cin || x2 < 0 || x2 % 2 != 0) {
@@ -193,12 +200,12 @@ void Recorder::menu() {
             } else
                 cout << "Offset X2 out of range!" << endl;
 
-            cout << "Insert offset X2: ";
+            cout << "Insert offset X2:";
             cin >> x2;
             cout.flush();
         }
 
-        cout << "Insert offset Y2: ";
+        cout << "Insert offset Y2:";
         cin >> y2;
         cout.flush();
         while (!cin || y2 < 0 || y2 % 2 != 0) {
@@ -212,7 +219,7 @@ void Recorder::menu() {
             } else
                 cout << "Offset Y2 out of range!" << endl;
 
-            cout << "Insert offset Y2: ";
+            cout << "Insert offset Y2:";
             cin >> y2;
             cout.flush();
         }
@@ -307,7 +314,6 @@ int Recorder::OpenVideoDevice() {
     av_dict_set(&options, "framerate", to_string(fps).c_str(), 0);
     av_dict_set(&options, "preset", "ultrafast", 0);
 
-
     iFormatCtx = avformat_alloc_context();
     if (iFormatCtx == nullptr) {
         cout << "Could not allocate memory for Input Format Context\n";
@@ -315,7 +321,7 @@ int Recorder::OpenVideoDevice() {
     }
 
 #ifdef WIN32
-    iformat = av_find_input_format("gdigrab");
+    iformat = const_cast<AVInputFormat*>(av_find_input_format("gdigrab"));
     value = avformat_open_input(&iFormatCtx, "desktop", iformat, &options);
     if (value < 0) {
         cout << "Cannot open input device\n";
@@ -404,7 +410,7 @@ int Recorder::InitOutputFile() {
     value = 0;
     oFormatCtx = nullptr;
 
-    oformat = av_guess_format(nullptr, output_file, nullptr);
+    oformat = const_cast<AVOutputFormat*>(av_guess_format(nullptr, output_file, nullptr));
     if (!oformat) {
         cout << "Can't create output format!\n";
         exit(1);
@@ -456,7 +462,6 @@ int Recorder::SetUp_VideoEncoder() {
     stream->codecpar->width = width;
     stream->codecpar->height = height;
     stream->codecpar->format = AV_PIX_FMT_YUV420P;
-//    stream->codecpar->bit_rate = 10000000;
     stream->codecpar->bit_rate = 4000;
     avcodec_parameters_to_context(EncoderCodecCtx, stream->codecpar);
     EncoderCodecCtx->time_base.num = 1;
@@ -465,8 +470,6 @@ int Recorder::SetUp_VideoEncoder() {
     EncoderCodecCtx->gop_size = fps * 2;
     EncoderCodecCtx->qmin = 0;
     EncoderCodecCtx->qmax = 5;
-
-//    stream->time_base = EncoderCodecCtx->time_base;
 
     if (stream->codecpar->codec_id == AV_CODEC_ID_H264) {
         av_opt_set(EncoderCodecCtx, "preset", "ultrafast", 0);
@@ -525,9 +528,10 @@ int Recorder::OpenAudioDevice() {
 
     av_dict_set(&AudioOptions, "async", "25", 0);
 #ifdef WIN32
-    audioIFormat = av_find_input_format("dshow");
+    audioIFormat = const_cast<AVInputFormat*>(av_find_input_format("dshow"));
     av_dict_set(&AudioOptions, "sample_rate", "44100", 0);
-    value = avformat_open_input(&AudioInFCtx, "audio=Microfono (Realtek Audio)", audioIFormat, &AudioOptions);
+    //Windows = audio=Microfono (Realtek Audio)
+    value = avformat_open_input(&AudioInFCtx, audio_device.c_str(), audioIFormat, &AudioOptions);
     if (value < 0) {
         cout << "Cannot open Audio input Windows\n";
         exit(10);
@@ -535,7 +539,8 @@ int Recorder::OpenAudioDevice() {
 #elif defined linux
     audioIFormat = av_find_input_format("alsa");
     av_dict_set(&AudioOptions, "sample_rate", "64100", 0);
-    value = avformat_open_input(&AudioInFCtx, "hw:0,0", audioIFormat, &AudioOptions);
+    //Linux = hw:0,0
+    value = avformat_open_input(&AudioInFCtx, audio_device.c_str(), audioIFormat, &AudioOptions);
     if(value < 0 ){
         cout << "Cannot open Audio input\n";
         exit(10);
@@ -834,9 +839,31 @@ void Recorder::decodeVideoStream() {
     while (remainingPackets != 0) {
         if (pauseRecording) {
             unique_lock<mutex> ul_pause(pause_lock);
-
+#if defined linux
+            avformat_close_input(&iFormatCtx);
+            if (iFormatCtx != nullptr) {
+               exit(-1);
+            }
+#endif
             cv_pause.wait(ul_pause, [this]() { return !pauseRecording || stopRecording; });
-
+#if defined linux
+            if(const char* env = std::getenv("DISPLAY")) {
+                regex rgx(":[0-9].[0-9]");
+                string display = env;
+                if(!regex_match(display,rgx))
+                    display = display + ".0";
+                value = avformat_open_input(&iFormatCtx, (display+"+" + to_string(offset_x) + "," + to_string(offset_y)).c_str(),
+                                            iformat, &options);
+                if (value < 0) {
+                    cout << "Cannot open input device\n";
+                    exit(1);
+                }
+            }
+            else {
+                cerr << "Cannot open input device\n";
+                exit(2);
+            }
+#endif
             ul_pause.unlock();
             cv_pause.notify_all();
         }
@@ -872,15 +899,6 @@ void Recorder::encodeVideoStream() {
     int i = 1, j = 1, retSend, retReceive;
 
     while (true) {
-        if (pauseRecording) {
-            unique_lock<mutex> ul_pause(pause_lock);
-
-            cv_pause.wait(ul_pause, [this]() { return !pauseRecording || stopRecording; });
-
-            ul_pause.unlock();
-            cv_pause.notify_all();
-        }
-
         unique_lock<mutex> ul_queue(queue_lock);
         if (!ReadRawPacketsQ.empty()) {
             pPacket = ReadRawPacketsQ.front();
@@ -999,19 +1017,6 @@ int Recorder::AudioDecEnc() {
 
     bool beforeValidVideo = true;
 
-    avformat_close_input(&AudioInFCtx); //clear the internal buffer
-#ifdef WIN32
-    value = avformat_open_input(&AudioInFCtx, "audio=Microfono (Realtek Audio)", audioIFormat, &AudioOptions);
-#elif linux
-    value = avformat_open_input(&AudioInFCtx, "hw:0,0", audioIFormat, &AudioOptions);
-#else
-
-#endif
-    if (value < 0) {
-        cout << "Cannot open Audio input\n";
-        exit(10);
-    }
-
     PrepareAudioDecEnc(&audio_fifo, &pAudioPacket, &outAudioPacket, &pAudioFrame, &outAudioFrame, &resampleContext);
 
     int j = 0;
@@ -1023,6 +1028,19 @@ int Recorder::AudioDecEnc() {
     cv_video.notify_all();
     ul_audioSynch.unlock();
     cout << "Audio Started!" << endl;
+
+    avformat_close_input(&AudioInFCtx); //clear the internal buffer
+#ifdef WIN32
+    value = avformat_open_input(&AudioInFCtx, audio_device.c_str(), audioIFormat, &AudioOptions);
+#elif linux
+    value = avformat_open_input(&AudioInFCtx, audio_device.c_str(), audioIFormat, &AudioOptions);
+#else
+
+#endif
+    if (value < 0) {
+        cout << "Cannot open Audio input\n";
+        exit(10);
+    }
 
     while (true) {
         if (pauseRecording) {
@@ -1037,12 +1055,11 @@ int Recorder::AudioDecEnc() {
 
             //reopen input audio
 #ifdef WIN32
-            value = avformat_open_input(&AudioInFCtx, "audio=Microfono (Realtek Audio)", audioIFormat,
+            value = avformat_open_input(&AudioInFCtx, audio_device.c_str(), audioIFormat,
                                         &AudioOptions);
 #elif linux
-            value = avformat_open_input(&AudioInFCtx, "hw:0,0", audioIFormat, &AudioOptions);
+            value = avformat_open_input(&AudioInFCtx, audio_device.c_str(), audioIFormat, &AudioOptions);
 #else
-
 #endif
             if (value < 0) {
                 cout << "Cannot open Audio input\n";
@@ -1065,7 +1082,6 @@ int Recorder::AudioDecEnc() {
         if (av_read_frame(AudioInFCtx, pAudioPacket) >= 0) {
             if (pAudioPacket->stream_index == AudioStreamIndx) {
                 av_packet_rescale_ts(outAudioPacket, AudioInFCtx->streams[AudioStreamIndx]->time_base,
-
                                      AudioDecoderCodecCtx->time_base);
                 value = avcodec_send_packet(AudioDecoderCodecCtx, pAudioPacket);
                 if (value < 0) {
