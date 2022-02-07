@@ -59,7 +59,11 @@ void Recorder::menu() {
     getline(cin, audio_dev);
     endl(cout);
 
+#if defined WIN32
     this->audio_device = "audio="+audio_dev;
+#elif defined linux
+    this->audio_device = audio_dev;
+#endif
 
     cout << "Specify an output file: ";
     cin >> output_file;
