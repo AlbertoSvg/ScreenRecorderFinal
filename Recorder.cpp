@@ -847,6 +847,7 @@ void Recorder::decodeVideoStream() {
 #endif
             cv_pause.wait(ul_pause, [this]() { return !pauseRecording || stopRecording; });
 #if defined linux
+            string video_size = to_string(width) + "*" + to_string(height);
             if(const char* env = std::getenv("DISPLAY")) {
                 regex rgx(":[0-9].[0-9]");
                 string display = env;
