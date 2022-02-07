@@ -14,8 +14,6 @@
 #include <queue>
 #include <regex>
 
-//#define __STDC_CONSTANT_MACROS
-
 //FFMPEG LIBRARIES
 extern "C"
 {
@@ -25,7 +23,6 @@ extern "C"
 #include "libavdevice/avdevice.h"
 
 #include "libavfilter/avfilter.h"
-//#include "libavfilter/avfiltergraph.h"
 #include "libavfilter/buffersink.h"
 #include "libavfilter/buffersrc.h"
 
@@ -149,7 +146,6 @@ public:
     void lastSetUp();
 
     int InitOutputFile();
-    int VideoDecEnc();
     int AudioDecEnc();
 
     /** VIDEO **/
