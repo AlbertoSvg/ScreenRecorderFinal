@@ -832,8 +832,8 @@ void Recorder::acquireVideoFrames() {
         exit(-1);
     }
 
-    synchWithAudio();
     OpenVideoDevice();
+    synchWithAudio();
 
     while (remainingPackets != 0) {
         if (pauseRecording) {
@@ -847,8 +847,8 @@ void Recorder::acquireVideoFrames() {
             ul_pause.unlock();
             cv_pause.notify_all();
 
-            synchWithAudio();
             OpenVideoDevice();
+            synchWithAudio();
         }
 
         unique_lock<mutex> ul_stop(_lock);
@@ -1009,8 +1009,9 @@ int Recorder::AudioDecEnc() {
         exit(-1);
     }
 
-    synchWithVideo();
     OpenAudioDevice();
+    synchWithVideo();
+
 
     while (true) {
         if (pauseRecording) {
@@ -1022,9 +1023,10 @@ int Recorder::AudioDecEnc() {
 
             ul_pause.unlock();
             cv_pause.notify_all();
-            synchWithVideo();
+
             //reopen input audio
             OpenAudioDevice();
+            synchWithVideo();
         }
 
         unique_lock<mutex> ul_stopAudio(_lock);
