@@ -117,6 +117,7 @@ class Recorder {
     bool videoEnd = false;
     bool audioEnd = false;
     bool firstVideoPacket = false;
+    bool crashed = false;
 
     mutex _lock;
     mutex write_lock;
