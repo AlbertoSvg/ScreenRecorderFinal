@@ -1,3 +1,0 @@
-D:/OneDrive/Desktop/test_build/ScreenRecorderFinal/Win32/release/CMakeFiles/ScreenRecorderProject.dir
-D:/OneDrive/Desktop/test_build/ScreenRecorderFinal/Win32/release/CMakeFiles/edit_cache.dir
-D:/OneDrive/Desktop/test_build/ScreenRecorderFinal/Win32/release/CMakeFiles/rebuild_cache.dir
