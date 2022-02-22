@@ -1,4 +1,4 @@
-## ScreenRecorderProject
+# ScreenRecorderProject
 
 ***
 ### Group:
