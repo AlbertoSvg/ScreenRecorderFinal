@@ -1296,17 +1296,6 @@ void Recorder::startCapture() {
         exit(-1);
     }
 
-    thread t4(manageCapture);
-
-    unique_lock<mutex> ul_start(_lock);
-    cv_start.wait(ul_start, [this]() { return startRecording || exited; });
-    if (exited && !startRecording) {
-        t4.join();
-        ul_start.unlock();
-        return;
-    }
-    ul_start.unlock();
-
     try {
 
         OpenVideoDevice();
@@ -1321,11 +1310,24 @@ void Recorder::startCapture() {
 
         lastSetUp();
     } catch (const std::exception &e) {
-        t4.join();
+//        t4.join();
         cerr << e.what() << endl;
         outFile << e.what() << endl;
         exit(-2);
     }
+
+    thread t4(manageCapture);
+
+    unique_lock<mutex> ul_start(_lock);
+    cv_start.wait(ul_start, [this]() { return startRecording || exited; });
+    if (exited && !startRecording) {
+        t4.join();
+        ul_start.unlock();
+        return;
+    }
+    ul_start.unlock();
+
+
 
 
     thread t1(acquireFrames);
