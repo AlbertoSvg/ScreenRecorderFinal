@@ -1,18 +1,18 @@
 # ScreenRecorderProject
 
 ***
-###Group:
+### Group:
 * Alberto Solavagione
 * Davide Scovotto
 
 ***
 
-###Description:
+### Description:
 **ScreenRecorderProject** is a library based on the famous third party library **FFmpeg** which offers 
 the possibility to record the desktop and optionally the audio from the system microphone.
 It is possible to interact with this library through a CLI integrated in this project.
 
-####CLI
+#### CLI
 Using the **command line** a user can:
 * Specify an audio device (microphone)
 * Specify the location where to save the video recorded (with .mp4 format)
@@ -25,7 +25,7 @@ Once the user has set all the initial options then can:
 * Stop the recording
 * Exit
 
-####Library
+#### Library
 
 The **ScreenRecorderProject library** is composed by two files **Recorder.cpp** and **Recorder.h**.
 The major APIs offered by this library are:
@@ -64,12 +64,12 @@ on the output file
 <br><br/>
 * **AudioDecEnc()**: this API performs similar actions to the ones of the video but for the audio
 
-###How To Build/Install:
+### How To Build/Install:
 
-####Linux
+#### Linux
 
-####Windows
+#### Windows
 
-###Run:
+### Run:
 
 
