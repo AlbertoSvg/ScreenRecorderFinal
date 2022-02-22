@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\ScreenRecorderProject.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\ScreenRecorderProject.dir/objects.a @CMakeFiles\ScreenRecorderProject.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe -O3 -DNDEBUG -Wl,--whole-archive CMakeFiles\ScreenRecorderProject.dir/objects.a -Wl,--no-whole-archive -o ScreenRecorderProject.exe -Wl,--out-implib,libScreenRecorderProject.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ScreenRecorderProject.dir\linklibs.rsp

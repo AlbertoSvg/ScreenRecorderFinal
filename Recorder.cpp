@@ -14,8 +14,6 @@ Recorder::Recorder() {
     width = scrn->width;
     height = scrn->height;
 
-#else
-
 #endif
 
 }
