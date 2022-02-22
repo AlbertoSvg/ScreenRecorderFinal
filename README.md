@@ -1,11 +1,11 @@
 # ScreenRecorderProject
 
-***
+
 ## Group:
 * Alberto Solavagione
 * Davide Scovotto
 
-***
+
 
 ## Description:
 **ScreenRecorderProject** is a library based on the famous third party library **FFmpeg** which offers 
