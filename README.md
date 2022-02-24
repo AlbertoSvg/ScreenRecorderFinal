@@ -108,4 +108,4 @@ For a better understanding look at picture below.
 ![alt text](https://i.imgur.com/koGgagu.jpg)
 - After all these initial configurations you can start the recording by pressing `1`.
 - This is a video example of a recording.
-  [![Watch the video]](https://youtu.be/z5y5LjfVFcA)
+  ![Watch the video](https://media.giphy.com/media/g0x1DTt1YkRAgXZJBG/giphy.gif)
