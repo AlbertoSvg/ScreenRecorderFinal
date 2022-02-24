@@ -88,8 +88,7 @@ downloading and compiling the FFmpeg library.
 In Linux to find out what audio device you have to insert you can initially install the alsa-utils package with `sudo apt install alsa-utils` and then use the command
 `arecord -l` to list all the capture devices and choose the appropriate one.<br/>
 For example in the case reported in the picture the correct device to insert is `hw:0,0`.<br/>
-![alt text](https://i.imgur.com/KSkwJPG.jpg)
-<br/>
+![alt text](https://i.imgur.com/KSkwJPG.jpg) <br/>
 In Windows to find out what audio device you have to insert, you need to type
 _Device Manager_ in the search box on the Windows' taskbar, then select from the menu the **Device Manager**.
 Then navigate to **Audio inputs and outputs** and copy the name of the appropriate audio
