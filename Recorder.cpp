@@ -328,7 +328,7 @@ int Recorder::OpenVideoDevice() {
         throw runtime_error("Cannot open input device\n");
     }
 #elif defined linux
-    iformat = av_find_input_format("x11grab");
+    iformat = const_cast<AVInputFormat *>(av_find_input_format("x11grab"));
     if(const char* env = std::getenv("DISPLAY")) {
         regex rgx(":[0-9].[0-9]");
         string display = env;
@@ -506,7 +506,7 @@ int Recorder::OpenAudioDevice() {
         throw runtime_error("Cannot open Audio input Windows\n");
     }
 #elif defined linux
-    audioIFormat = av_find_input_format("alsa");
+    audioIFormat = const_cast<AVInputFormat *>(av_find_input_format("alsa"));
     av_dict_set(&AudioOptions, "sample_rate", "44100", 0);
     //Linux = hw:0,0
     value = avformat_open_input(&AudioInFCtx, audio_device.c_str(), audioIFormat, &AudioOptions);

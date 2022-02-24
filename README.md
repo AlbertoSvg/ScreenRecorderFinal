@@ -67,9 +67,26 @@ on the output file
 ## How To Build/Install:
 
 ### Linux
-
+- Download the required libraries and tools `sudo apt install qt5-qmake build-essential libasound2-dev libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavutil-dev`
+- Install **c++ 20** `sudo apt install gcc-10 gcc-10-base gcc-10-doc g++-10` `sudo apt install libstdc++-10-dev libstdc++-10-doc`
+- Clone the repository `git clone https://github.com/AlbertoSvg/ScreenRecorderFinal.git`
+- Go in the project folder  `cd ScreenRecorderFinal`
+- Generate the **Makefile** `qmake ScreenRecorder.pro`
+- Compile it `make clean; make all`
+- Allow the **binary** to be executed  `chmod 777 ScreenRecorder`
+- Run it `./ScreenRecorder`
 ### Windows
-
+- Since in Windows the whole process of installation of the required libraries and
+compilation of the software is much more complicated than Linux, we suggest to simply
+download the precompiled software from this [link](https://github.com/AlbertoSvg/ScreenRecorderFinal/releases/download/Latest/ScreenRecorderProject_Win32.exe).
+- If you really want to compile it from scratch, here is the [link](https://trac.ffmpeg.org/wiki/CompilationGuide/MinGW) that guides you for 
+downloading and compiling the FFmpeg library.
 ## Run:
-
+- Download the software from this [link](https://github.com/AlbertoSvg/ScreenRecorderFinal/releases/download/Latest/ScreenRecorderProject_Win32.exe) (Windows) or this link (Linux)
+- Run the software
+- The first thing that the software ask you is to specify the audio device.<br/>
+In Linux to find out what audio device you have to insert you can use the command
+`arecord` <br/>
+In Windows to find out what audio device you have to insert you can use the command
+``
 
