@@ -78,7 +78,7 @@ on the output file
 ### Windows
 - Since in Windows the whole process of installation of the required libraries and
 compilation of the software is much more complicated than Linux, we suggest to simply
-download the precompiled software from this [link](https://github.com/AlbertoSvg/ScreenRecorderFinal/releases/download/Latest/ScreenRecorderProject_Win32.exe).
+download the precompiled software from this [link](https://github.com/AlbertoSvg/ScreenRecorderFinal/releases/download/Latest/ScreenRecorderFinal_Win32.exe).
 - If you really want to compile it from scratch, here is the [link](https://trac.ffmpeg.org/wiki/CompilationGuide/MinGW) that guides you for 
 downloading and compiling the FFmpeg library.
 ## Run:
