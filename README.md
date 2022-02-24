@@ -94,5 +94,18 @@ _Device Manager_ in the search box on the Windows' taskbar, then select from the
 Then navigate to **Audio inputs and outputs** and copy the name of the appropriate audio
 input device (like in the picture below).
 ![alt text](https://i.imgur.com/b7dvvIH.jpg)
-- 
-
+- The second thing to insert is the path and name of the output file (recorded video).
+For example `./output.mp4`.<br/>
+_IMPORTANT:_ specify the file format`(.mp4)`.
+- The third thing is to specify if you want the audio recording `(Y,N)`.
+- The final thing is the definition of the screen area to record. This is possible by 
+inserting _4 offsets (X1, Y1, X2, Y2)_. The offsets must be multiple of 2 and lower than the width and height of the screen.
+  1. X1 is the horizontal offset starting from the left
+  2. X2 is the horizontal offset starting from the right
+  3. Y1 is the vertical offset starting from the top
+  4. Y2 is the vertical offset starting from the bottom<br/>
+For a better understanding look at picture below.
+![alt text](https://i.imgur.com/koGgagu.jpg)
+- After all these initial configurations you can start the recording by pressing `1`.
+- This is a video example of a recording.
+  [![Watch the video]](https://youtu.be/z5y5LjfVFcA)
