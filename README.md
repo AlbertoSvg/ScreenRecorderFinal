@@ -106,6 +106,6 @@ inserting _4 offsets (X1, Y1, X2, Y2)_. The offsets must be multiple of 2 and lo
   4. Y2 is the vertical offset starting from the bottom<br/>
 For a better understanding look at picture below.
 ![alt text](https://i.imgur.com/koGgagu.jpg)
-- After all these initial configurations you can start the recording by pressing `1`.
-- This is a video example of a recording.
+- After all these initial configurations you can start the recording by pressing `1`.<br/>
+- This is a video example of a recording.<br/>
   ![Watch the video](https://media.giphy.com/media/g0x1DTt1YkRAgXZJBG/giphy.gif)
