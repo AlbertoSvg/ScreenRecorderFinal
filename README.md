@@ -85,8 +85,14 @@ downloading and compiling the FFmpeg library.
 - Download the software from this [link](https://github.com/AlbertoSvg/ScreenRecorderFinal/releases/download/Latest/ScreenRecorderProject_Win32.exe) (Windows) or this link (Linux)
 - Run the software
 - The first thing that the software ask you is to specify the audio device.<br/>
-In Linux to find out what audio device you have to insert you can use the command
-`arecord` <br/>
-In Windows to find out what audio device you have to insert you can use the command
-``
+In Linux to find out what audio device you have to insert you can initially install the alsa-utils package with `sudo apt install alsa-utils` and then use the command
+`arecord -l` to list all the capture devices and choose the appropriate one.<br/>
+For example in the case reported in the picture the correct device to insert is `hw:0,0`.<br/>
+![alt text](https://i.imgur.com/KSkwJPG.jpg)
+In Windows to find out what audio device you have to insert, you need to type
+_Device Manager_ in the search box on the Windows' taskbar, then select from the menu the **Device Manager**.
+Then navigate to **Audio inputs and outputs** and copy the name of the appropriate audio
+input device (like in the picture below).
+![alt text](https://i.imgur.com/b7dvvIH.jpg)
+- 
 
