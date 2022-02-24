@@ -107,5 +107,3 @@ inserting _4 offsets (X1, Y1, X2, Y2)_. The offsets must be multiple of 2 and lo
 For a better understanding look at picture below.
 ![alt text](https://i.imgur.com/koGgagu.jpg)
 - After all these initial configurations you can start the recording by pressing `1`.<br/>
-- This is a video example of a recording.<br/>
-  ![Watch the video](https://i.imgur.com/X78vKOv.mp4)
