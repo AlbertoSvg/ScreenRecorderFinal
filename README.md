@@ -82,7 +82,7 @@ download the precompiled software from this [link](https://github.com/AlbertoSvg
 - If you really want to compile it from scratch, here is the [link](https://trac.ffmpeg.org/wiki/CompilationGuide/MinGW) that guides you for 
 downloading and compiling the FFmpeg library.
 ## Run:
-- Download the software from this [link](https://github.com/AlbertoSvg/ScreenRecorderFinal/releases/download/Latest/ScreenRecorderFinal_Win32.exe) (Windows) or this [link](https://github.com/AlbertoSvg/ScreenRecorderFinal/releases/download/Latest/ScreenRecorderFinal_Linux) (Linux)
+- Download the software from this [link](https://github.com/AlbertoSvg/ScreenRecorderFinal/releases/download/Latest/ScreenRecorderFinal_Win32.exe) **(Windows)** or this [link](https://github.com/AlbertoSvg/ScreenRecorderFinal/releases/download/Latest/ScreenRecorderFinal_Linux) **(Linux)**
 - Run the software
 - The first thing that the software ask you is to specify the audio device.<br/>
 In **Linux** to find out what audio device you have to insert you can initially install the alsa-utils package with `sudo apt install alsa-utils` and then use the command
