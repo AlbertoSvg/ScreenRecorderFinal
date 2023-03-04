@@ -1,6 +1,6 @@
 #include "Recorder.h"
 
-/** Initialize resources **/
+/* Initialize resources */
 Recorder::Recorder() {
     avdevice_register_all();
 
@@ -18,9 +18,11 @@ Recorder::Recorder() {
 
 }
 
-/** Destroy resources **/
+/* Destroy resources */
 Recorder::~Recorder() {
+    /* If the user exits before starting the recording there is nothing to free */
     if (!exited) {
+        /* Write the stream trailer to the output file and free the file private data*/
         av_write_trailer(oFormatCtx);
         if (!(oformat->flags & AVFMT_NOFILE)) {
             int err = avio_close(oFormatCtx->pb);
@@ -48,6 +50,12 @@ Recorder::~Recorder() {
     }
 }
 
+/* Get input information from user:
+ * 1. Audio device
+ * 2. output file location and format
+ * 3. Choose if want audio recording
+ * 4. Specify offset for the screen
+ * */
 void Recorder::menu() {
     string output_file;
     char audio;
@@ -79,6 +87,7 @@ void Recorder::menu() {
 
     this->audio = audio == 'Y' || audio == 'y';
 
+    /* For each offset check that is not < 0 and that is a multiple of 2*/
     cout << "Insert offset X1:";
     cin >> x1;
     while (!cin || x1 < 0 || x1 % 2 != 0) {
@@ -149,6 +158,7 @@ void Recorder::menu() {
         cin >> y2;
     }
 
+    /* Check inserted offsets do not cross the screen size */
     while (width - x1 - x2 <= 0 || height - y1 - y2 <= 0) {
 
         cout << "Offsets NOT valid! Please insert again" << endl;
@@ -236,6 +246,7 @@ void Recorder::menu() {
     offset_y_v2 = y2;
 }
 
+/* Menu for managing recording */
 void Recorder::captureMenu() {
     int _read;
 
@@ -298,7 +309,7 @@ void Recorder::captureMenu() {
     }
 }
 
-/**           VIDEO            **/
+/*         VIDEO            */
 int Recorder::OpenVideoDevice() {
     value = 0;
     options = nullptr;
@@ -314,6 +325,7 @@ int Recorder::OpenVideoDevice() {
     av_dict_set(&options, "video_size", video_size.c_str(), 0);
     av_dict_set(&options, "probesize", "30M", 0);
     av_dict_set(&options, "framerate", to_string(fps).c_str(), 0);
+    /* encoding speed */
     av_dict_set(&options, "preset", "ultrafast", 0);
 
     iFormatCtx = avformat_alloc_context();
@@ -360,6 +372,7 @@ int Recorder::InitializeVideoDecoder() {
     for (int i = 0; i < iFormatCtx->nb_streams; i++) // find video stream position/index.
         if (iFormatCtx->streams[i]->codecpar->codec_type == AVMEDIA_TYPE_VIDEO) {
             AVCodecParameters *iLocalCodecParams = nullptr;
+            /* Codec params describe the information relative to that stream */
             iLocalCodecParams = iFormatCtx->streams[i]->codecpar;
 
             const AVCodec *iLocalCodec = nullptr;
@@ -399,15 +412,18 @@ int Recorder::InitializeVideoDecoder() {
     return 1;
 }
 
+/* Allocates and prepares the context for the output file based on the file extension */
 int Recorder::InitOutputFile() {
     value = 0;
     oFormatCtx = nullptr;
 
+    /* Get the output format from the list of registered formats which best matches 'output_file' */
     oformat = const_cast<AVOutputFormat *>(av_guess_format(nullptr, output_file, nullptr));
     if (!oformat) {
         throw runtime_error("Can't create output format!\n");
     }
 
+    /* Allocates the format I/O context for the given 'output_file' and 'oformat' internal parameters */
     avformat_alloc_output_context2(&oFormatCtx, oformat, nullptr, output_file);
     if (!oFormatCtx) {
         throw runtime_error("Can't create output context\n");
@@ -421,7 +437,7 @@ void Recorder::lastSetUp() {
             throw runtime_error("Failed to open output file\n");
         }
     }
-
+    /* Allocate stream private data and write the stream header into the output file */
     if ((value = avformat_write_header(oFormatCtx, nullptr)) < 0) {
         throw runtime_error("Failed to write header\n");
     }
@@ -450,10 +466,18 @@ int Recorder::SetUp_VideoEncoder() {
     stream->codecpar->format = AV_PIX_FMT_YUV420P;
     stream->codecpar->bit_rate = 4000;
     avcodec_parameters_to_context(EncoderCodecCtx, stream->codecpar);
+    /* This the unit of time in seconds in terms of which frames are represented
+     * For fixed fps content, timebase should be 1/framerate
+     * */
     EncoderCodecCtx->time_base.num = 1;
     EncoderCodecCtx->time_base.den = fps;
+    /* B‑frames can use both previous and forward frames for data reference to get the highest amount of data compression */
     EncoderCodecCtx->max_b_frames = 10;
+    /*GOP is the distance between two keyframes (I-frames). A typical GOP contains a repeating pattern of B and P frames
+     * sandwiched between I frames. A longer GOP length will compress the content more efficiently, providing higher
+     * video quality at lower bit rates*/
     EncoderCodecCtx->gop_size = fps * 2;
+    /* Allows the encoder to achieve a certain output quality when output file size is not important */
     EncoderCodecCtx->qmin = 0;
     EncoderCodecCtx->qmax = 5;
 
@@ -470,7 +494,7 @@ int Recorder::SetUp_VideoEncoder() {
         throw runtime_error("Failed to open Encoder Codec\n");
     }
 
-    //find free stream index
+    /* find free stream index */
     outVideoStreamIndx = -1;
     for (int i = 0; i < oFormatCtx->nb_streams; i++) {
         if (oFormatCtx->streams[i]->codecpar->codec_type == AVMEDIA_TYPE_VIDEO) {
@@ -500,7 +524,7 @@ int Recorder::OpenAudioDevice() {
 #ifdef WIN32
     audioIFormat = const_cast<AVInputFormat *>(av_find_input_format("dshow"));
     av_dict_set(&AudioOptions, "sample_rate", "44100", 0);
-    //Windows = Microfono (Realtek Audio)
+    /* Windows = Microfono (Realtek Audio) */
     value = avformat_open_input(&AudioInFCtx, audio_device.c_str(), audioIFormat, &AudioOptions);
     if (value < 0) {
         throw runtime_error("Cannot open Audio input Windows\n");
@@ -508,7 +532,7 @@ int Recorder::OpenAudioDevice() {
 #elif defined linux
     audioIFormat = const_cast<AVInputFormat *>(av_find_input_format("alsa"));
     av_dict_set(&AudioOptions, "sample_rate", "44100", 0);
-    //Linux = hw:0,0
+    /* Linux = hw:0,0 */
     value = avformat_open_input(&AudioInFCtx, audio_device.c_str(), audioIFormat, &AudioOptions);
     if(value < 0 ){
         throw runtime_error("Cannot open Audio input\n");
@@ -530,7 +554,7 @@ int Recorder::InitializeAudioDecoder() {
 
     AudioStreamIndx = -1;
     /* find the first video stream index . Also there is an API available to do the below operations */
-    for (int i = 0; i < AudioInFCtx->nb_streams; i++) {// find video stream position/index.
+    for (int i = 0; i < AudioInFCtx->nb_streams; i++) {// find audio stream position/index.
         if (AudioInFCtx->streams[i]->codecpar->codec_type == AVMEDIA_TYPE_AUDIO) {
             AVCodecParameters *iLocalCodecParams = nullptr;
             iLocalCodecParams = AudioInFCtx->streams[i]->codecpar;
@@ -578,7 +602,7 @@ int Recorder::SetUp_AudioEncoder() {
         throw runtime_error("Can't create EncoderCodec\n");
     }
 
-    /** Returns the first available "slot" in oFormatCtx->streams (here = ->streams[1] **/
+    /* Returns the first available "slot" in oFormatCtx->streams (here = ->streams[1] */
     audio_stream = avformat_new_stream(oFormatCtx, AudioEncoderCodec);
     if (!audio_stream) {
         throw runtime_error("Can't create stream for this format\n");
@@ -589,6 +613,8 @@ int Recorder::SetUp_AudioEncoder() {
         throw runtime_error("Can't create EncoderCodec Context\n");
     }
 
+    /* The sample rate is the number of times in a second an audio sample is taken: the number of instances per
+    second that recording equipment is transforming sound into data */
     if (AudioEncoderCodec->supported_samplerates) {
         AudioEncoderCodecCtx->sample_rate = AudioEncoderCodec->supported_samplerates[0];
         for (int i = 0; i < AudioEncoderCodec->supported_samplerates[i]; i++) {
@@ -603,7 +629,9 @@ int Recorder::SetUp_AudioEncoder() {
                                                                       : AV_SAMPLE_FMT_FLTP;
     AudioEncoderCodecCtx->channels = AudioDecoderCodecCtx->channels;
     AudioEncoderCodecCtx->channel_layout = av_get_default_channel_layout(AudioEncoderCodecCtx->channels);
+    /* Bit rate is the number of bits that are recorded over each unit of time */
     AudioEncoderCodecCtx->bit_rate = 128000; //96000
+    /* Time unit for which a sample is taken */
     AudioEncoderCodecCtx->time_base = (AVRational) {1, AudioDecoderCodecCtx->sample_rate};
     AudioEncoderCodecCtx->strict_std_compliance = FF_COMPLIANCE_EXPERIMENTAL;
 
@@ -617,7 +645,7 @@ int Recorder::SetUp_AudioEncoder() {
         throw runtime_error("Error in opening the audio encoder codec!\n");
     }
 
-    //find free stream index
+    /* find free stream index */
     outAudioStreamIndx = -1;
     for (int i = 0; i < oFormatCtx->nb_streams; i++) {
         if (oFormatCtx->streams[i]->codecpar->codec_type == AVMEDIA_TYPE_UNKNOWN) {
@@ -641,7 +669,7 @@ void Recorder::PrepareVideoDecEnc() {
     }
 
     sws_ctx = nullptr;
-    // set up our SWSContext to convert the image data to YUV420:
+    /* set up our SWSContext to convert the image data to YUV420 */
     sws_ctx = sws_getContext(
             DecoderCodecCtx->width,
             DecoderCodecCtx->height,
@@ -658,14 +686,10 @@ void Recorder::PrepareVideoDecEnc() {
     if (sws_ctx == nullptr)
         throw runtime_error("Error during allocation of sws_ctx");
 
-    /**
-     * As we said before, we are using YV12 to display the image, and getting
-     * YUV420 data from ffmpeg.
-     */
-
     int numBytes;
     uint8_t *buffer = nullptr;
 
+    /* Return the size in bytes of the amount of data required to store an image with the given parameters */
     numBytes = av_image_get_buffer_size(
             AV_PIX_FMT_YUV420P,
             DecoderCodecCtx->width,
@@ -713,7 +737,7 @@ int Recorder::PrepareAudioDecEnc(AVAudioFifo **audio_fifo, AVPacket **pAudioPack
         throw runtime_error("Could not allocate FIFO\n");
     }
 
-    //allocate space for a packet
+    /* allocate space for a packet */
     *pAudioPacket = (AVPacket *) av_malloc(sizeof(AVPacket));
     if (!*pAudioPacket) {
         throw runtime_error("Cannot allocate an AVPacket for encoded audio\n");
@@ -723,7 +747,7 @@ int Recorder::PrepareAudioDecEnc(AVAudioFifo **audio_fifo, AVPacket **pAudioPack
         throw runtime_error("Cannot allocate an AVPacket for encoded audio\n");
     }
 
-    //allocate space for a frame
+    /* allocate space for a frame */
     *pAudioFrame = av_frame_alloc();
     if (!*pAudioFrame) {
         throw runtime_error("Cannot allocate an AVFrame for encoded audio\n");
@@ -739,7 +763,7 @@ int Recorder::PrepareAudioDecEnc(AVAudioFifo **audio_fifo, AVPacket **pAudioPack
         throw runtime_error("Cannot allocate an AVPacket for encoded video\n");
     }
 
-    //init the resampler
+    /* init the resampler */
     *resampleContext = nullptr;
     *resampleContext = swr_alloc_set_opts(*resampleContext,
                                           av_get_default_channel_layout(AudioEncoderCodecCtx->channels),
@@ -750,10 +774,6 @@ int Recorder::PrepareAudioDecEnc(AVAudioFifo **audio_fifo, AVPacket **pAudioPack
                                           AudioDecoderCodecCtx->sample_rate,
                                           0,
                                           nullptr);
-    /** Perform a sanity check so that the number of converted samples is
-    * not greater than the number of samples to be converted.
-    * If the sample rates differ, this case has to be handled differently
-    **/
 
     if (!*resampleContext) {
         throw runtime_error("Cannot allocate the resample context\n");
@@ -766,41 +786,39 @@ int Recorder::PrepareAudioDecEnc(AVAudioFifo **audio_fifo, AVPacket **pAudioPack
 }
 
 bool Recorder::isEndVideo() {
-    lock_guard<mutex> lg_videoEnd(_videoEnd);
     return videoEnd;
 }
 
 void Recorder::endVideo() {
-    lock_guard<mutex> lg_videoEnd(_videoEnd);
+    unique_lock<mutex> lg_videoEnd(_videoEnd);
     videoEnd = true;
+    lg_videoEnd.unlock();
     if (audio)
         cv_audio.notify_all();
 }
 
-void Recorder::endAudio() {
-    lock_guard<mutex> lg(_audio);
-    audioEnd = true;
-}
-
 void Recorder::synchWithAudio() {
     if (audio) {
-        unique_lock<mutex> ul_videoSynch(_video);
+        unique_lock<mutex> ul_videoSynch(_sync);
         videoReady = true;
         std::cout << "Video Ready" << endl;
         cv_video.wait(ul_videoSynch, [this]() { return audioReady; });
-        cv_audio.notify_all();
+        audioReady = false;
         ul_videoSynch.unlock();
+        cv_audio.notify_all();
         std::cout << "Video Started" << endl;
     }
 }
 
 void Recorder::synchWithVideo() {
-    unique_lock<mutex> ul_audioSynch(_audio);
+
+    unique_lock<mutex> ul_audioSynch(_sync);
     audioReady = true;
     cout << "Audio Ready" << endl;
     cv_audio.wait(ul_audioSynch, [this]() { return videoReady; });
-    cv_video.notify_all();
+    videoReady = false;
     ul_audioSynch.unlock();
+    cv_video.notify_all();
     cout << "Audio Started" << endl;
 }
 
@@ -821,7 +839,7 @@ void Recorder::acquireVideoFrames() {
     }
 
     int retValue;
-    int remainingPackets = 30; // to add the packets after end is pressed
+    int remainingPackets = 20; // to add the packets after end is pressed
 
     avformat_close_input(&iFormatCtx);
     if (iFormatCtx != nullptr) {
@@ -835,61 +853,72 @@ void Recorder::acquireVideoFrames() {
         cerr << e.what() << endl;
         exit(-2);
     }
-    if(audio)
+    if (audio)
         synchWithAudio();
     else
         cout << "Video Started" << endl;
 
     try {
-        while (remainingPackets != 0) {
-            if (pauseRecording) {
-                unique_lock<mutex> ul_pause(pause_lock);
-                avformat_close_input(&iFormatCtx);
-                if (iFormatCtx != nullptr) {
-                    throw runtime_error("Unable to close the video input\n");
-                }
-                cv_pause.wait(ul_pause, [this]() { return !pauseRecording || stopRecording; });
+        while (remainingPackets > 0) {
+            unique_lock<mutex> ul_pause(_lock);
+            if (!crashed) {
+                if (pauseRecording) {
+                    avformat_close_input(&iFormatCtx);
+                    if (iFormatCtx != nullptr) {
+                        throw runtime_error("Unable to close the video input\n");
+                    }
+                    cv_pause.wait(ul_pause, [this]() { return !pauseRecording || stopRecording; });
+                    if (stopRecording) {
+                        remainingPackets = 0;
+                        ul_pause.unlock();
+                        cv_pause.notify_all();
+                        break;
+                    }
+                    ul_pause.unlock();
+                    cv_pause.notify_all();
 
+                    try {
+                        OpenVideoDevice();
+                    } catch (const std::exception &e) {
+                        throw e;
+                    }
+
+                    if (audio)
+                        synchWithAudio();
+                    else
+                        cout << "Video Started" << endl;
+                } else
+                    ul_pause.unlock();
+
+                unique_lock<mutex> ul_stop(_lock);
+                if (stopRecording) {
+                    if (retValue >= 0) {
+                        remainingPackets--;
+                    }
+                }
+                ul_stop.unlock();
+
+                pPacket = av_packet_alloc();
+                if (pPacket == nullptr) {
+                    throw runtime_error("Could not alloc packet,\n");
+                }
+
+                retValue = av_read_frame(iFormatCtx, pPacket);
+                if (retValue >= 0 && pPacket->size > 0) {
+                    unique_lock<mutex> ul_queue(queue_lock);
+                    ReadRawPacketsQ.push(pPacket);
+                    ul_queue.unlock();
+                } // end of prim while
+            } else {
+                remainingPackets = 0;
                 ul_pause.unlock();
-                cv_pause.notify_all();
-
-                try {
-                    OpenVideoDevice();
-                } catch (const std::exception &e) {
-                    throw e;
-                }
-
-                if(audio)
-                    synchWithAudio();
-                else
-                    cout << "Video Started"<<endl;
             }
-
-            unique_lock<mutex> ul_stop(_lock);
-            if (stopRecording) {
-                if (retValue >= 0) {
-                    remainingPackets--;
-                }
-            }
-            ul_stop.unlock();
-
-            pPacket = av_packet_alloc();
-            if (pPacket == nullptr) {
-                throw runtime_error("Could not alloc packet,\n");
-            }
-
-            retValue = av_read_frame(iFormatCtx, pPacket);
-            if (retValue >= 0 && pPacket->size > 0) {
-                unique_lock<mutex> ul_queue(queue_lock);
-                ReadRawPacketsQ.push(pPacket);
-                ul_queue.unlock();
-            } // end of prim while
         }
-    }catch (const std::exception &e){
+    } catch (const std::exception &e) {
         cerr << e.what() << endl;
         outFile << e.what() << endl;
 //        cout << "VIDEO ENDING" << endl;
-        unique_lock<mutex> lk_stop (_lock);
+        unique_lock<mutex> lk_stop(_lock);
         stopRecording = true;
         lk_stop.unlock();
         endVideo();
@@ -913,6 +942,7 @@ void Recorder::encodeDecodeVideoStream() {
                 ReadRawPacketsQ.pop();
                 ul_queue.unlock();
                 if (pPacket->stream_index == VideoStreamIndx) {
+                    /* Supply raw packet data as input to a decoder */
                     retSend = avcodec_send_packet(DecoderCodecCtx, pPacket);
                     av_packet_unref(pPacket);
                     av_packet_free(&pPacket);
@@ -921,19 +951,21 @@ void Recorder::encodeDecodeVideoStream() {
                     }
 
                 }
+                /* Returns decoded output data (frame) from the decoder*/
                 retReceive = avcodec_receive_frame(DecoderCodecCtx, pFrame);
                 if (retReceive == 0) {
-                    // Convert the image into YUV format that SDL uses:
-                    // We change the conversion format to PIX_FMT_YUV420P, and we
-                    // use sws_scale just like before.
+                    /* We change the conversion format to PIX_FMT_YUV420P, and we
+                     use sws_scale just like before. */
                     sws_scale(sws_ctx, pFrame->data, pFrame->linesize, 0, DecoderCodecCtx->height, pict->data,
                               pict->linesize);
+
                     pict->pts = (int64_t) j * stream->time_base.den / (int64_t) fps;
                     j++;
                     pict->format = EncoderCodecCtx->pix_fmt;
                     pict->width = EncoderCodecCtx->width;
                     pict->height = EncoderCodecCtx->height;
 
+                    /* Send a raw video frame to the encoder */
                     retSend = avcodec_send_frame(EncoderCodecCtx, pict);
                     if (retSend >= 0) {
                         outPacket = av_packet_alloc();
@@ -944,10 +976,9 @@ void Recorder::encodeDecodeVideoStream() {
                         outPacket->size = 0;
                         outPacket->flags |= AV_PKT_FLAG_KEY;
 
+                        /* Read encoded data from the encoder */
                         retReceive = avcodec_receive_packet(EncoderCodecCtx, outPacket);
                         if (retReceive == 0) {
-                            if (!firstVideoPacket)
-                                firstVideoPacket = true;
                             outPacket->pts = (int64_t) i * stream->time_base.den / (int64_t) fps;
                             outPacket->dts = (int64_t) i * stream->time_base.den / (int64_t) fps;
                             outPacket->stream_index = outVideoStreamIndx;
@@ -957,6 +988,7 @@ void Recorder::encodeDecodeVideoStream() {
                                 outFile << "Write video frame " << "(size= " << outPacket->size / 1000 << " )"
                                         << " PTS = "
                                         << outPacket->pts << endl;
+                                /* Write a packet to an output media file */
                                 if (av_interleaved_write_frame(oFormatCtx, outPacket) != 0) {
                                     cout << "\nerror in writing video frame";
                                 }
@@ -983,6 +1015,8 @@ void Recorder::encodeDecodeVideoStream() {
                         pkt->size = 0;
                         for (int k = i;; k++) {
                             avcodec_send_frame(EncoderCodecCtx, nullptr);
+                            /* AVERROR_EOF: the encoder has been fully flushed, and there will be no more output packets
+                             * so the else branch will let us exit */
                             if (avcodec_receive_packet(EncoderCodecCtx, pkt) == 0) {
                                 pkt->pts = (int64_t) k * stream->time_base.den / (int64_t) fps;
                                 pkt->dts = (int64_t) k * stream->time_base.den / (int64_t) fps;
@@ -998,21 +1032,20 @@ void Recorder::encodeDecodeVideoStream() {
                         break;
                     }
                     ul_queue.unlock();
-                }
-                else{
+                } else {
                     ul_end.unlock();
                 }
             }
         }
 
-    } catch (const exception &e){
+    } catch (const exception &e) {
         cerr << e.what() << endl;
         outFile << e.what() << endl;
-        if(outPacket != nullptr)
+        if (outPacket != nullptr)
             av_packet_free(&outPacket);
         av_frame_free(&pFrame);
         av_frame_free(&pict);
-        if(pPacket!= nullptr)
+        if (pPacket != nullptr)
             av_packet_free(&pPacket);
         sws_freeContext(sws_ctx);
         //        cout << "DECODING-ENCODING ENDING" << endl;
@@ -1039,8 +1072,6 @@ int Recorder::AudioDecEnc() {
 
     SwrContext *resampleContext;
 
-    bool beforeValidVideo = true;
-
     int retry = 2;
     while (retry) {
         try {
@@ -1059,9 +1090,10 @@ int Recorder::AudioDecEnc() {
 
     int j = 0;
 
-    avformat_close_input(&AudioInFCtx); //clear the internal buffer
+    /*  clear the internal buffer because as soon as the device is opened it starts buffering audio frames */
+    avformat_close_input(&AudioInFCtx);
     if (AudioInFCtx != nullptr) {
-        cerr <<"Failed to clear the audio format context (clearing internal buffer)\n" << endl;
+        cerr << "Failed to clear the audio format context (clearing internal buffer)\n" << endl;
         exit(-5);
     }
     try {
@@ -1074,176 +1106,188 @@ int Recorder::AudioDecEnc() {
     synchWithVideo();
     try {
         while (true) {
-            if (pauseRecording) {
-                unique_lock<mutex> ul_pause(pause_lock);
-
-                avformat_close_input(&AudioInFCtx); //close and clear the internal buffer
-                if (AudioInFCtx != nullptr) {
-                    throw runtime_error("Failed to clear the audio format context (clearing internal buffer)\n");
-                }
-
-                cv_pause.wait(ul_pause, [this]() { return !pauseRecording || stopRecording; });
-
-                ul_pause.unlock();
-                cv_pause.notify_all();
-
-                //reopen input audio
-                try {
-                    OpenAudioDevice();
-                } catch (const std::exception &e) {
-                    throw e;
-                }
-                synchWithVideo();
-            }
-
-            unique_lock<mutex> ul_stopAudio(_lock);
-            if (stopRecording) {
-                endAudio();
-                ul_stopAudio.unlock();
-                // wait for video acquire thread to terminate
-                unique_lock<mutex> ul_audioSynch(_audio);
-                cv_audio.wait(ul_audioSynch, [this]() { return isEndVideo(); });
-                ul_audioSynch.unlock();
-                break;
-            }
-            ul_stopAudio.unlock();
-
-            if (av_read_frame(AudioInFCtx, pAudioPacket) >= 0) {
-                if (pAudioPacket->stream_index == AudioStreamIndx) {
-                    av_packet_rescale_ts(outAudioPacket, AudioInFCtx->streams[AudioStreamIndx]->time_base,
-                                         AudioDecoderCodecCtx->time_base);
-                    value = avcodec_send_packet(AudioDecoderCodecCtx, pAudioPacket);
-                    if (value < 0) {
-                        throw runtime_error("Cannot decode current audio packet\n");
+            unique_lock<mutex> ul_pause(_lock);
+            if (!crashed) {
+                if (pauseRecording) {
+                    avformat_close_input(&AudioInFCtx); //close and clear the internal buffer
+                    if (AudioInFCtx != nullptr) {
+                        throw runtime_error("Failed to clear the audio format context (clearing internal buffer)\n");
                     }
 
-                    while (value >= 0) {
-                        value = avcodec_receive_frame(AudioDecoderCodecCtx, pAudioFrame);
+                    cv_pause.wait(ul_pause, [this]() { return !pauseRecording || stopRecording; });
 
-                        if (value == AVERROR(EAGAIN) || value == AVERROR_EOF) {
-                            break;
-                        } else if (value < 0) {
-                            throw runtime_error("Error while decoding.\n");
+                    if (stopRecording) {
+                        ul_pause.unlock();
+                        cv_pause.notify_all();
+                        break;
+                    }
+                    ul_pause.unlock();
+                    cv_pause.notify_all();
+
+                    //reopen input audio
+                    try {
+                        OpenAudioDevice();
+                    } catch (const std::exception &e) {
+                        throw e;
+                    }
+                    synchWithVideo();
+                } else
+                    ul_pause.unlock();
+
+                unique_lock<mutex> ul_stopAudio(_lock);
+                if (stopRecording) {
+                    ul_stopAudio.unlock();
+                    /* wait for video acquire thread to terminate */
+                    unique_lock<mutex> ul_audioSynch(_videoEnd);
+                    cv_audio.wait(ul_audioSynch, [this]() { return isEndVideo(); });
+                    ul_audioSynch.unlock();
+                    break;
+                }
+                ul_stopAudio.unlock();
+
+                if (av_read_frame(AudioInFCtx, pAudioPacket) >= 0) {
+                    if (pAudioPacket->stream_index == AudioStreamIndx) {
+                        /* Convert timestamps/durations in a packet from one timebase to another */
+                        av_packet_rescale_ts(outAudioPacket, AudioInFCtx->streams[AudioStreamIndx]->time_base,
+                                             AudioDecoderCodecCtx->time_base);
+                        /* Send to decoder */
+                        value = avcodec_send_packet(AudioDecoderCodecCtx, pAudioPacket);
+                        if (value < 0) {
+                            throw runtime_error("Cannot decode current audio packet\n");
                         }
 
-                        if (oFormatCtx->streams[outAudioStreamIndx]->start_time <= 0) {
-                            oFormatCtx->streams[outAudioStreamIndx]->start_time = pAudioFrame->pts;
-                        }
+                        while (value >= 0) {
+                            value = avcodec_receive_frame(AudioDecoderCodecCtx, pAudioFrame);
 
-                        /* Allocate as many pointers as there are audio channels.
-                        * Each pointer will later point to the audio samples of the corresponding
-                        * channels (although it may be NULL for interleaved formats).
-                        */
-
-                        if (!(resampledData =(uint8_t **) calloc(AudioEncoderCodecCtx->channels, sizeof(*resampledData)))) {
-                            throw runtime_error("Could not allocate converted input sample pointers\n");
-                        }
-
-                        /* Allocate memory for the samples of all channels in one consecutive
-                        * block for convenience. */
-                        if (av_samples_alloc(resampledData, nullptr,
-                                             AudioEncoderCodecCtx->channels,
-                                             pAudioFrame->nb_samples,
-                                             AudioEncoderCodecCtx->sample_fmt, 0) < 0) {
-                            throw runtime_error("Cannot allocate memory for samples\n");
-                        }
-
-                        //convert
-                        swr_convert(resampleContext,
-                                    resampledData, pAudioFrame->nb_samples,
-                                    (const uint8_t **) pAudioFrame->extended_data, pAudioFrame->nb_samples);
-
-                        //add_sample_to_fifo
-                        /* Make the FIFO as large as it needs to be to hold both,
-                        * the old and the new samples. */
-                        if ((value = av_audio_fifo_realloc(audio_fifo,
-                                                           av_audio_fifo_size(audio_fifo) + pAudioFrame->nb_samples)) < 0) {
-                            throw runtime_error("Could not reallocate FIFO\n");
-                        }
-
-                        /* Store the new samples in the FIFO buffer. */
-
-                        if (av_audio_fifo_write(audio_fifo, (void **) resampledData, pAudioFrame->nb_samples) <
-                            pAudioFrame->nb_samples) {
-                            throw runtime_error("Could not write data to FIFO\n");
-                        }
-
-                        //pAudioFrame ready
-                        outAudioPacket = av_packet_alloc();
-                        outAudioPacket->data = nullptr;
-                        outAudioPacket->size = 0;
-
-                        outAudioFrame = av_frame_alloc();
-                        if (!outAudioFrame) {
-                            throw runtime_error("Cannot allocate an AVFrame for encoded audio\n");
-                        }
-
-                        outAudioFrame->nb_samples = AudioEncoderCodecCtx->frame_size;
-                        outAudioFrame->channel_layout = AudioEncoderCodecCtx->channel_layout;
-                        outAudioFrame->format = AudioEncoderCodecCtx->sample_fmt;
-                        outAudioFrame->sample_rate = AudioEncoderCodecCtx->sample_rate;
-                        av_frame_get_buffer(outAudioFrame, 0);
-
-                        while (av_audio_fifo_size(audio_fifo) >=
-                               AudioEncoderCodecCtx->frame_size) { //frame_size = number of samples per channel in an audio frame.
-                            value = av_audio_fifo_read(audio_fifo, (void **) outAudioFrame->data,
-                                                       AudioEncoderCodecCtx->frame_size);
-                            outAudioFrame->pts = j;
-                            j += outAudioFrame->nb_samples;
-                            value = avcodec_send_frame(AudioEncoderCodecCtx, outAudioFrame);
-                            if (value == AVERROR(EAGAIN) || value == AVERROR_EOF)
+                            /* AVERROR(EAGAIN): output is not available in this state - user must try to send new input
+                             * AVERROR_EOF: the decoder has been fully flushed
+                             */
+                            if (value == AVERROR(EAGAIN) || value == AVERROR_EOF) {
                                 break;
-                            if (value < 0) {
-                                throw runtime_error("Cannot encode current audio packet\n");
+                            } else if (value < 0) {
+                                throw runtime_error("Error while decoding.\n");
                             }
-                            while (value >= 0) {
-                                value = avcodec_receive_packet(AudioEncoderCodecCtx, outAudioPacket);
+
+                            /* pts of the first frame of the stream */
+                            if (oFormatCtx->streams[outAudioStreamIndx]->start_time <= 0) {
+                                oFormatCtx->streams[outAudioStreamIndx]->start_time = pAudioFrame->pts;
+                            }
+
+                            /* Allocate as many pointers as there are audio channels.
+                            * Each pointer will later point to the audio samples of the corresponding
+                            * channels (although it may be NULL for interleaved formats).
+                            */
+
+                            if (!(resampledData = (uint8_t **) calloc(AudioEncoderCodecCtx->channels,
+                                                                      sizeof(*resampledData)))) {
+                                throw runtime_error("Could not allocate converted input sample pointers\n");
+                            }
+
+                            /* Allocate memory for the samples of all channels in one consecutive
+                            * block for convenience. */
+                            if (av_samples_alloc(resampledData, nullptr,
+                                                 AudioEncoderCodecCtx->channels,
+                                                 pAudioFrame->nb_samples,
+                                                 AudioEncoderCodecCtx->sample_fmt, 0) < 0) {
+                                throw runtime_error("Cannot allocate memory for samples\n");
+                            }
+
+                            /* convert */
+                            swr_convert(resampleContext,
+                                        resampledData, pAudioFrame->nb_samples,
+                                        (const uint8_t **) pAudioFrame->extended_data, pAudioFrame->nb_samples);
+
+                            /* Make the FIFO as large as it needs to be to hold both,
+                            * the old and the new samples. */
+                            if ((value = av_audio_fifo_realloc(audio_fifo,
+                                                               av_audio_fifo_size(audio_fifo) +
+                                                               pAudioFrame->nb_samples)) <
+                                0) {
+                                throw runtime_error("Could not reallocate FIFO\n");
+                            }
+
+                            /* Store the new samples in the FIFO buffer. */
+
+                            if (av_audio_fifo_write(audio_fifo, (void **) resampledData, pAudioFrame->nb_samples) <
+                                pAudioFrame->nb_samples) {
+                                throw runtime_error("Could not write data to FIFO\n");
+                            }
+
+                            outAudioPacket = av_packet_alloc();
+                            outAudioPacket->data = nullptr;
+                            outAudioPacket->size = 0;
+
+                            outAudioFrame = av_frame_alloc();
+                            if (!outAudioFrame) {
+                                throw runtime_error("Cannot allocate an AVFrame for encoded audio\n");
+                            }
+
+                            outAudioFrame->nb_samples = AudioEncoderCodecCtx->frame_size;
+                            outAudioFrame->channel_layout = AudioEncoderCodecCtx->channel_layout;
+                            outAudioFrame->format = AudioEncoderCodecCtx->sample_fmt;
+                            outAudioFrame->sample_rate = AudioEncoderCodecCtx->sample_rate;
+                            av_frame_get_buffer(outAudioFrame, 0);
+
+                            while (av_audio_fifo_size(audio_fifo) >=
+                                   AudioEncoderCodecCtx->frame_size) { /* frame_size = number of samples per channel in an audio frame */
+                                value = av_audio_fifo_read(audio_fifo, (void **) outAudioFrame->data,
+                                                           AudioEncoderCodecCtx->frame_size);
+                                outAudioFrame->pts = j;
+                                j += outAudioFrame->nb_samples;
+                                value = avcodec_send_frame(AudioEncoderCodecCtx, outAudioFrame);
                                 if (value == AVERROR(EAGAIN) || value == AVERROR_EOF)
                                     break;
-                                else if (value < 0) {
-                                    throw runtime_error("Error during encoding\n");
+                                if (value < 0) {
+                                    throw runtime_error("Cannot encode current audio packet\n");
                                 }
-
-                                av_packet_rescale_ts(outAudioPacket, AudioEncoderCodecCtx->time_base,
-                                                     audio_stream->time_base);
-                                outAudioPacket->stream_index = outAudioStreamIndx;
-
-                                {
-                                    lock_guard<mutex> w_lk(write_lock);
-                                    outFile << "Write audio frame " << j << "(size= " << outAudioPacket->size / 1000
-                                            << " )" << endl;
-                                    if (firstVideoPacket) {
-                                        if (!beforeValidVideo) {
-                                            if (av_write_frame(oFormatCtx, outAudioPacket) != 0) {
-                                                cerr << "Error in writing audio frame\n";
-                                            }
-                                        } else
-                                            beforeValidVideo = false;
+                                while (value >= 0) {
+                                    value = avcodec_receive_packet(AudioEncoderCodecCtx, outAudioPacket);
+                                    if (value == AVERROR(EAGAIN) || value == AVERROR_EOF)
+                                        break;
+                                    else if (value < 0) {
+                                        throw runtime_error("Error during encoding\n");
                                     }
+
+                                    av_packet_rescale_ts(outAudioPacket, AudioEncoderCodecCtx->time_base,
+                                                         audio_stream->time_base);
+                                    outAudioPacket->stream_index = outAudioStreamIndx;
+
+                                    {
+                                        lock_guard<mutex> w_lk(write_lock);
+                                        outFile << "Write audio frame " << j << "(size= " << outAudioPacket->size / 1000
+                                                << " )" << endl;
+
+                                        if (av_write_frame(oFormatCtx, outAudioPacket) != 0) {
+                                            cerr << "Error in writing audio frame\n";
+                                        }
+                                    }
+                                    av_packet_unref(outAudioPacket);
                                 }
-                                av_packet_unref(outAudioPacket);
+                                value = 0;
                             }
-                            value = 0;
+                            av_frame_free(&outAudioFrame);
+                            av_packet_unref(outAudioPacket);
                         }
-                        av_frame_free(&outAudioFrame);
-                        av_packet_unref(outAudioPacket);
                     }
                 }
+            } else {
+                ul_pause.unlock();
+                break;
             }
+
         }
-    } catch (const exception &e){
+    } catch (const exception &e) {
         cerr << e.what() << endl;
         outFile << e.what() << endl;
-        if(outAudioPacket != nullptr) {
+        if (outAudioPacket != nullptr) {
             av_packet_unref(outAudioPacket);
             av_packet_free(&outAudioPacket);
         }
-        if(outAudioFrame != nullptr)
+        if (outAudioFrame != nullptr)
             av_frame_free(&outAudioFrame);
 
         av_audio_fifo_free(audio_fifo);
         swr_free(&resampleContext);
-        endAudio();
 //        cout << "AUDIO ENDING" << endl;
         throw;
     }
@@ -1258,30 +1302,35 @@ void Recorder::startCapture() {
     auto acquireFrames = [this]() -> void {
         try {
             acquireVideoFrames();
-        }catch (const exception &e){
-            if(audio)
-                endAudio();
+        } catch (const exception &e) {
+            unique_lock<mutex> lk_stop(_lock);
+            stopRecording = true;
+            endVideo();
             crashed = true;
+            lk_stop.unlock();
+            cv_pause.notify_all();
         }
     };
     auto encodeDecodeVideo = [this]() -> void {
         try {
             encodeDecodeVideoStream();
-        }catch (const exception &e){
-            lock_guard<mutex> lk_stop(_lock);
+        } catch (const exception &e) {
+            unique_lock<mutex> lk_stop(_lock);
             stopRecording = true;
-            if(audio)
-                endAudio();
             crashed = true;
+            lk_stop.unlock();
+            cv_pause.notify_all();
         }
     };
     auto captureAudio = [this]() -> void {
         try {
             AudioDecEnc();
-        }catch (const exception &e){
-            lock_guard<mutex> lk_stop(_lock);
+        } catch (const exception &e) {
+            unique_lock<mutex> lk_stop(_lock);
             stopRecording = true;
             crashed = true;
+            lk_stop.unlock();
+            cv_pause.notify_all();
         }
     };
 
@@ -1289,6 +1338,7 @@ void Recorder::startCapture() {
         captureMenu();
     };
 
+    /* 1. Try to open and locate the output file where the recording will be saved */
     try {
         InitOutputFile();
     } catch (const std::exception &e) {
@@ -1297,20 +1347,24 @@ void Recorder::startCapture() {
     }
 
     try {
-
+        /* Open the device for recording the desktop using gdigrab or x11grab */
         OpenVideoDevice();
         InitializeVideoDecoder();
         SetUp_VideoEncoder();
 
         if (audio) {
+            /* Open the device for recording the desktop using dshow or alsa */
             OpenAudioDevice();
             InitializeAudioDecoder();
             SetUp_AudioEncoder();
         }
 
+        /*
+         * 1. Open output file
+         * 2. Write header in file, to be done only once after all devices setup.
+         * */
         lastSetUp();
     } catch (const std::exception &e) {
-//        t4.join();
         cerr << e.what() << endl;
         outFile << e.what() << endl;
         exit(-2);
@@ -1328,7 +1382,11 @@ void Recorder::startCapture() {
     ul_start.unlock();
 
 
-
+    /* Divided Video processing in 2 threads because, by sequentially capturing raw frames from the device
+     * and processing them, causes frames drop since the CPU is not fast enough to decode/encode a
+     * packet before another packet would come. So we implemented an internal queue which is filled with
+     * arriving packets (containing frames), giving enough time to the encodeDecode thread to process each of them.
+     * */
 
     thread t1(acquireFrames);
     thread t2(encodeDecodeVideo);
@@ -1341,7 +1399,7 @@ void Recorder::startCapture() {
     if (audio) {
         t3.join();
     }
-    if(crashed) {
+    if (crashed) {
         cerr << "Fatal Error Press 1 to Exit and Save" << endl;
     }
     t4.join();

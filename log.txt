@@ -1,202 +1,3253 @@
-Write video frame (size= 290 ) PTS = 6000
-Write video frame (size= 1 ) PTS = 12000
+Write audio frame 2048(size= 0 )
+Write audio frame 3072(size= 0 )
+Write audio frame 4096(size= 0 )
+Write audio frame 5120(size= 0 )
+Write audio frame 6144(size= 0 )
+Write audio frame 7168(size= 0 )
+Write audio frame 8192(size= 0 )
+Write audio frame 9216(size= 0 )
+Write audio frame 10240(size= 0 )
+Write audio frame 11264(size= 0 )
+Write audio frame 12288(size= 0 )
+Write audio frame 13312(size= 0 )
+Write audio frame 14336(size= 0 )
+Write audio frame 15360(size= 0 )
+Write audio frame 16384(size= 0 )
+Write audio frame 17408(size= 0 )
+Write audio frame 18432(size= 0 )
+Write audio frame 19456(size= 0 )
+Write audio frame 20480(size= 0 )
+Write audio frame 21504(size= 0 )
+Write audio frame 22528(size= 0 )
+Write audio frame 23552(size= 0 )
+Write audio frame 24576(size= 0 )
+Write audio frame 25600(size= 0 )
+Write audio frame 26624(size= 0 )
+Write audio frame 27648(size= 0 )
+Write audio frame 28672(size= 0 )
+Write audio frame 29696(size= 0 )
+Write audio frame 30720(size= 0 )
+Write audio frame 31744(size= 0 )
+Write audio frame 32768(size= 0 )
+Write audio frame 33792(size= 0 )
+Write audio frame 34816(size= 0 )
+Write audio frame 35840(size= 0 )
+Write audio frame 36864(size= 0 )
+Write audio frame 37888(size= 0 )
+Write audio frame 38912(size= 0 )
+Write audio frame 39936(size= 0 )
+Write audio frame 40960(size= 0 )
+Write audio frame 41984(size= 0 )
+Write audio frame 43008(size= 0 )
+Write audio frame 44032(size= 0 )
+Write audio frame 45056(size= 0 )
+Write audio frame 46080(size= 0 )
+Write audio frame 47104(size= 0 )
+Write audio frame 48128(size= 0 )
+Write audio frame 49152(size= 0 )
+Write audio frame 50176(size= 0 )
+Write audio frame 51200(size= 0 )
+Write audio frame 52224(size= 0 )
+Write audio frame 53248(size= 0 )
+Write audio frame 54272(size= 0 )
+Write audio frame 55296(size= 0 )
+Write audio frame 56320(size= 0 )
+Write audio frame 57344(size= 0 )
+Write audio frame 58368(size= 0 )
+Write audio frame 59392(size= 0 )
+Write audio frame 60416(size= 0 )
+Write audio frame 61440(size= 0 )
+Write audio frame 62464(size= 0 )
+Write audio frame 63488(size= 0 )
+Write audio frame 64512(size= 0 )
+Write audio frame 65536(size= 0 )
+Write audio frame 66560(size= 0 )
+Write audio frame 67584(size= 0 )
+Write audio frame 68608(size= 0 )
+Write audio frame 69632(size= 0 )
+Write audio frame 70656(size= 0 )
+Write audio frame 71680(size= 0 )
+Write audio frame 72704(size= 0 )
+Write audio frame 73728(size= 0 )
+Write audio frame 74752(size= 0 )
+Write audio frame 75776(size= 0 )
+Write audio frame 76800(size= 0 )
+Write audio frame 77824(size= 0 )
+Write audio frame 78848(size= 0 )
+Write audio frame 79872(size= 0 )
+Write audio frame 80896(size= 0 )
+Write audio frame 81920(size= 0 )
+Write audio frame 82944(size= 0 )
+Write audio frame 83968(size= 0 )
+Write audio frame 84992(size= 0 )
+Write audio frame 86016(size= 0 )
+Write audio frame 87040(size= 0 )
+Write audio frame 88064(size= 0 )
+Write audio frame 89088(size= 0 )
+Write audio frame 90112(size= 0 )
+Write audio frame 91136(size= 0 )
+Write audio frame 92160(size= 0 )
+Write audio frame 93184(size= 0 )
+Write audio frame 94208(size= 0 )
+Write audio frame 95232(size= 0 )
+Write audio frame 96256(size= 0 )
+Write audio frame 97280(size= 0 )
+Write audio frame 98304(size= 0 )
+Write audio frame 99328(size= 0 )
+Write audio frame 100352(size= 0 )
+Write audio frame 101376(size= 0 )
+Write audio frame 102400(size= 0 )
+Write audio frame 103424(size= 0 )
+Write audio frame 104448(size= 0 )
+Write audio frame 105472(size= 0 )
+Write audio frame 106496(size= 0 )
+Write audio frame 107520(size= 0 )
+Write audio frame 108544(size= 0 )
+Write audio frame 109568(size= 0 )
+Write audio frame 110592(size= 0 )
+Write audio frame 111616(size= 0 )
+Write audio frame 112640(size= 0 )
+Write audio frame 113664(size= 0 )
+Write audio frame 114688(size= 0 )
+Write audio frame 115712(size= 0 )
+Write audio frame 116736(size= 0 )
+Write audio frame 117760(size= 0 )
+Write audio frame 118784(size= 0 )
+Write audio frame 119808(size= 0 )
+Write audio frame 120832(size= 0 )
+Write audio frame 121856(size= 0 )
+Write audio frame 122880(size= 0 )
+Write audio frame 123904(size= 0 )
+Write audio frame 124928(size= 0 )
+Write audio frame 125952(size= 0 )
+Write audio frame 126976(size= 0 )
+Write audio frame 128000(size= 0 )
+Write audio frame 129024(size= 0 )
+Write audio frame 130048(size= 0 )
+Write audio frame 131072(size= 0 )
+Write audio frame 132096(size= 0 )
+Write audio frame 133120(size= 0 )
+Write audio frame 134144(size= 0 )
+Write audio frame 135168(size= 0 )
+Write audio frame 136192(size= 0 )
+Write audio frame 137216(size= 0 )
+Write audio frame 138240(size= 0 )
+Write audio frame 139264(size= 0 )
+Write audio frame 140288(size= 0 )
+Write audio frame 141312(size= 0 )
+Write audio frame 142336(size= 0 )
+Write audio frame 143360(size= 0 )
+Write audio frame 144384(size= 0 )
+Write audio frame 145408(size= 0 )
+Write audio frame 146432(size= 0 )
+Write audio frame 147456(size= 0 )
+Write audio frame 148480(size= 0 )
+Write audio frame 149504(size= 0 )
+Write audio frame 150528(size= 0 )
+Write audio frame 151552(size= 0 )
+Write audio frame 152576(size= 0 )
+Write audio frame 153600(size= 0 )
+Write audio frame 154624(size= 0 )
+Write audio frame 155648(size= 0 )
+Write video frame (size= 166 ) PTS = 6000
+Write audio frame 156672(size= 0 )
+Write audio frame 157696(size= 0 )
+Write audio frame 158720(size= 0 )
+Write audio frame 159744(size= 0 )
+Write video frame (size= 3 ) PTS = 12000
+Write audio frame 160768(size= 0 )
+Write audio frame 161792(size= 0 )
+Write audio frame 162816(size= 0 )
+Write audio frame 163840(size= 0 )
 Write video frame (size= 0 ) PTS = 18000
 Write video frame (size= 0 ) PTS = 24000
+Write audio frame 164864(size= 0 )
+Write audio frame 165888(size= 0 )
+Write audio frame 166912(size= 0 )
+Write audio frame 167936(size= 0 )
 Write video frame (size= 0 ) PTS = 30000
+Write audio frame 168960(size= 0 )
+Write audio frame 169984(size= 0 )
+Write audio frame 171008(size= 0 )
+Write audio frame 172032(size= 0 )
 Write video frame (size= 0 ) PTS = 36000
+Write audio frame 173056(size= 0 )
+Write audio frame 174080(size= 0 )
+Write audio frame 175104(size= 0 )
+Write audio frame 176128(size= 0 )
 Write video frame (size= 0 ) PTS = 42000
 Write video frame (size= 0 ) PTS = 48000
+Write audio frame 177152(size= 0 )
+Write audio frame 178176(size= 0 )
+Write audio frame 179200(size= 0 )
+Write audio frame 180224(size= 0 )
 Write video frame (size= 0 ) PTS = 54000
+Write audio frame 181248(size= 0 )
+Write audio frame 182272(size= 0 )
+Write audio frame 183296(size= 0 )
+Write audio frame 184320(size= 0 )
 Write video frame (size= 0 ) PTS = 60000
 Write video frame (size= 0 ) PTS = 66000
+Write audio frame 185344(size= 0 )
+Write audio frame 186368(size= 0 )
+Write audio frame 187392(size= 0 )
+Write audio frame 188416(size= 0 )
 Write video frame (size= 0 ) PTS = 72000
-Write video frame (size= 61 ) PTS = 78000
+Write audio frame 189440(size= 0 )
+Write audio frame 190464(size= 0 )
+Write audio frame 191488(size= 0 )
+Write audio frame 192512(size= 0 )
+Write video frame (size= 0 ) PTS = 78000
+Write audio frame 193536(size= 0 )
+Write audio frame 194560(size= 0 )
+Write audio frame 195584(size= 0 )
+Write audio frame 196608(size= 0 )
 Write video frame (size= 0 ) PTS = 84000
 Write video frame (size= 0 ) PTS = 90000
+Write audio frame 197632(size= 0 )
+Write audio frame 198656(size= 0 )
+Write audio frame 199680(size= 0 )
+Write audio frame 200704(size= 0 )
 Write video frame (size= 0 ) PTS = 96000
+Write audio frame 201728(size= 0 )
+Write audio frame 202752(size= 0 )
+Write audio frame 203776(size= 0 )
+Write audio frame 204800(size= 0 )
 Write video frame (size= 0 ) PTS = 102000
+Write audio frame 205824(size= 0 )
+Write audio frame 206848(size= 0 )
+Write audio frame 207872(size= 0 )
+Write audio frame 208896(size= 0 )
 Write video frame (size= 0 ) PTS = 108000
 Write video frame (size= 0 ) PTS = 114000
+Write audio frame 209920(size= 0 )
+Write audio frame 210944(size= 0 )
+Write audio frame 211968(size= 0 )
+Write audio frame 212992(size= 0 )
 Write video frame (size= 0 ) PTS = 120000
+Write audio frame 214016(size= 0 )
+Write audio frame 215040(size= 0 )
+Write audio frame 216064(size= 0 )
+Write audio frame 217088(size= 0 )
 Write video frame (size= 0 ) PTS = 126000
 Write video frame (size= 0 ) PTS = 132000
+Write audio frame 218112(size= 0 )
+Write audio frame 219136(size= 0 )
+Write audio frame 220160(size= 0 )
+Write audio frame 221184(size= 0 )
 Write video frame (size= 0 ) PTS = 138000
+Write audio frame 222208(size= 0 )
+Write audio frame 223232(size= 0 )
+Write audio frame 224256(size= 0 )
+Write audio frame 225280(size= 0 )
 Write video frame (size= 0 ) PTS = 144000
+Write audio frame 226304(size= 0 )
+Write audio frame 227328(size= 0 )
+Write audio frame 228352(size= 0 )
+Write audio frame 229376(size= 0 )
 Write video frame (size= 0 ) PTS = 150000
 Write video frame (size= 0 ) PTS = 156000
+Write audio frame 230400(size= 0 )
+Write audio frame 231424(size= 0 )
+Write audio frame 232448(size= 0 )
+Write audio frame 233472(size= 0 )
 Write video frame (size= 0 ) PTS = 162000
+Write audio frame 234496(size= 0 )
+Write audio frame 235520(size= 0 )
+Write audio frame 236544(size= 0 )
+Write audio frame 237568(size= 0 )
 Write video frame (size= 0 ) PTS = 168000
 Write video frame (size= 0 ) PTS = 174000
+Write audio frame 238592(size= 0 )
+Write audio frame 239616(size= 0 )
+Write audio frame 240640(size= 0 )
+Write audio frame 241664(size= 0 )
 Write video frame (size= 0 ) PTS = 180000
-Write video frame (size= 320 ) PTS = 186000
+Write audio frame 242688(size= 0 )
+Write audio frame 243712(size= 0 )
+Write audio frame 244736(size= 0 )
+Write audio frame 245760(size= 0 )
+Write video frame (size= 167 ) PTS = 186000
+Write audio frame 246784(size= 0 )
+Write audio frame 247808(size= 0 )
+Write audio frame 248832(size= 0 )
+Write audio frame 249856(size= 0 )
 Write video frame (size= 1 ) PTS = 192000
 Write video frame (size= 0 ) PTS = 198000
+Write audio frame 250880(size= 0 )
+Write audio frame 251904(size= 0 )
+Write audio frame 252928(size= 0 )
+Write audio frame 253952(size= 0 )
 Write video frame (size= 0 ) PTS = 204000
+Write audio frame 254976(size= 0 )
+Write audio frame 256000(size= 0 )
+Write audio frame 257024(size= 0 )
+Write audio frame 258048(size= 0 )
 Write video frame (size= 0 ) PTS = 210000
 Write video frame (size= 0 ) PTS = 216000
+Write audio frame 259072(size= 0 )
+Write audio frame 260096(size= 0 )
+Write audio frame 261120(size= 0 )
+Write audio frame 262144(size= 0 )
 Write video frame (size= 0 ) PTS = 222000
+Write audio frame 263168(size= 0 )
+Write audio frame 264192(size= 0 )
+Write audio frame 265216(size= 0 )
+Write audio frame 266240(size= 0 )
 Write video frame (size= 0 ) PTS = 228000
+Write audio frame 267264(size= 0 )
+Write audio frame 268288(size= 0 )
+Write audio frame 269312(size= 0 )
+Write audio frame 270336(size= 0 )
 Write video frame (size= 0 ) PTS = 234000
 Write video frame (size= 0 ) PTS = 240000
+Write audio frame 271360(size= 0 )
+Write audio frame 272384(size= 0 )
+Write audio frame 273408(size= 0 )
+Write audio frame 274432(size= 0 )
 Write video frame (size= 0 ) PTS = 246000
+Write audio frame 275456(size= 0 )
+Write audio frame 276480(size= 0 )
+Write audio frame 277504(size= 0 )
+Write audio frame 278528(size= 0 )
 Write video frame (size= 0 ) PTS = 252000
+Write audio frame 279552(size= 0 )
 Write video frame (size= 0 ) PTS = 258000
+Write audio frame 280576(size= 0 )
+Write audio frame 281600(size= 0 )
+Write audio frame 282624(size= 0 )
 Write video frame (size= 0 ) PTS = 264000
+Write audio frame 283648(size= 0 )
+Write audio frame 284672(size= 0 )
+Write audio frame 285696(size= 0 )
+Write audio frame 286720(size= 0 )
 Write video frame (size= 0 ) PTS = 270000
+Write audio frame 287744(size= 0 )
+Write audio frame 288768(size= 0 )
+Write audio frame 289792(size= 0 )
+Write audio frame 290816(size= 0 )
 Write video frame (size= 0 ) PTS = 276000
 Write video frame (size= 0 ) PTS = 282000
+Write audio frame 291840(size= 0 )
+Write audio frame 292864(size= 0 )
+Write audio frame 293888(size= 0 )
+Write audio frame 294912(size= 0 )
 Write video frame (size= 0 ) PTS = 288000
+Write audio frame 295936(size= 0 )
+Write audio frame 296960(size= 0 )
+Write audio frame 297984(size= 0 )
+Write audio frame 299008(size= 0 )
 Write video frame (size= 0 ) PTS = 294000
 Write video frame (size= 0 ) PTS = 300000
+Write audio frame 300032(size= 0 )
+Write audio frame 301056(size= 0 )
+Write audio frame 302080(size= 0 )
+Write audio frame 303104(size= 0 )
 Write video frame (size= 0 ) PTS = 306000
+Write audio frame 304128(size= 0 )
+Write audio frame 305152(size= 0 )
+Write audio frame 306176(size= 0 )
+Write audio frame 307200(size= 0 )
 Write video frame (size= 0 ) PTS = 312000
+Write audio frame 308224(size= 0 )
+Write audio frame 309248(size= 0 )
+Write audio frame 310272(size= 0 )
+Write audio frame 311296(size= 0 )
 Write video frame (size= 0 ) PTS = 318000
 Write video frame (size= 0 ) PTS = 324000
+Write audio frame 312320(size= 0 )
+Write audio frame 313344(size= 0 )
+Write audio frame 314368(size= 0 )
+Write audio frame 315392(size= 0 )
 Write video frame (size= 0 ) PTS = 330000
+Write audio frame 316416(size= 0 )
+Write audio frame 317440(size= 0 )
+Write audio frame 318464(size= 0 )
+Write audio frame 319488(size= 0 )
 Write video frame (size= 0 ) PTS = 336000
+Write audio frame 320512(size= 0 )
+Write audio frame 321536(size= 0 )
+Write audio frame 322560(size= 0 )
+Write audio frame 323584(size= 0 )
 Write video frame (size= 0 ) PTS = 342000
 Write video frame (size= 0 ) PTS = 348000
+Write audio frame 324608(size= 0 )
+Write audio frame 325632(size= 0 )
+Write audio frame 326656(size= 0 )
+Write audio frame 327680(size= 0 )
 Write video frame (size= 0 ) PTS = 354000
+Write audio frame 328704(size= 0 )
+Write audio frame 329728(size= 0 )
+Write audio frame 330752(size= 0 )
+Write audio frame 331776(size= 0 )
 Write video frame (size= 0 ) PTS = 360000
-Write video frame (size= 314 ) PTS = 366000
-Write video frame (size= 0 ) PTS = 372000
+Write video frame (size= 167 ) PTS = 366000
+Write audio frame 332800(size= 0 )
+Write audio frame 333824(size= 0 )
+Write audio frame 334848(size= 0 )
+Write audio frame 335872(size= 0 )
+Write video frame (size= 1 ) PTS = 372000
+Write audio frame 336896(size= 0 )
+Write audio frame 337920(size= 0 )
+Write audio frame 338944(size= 0 )
+Write audio frame 339968(size= 0 )
 Write video frame (size= 0 ) PTS = 378000
+Write audio frame 340992(size= 0 )
+Write audio frame 342016(size= 0 )
+Write audio frame 343040(size= 0 )
+Write audio frame 344064(size= 0 )
 Write video frame (size= 0 ) PTS = 384000
 Write video frame (size= 0 ) PTS = 390000
+Write audio frame 345088(size= 0 )
+Write audio frame 346112(size= 0 )
+Write audio frame 347136(size= 0 )
+Write audio frame 348160(size= 0 )
 Write video frame (size= 0 ) PTS = 396000
+Write audio frame 349184(size= 0 )
+Write audio frame 350208(size= 0 )
+Write audio frame 351232(size= 0 )
+Write audio frame 352256(size= 0 )
 Write video frame (size= 0 ) PTS = 402000
 Write video frame (size= 0 ) PTS = 408000
+Write audio frame 353280(size= 0 )
+Write audio frame 354304(size= 0 )
+Write audio frame 355328(size= 0 )
+Write audio frame 356352(size= 0 )
 Write video frame (size= 0 ) PTS = 414000
+Write audio frame 357376(size= 0 )
+Write audio frame 358400(size= 0 )
+Write audio frame 359424(size= 0 )
+Write audio frame 360448(size= 0 )
 Write video frame (size= 0 ) PTS = 420000
+Write audio frame 361472(size= 0 )
+Write audio frame 362496(size= 0 )
+Write audio frame 363520(size= 0 )
+Write audio frame 364544(size= 0 )
 Write video frame (size= 0 ) PTS = 426000
 Write video frame (size= 0 ) PTS = 432000
+Write audio frame 365568(size= 0 )
+Write audio frame 366592(size= 0 )
+Write audio frame 367616(size= 0 )
+Write audio frame 368640(size= 0 )
 Write video frame (size= 0 ) PTS = 438000
+Write audio frame 369664(size= 0 )
+Write audio frame 370688(size= 0 )
+Write audio frame 371712(size= 0 )
+Write audio frame 372736(size= 0 )
 Write video frame (size= 0 ) PTS = 444000
 Write video frame (size= 0 ) PTS = 450000
+Write audio frame 373760(size= 0 )
+Write audio frame 374784(size= 0 )
+Write audio frame 375808(size= 0 )
+Write audio frame 376832(size= 0 )
 Write video frame (size= 0 ) PTS = 456000
+Write audio frame 377856(size= 0 )
+Write audio frame 378880(size= 0 )
+Write audio frame 379904(size= 0 )
+Write audio frame 380928(size= 0 )
 Write video frame (size= 0 ) PTS = 462000
+Write audio frame 381952(size= 0 )
+Write audio frame 382976(size= 0 )
+Write audio frame 384000(size= 0 )
+Write audio frame 385024(size= 0 )
 Write video frame (size= 0 ) PTS = 468000
 Write video frame (size= 0 ) PTS = 474000
+Write audio frame 386048(size= 0 )
+Write audio frame 387072(size= 0 )
+Write audio frame 388096(size= 0 )
+Write audio frame 389120(size= 0 )
 Write video frame (size= 0 ) PTS = 480000
+Write audio frame 390144(size= 0 )
+Write audio frame 391168(size= 0 )
+Write audio frame 392192(size= 0 )
+Write audio frame 393216(size= 0 )
 Write video frame (size= 0 ) PTS = 486000
 Write video frame (size= 0 ) PTS = 492000
+Write audio frame 394240(size= 0 )
+Write audio frame 395264(size= 0 )
+Write audio frame 396288(size= 0 )
+Write audio frame 397312(size= 0 )
 Write video frame (size= 0 ) PTS = 498000
+Write audio frame 398336(size= 0 )
+Write audio frame 399360(size= 0 )
+Write audio frame 400384(size= 0 )
+Write audio frame 401408(size= 0 )
 Write video frame (size= 0 ) PTS = 504000
+Write audio frame 402432(size= 0 )
+Write audio frame 403456(size= 0 )
+Write audio frame 404480(size= 0 )
+Write audio frame 405504(size= 0 )
 Write video frame (size= 0 ) PTS = 510000
 Write video frame (size= 0 ) PTS = 516000
+Write audio frame 406528(size= 0 )
+Write audio frame 407552(size= 0 )
+Write audio frame 408576(size= 0 )
+Write audio frame 409600(size= 0 )
 Write video frame (size= 0 ) PTS = 522000
+Write audio frame 410624(size= 0 )
+Write audio frame 411648(size= 0 )
+Write audio frame 412672(size= 0 )
+Write audio frame 413696(size= 0 )
 Write video frame (size= 0 ) PTS = 528000
+Write audio frame 414720(size= 0 )
+Write audio frame 415744(size= 0 )
+Write audio frame 416768(size= 0 )
+Write audio frame 417792(size= 0 )
 Write video frame (size= 0 ) PTS = 534000
 Write video frame (size= 0 ) PTS = 540000
-Write video frame (size= 320 ) PTS = 546000
-Write video frame (size= 0 ) PTS = 552000
+Write audio frame 418816(size= 0 )
+Write audio frame 419840(size= 0 )
+Write audio frame 420864(size= 0 )
+Write audio frame 421888(size= 0 )
+Write video frame (size= 167 ) PTS = 546000
+Write audio frame 422912(size= 0 )
+Write audio frame 423936(size= 0 )
+Write audio frame 424960(size= 0 )
+Write audio frame 425984(size= 0 )
+Write video frame (size= 1 ) PTS = 552000
 Write video frame (size= 0 ) PTS = 558000
+Write audio frame 427008(size= 0 )
+Write audio frame 428032(size= 0 )
+Write audio frame 429056(size= 0 )
+Write audio frame 430080(size= 0 )
 Write video frame (size= 0 ) PTS = 564000
+Write audio frame 431104(size= 0 )
+Write audio frame 432128(size= 0 )
+Write audio frame 433152(size= 0 )
+Write audio frame 434176(size= 0 )
 Write video frame (size= 0 ) PTS = 570000
+Write audio frame 435200(size= 0 )
+Write audio frame 436224(size= 0 )
+Write audio frame 437248(size= 0 )
 Write video frame (size= 0 ) PTS = 576000
+Write audio frame 438272(size= 0 )
 Write video frame (size= 0 ) PTS = 582000
+Write audio frame 439296(size= 0 )
+Write audio frame 440320(size= 0 )
+Write audio frame 441344(size= 0 )
+Write audio frame 442368(size= 0 )
 Write video frame (size= 0 ) PTS = 588000
+Write audio frame 443392(size= 0 )
+Write audio frame 444416(size= 0 )
+Write audio frame 445440(size= 0 )
+Write audio frame 446464(size= 0 )
 Write video frame (size= 0 ) PTS = 594000
 Write video frame (size= 0 ) PTS = 600000
+Write audio frame 447488(size= 0 )
+Write audio frame 448512(size= 0 )
+Write audio frame 449536(size= 0 )
+Write audio frame 450560(size= 0 )
 Write video frame (size= 0 ) PTS = 606000
+Write audio frame 451584(size= 0 )
+Write audio frame 452608(size= 0 )
+Write audio frame 453632(size= 0 )
+Write audio frame 454656(size= 0 )
 Write video frame (size= 0 ) PTS = 612000
+Write audio frame 455680(size= 0 )
+Write audio frame 456704(size= 0 )
+Write audio frame 457728(size= 0 )
+Write audio frame 458752(size= 0 )
 Write video frame (size= 0 ) PTS = 618000
 Write video frame (size= 0 ) PTS = 624000
+Write audio frame 459776(size= 0 )
+Write audio frame 460800(size= 0 )
+Write audio frame 461824(size= 0 )
+Write audio frame 462848(size= 0 )
 Write video frame (size= 0 ) PTS = 630000
+Write audio frame 463872(size= 0 )
+Write audio frame 464896(size= 0 )
+Write audio frame 465920(size= 0 )
+Write audio frame 466944(size= 0 )
 Write video frame (size= 0 ) PTS = 636000
 Write video frame (size= 0 ) PTS = 642000
+Write audio frame 467968(size= 0 )
+Write audio frame 468992(size= 0 )
+Write audio frame 470016(size= 0 )
+Write audio frame 471040(size= 0 )
 Write video frame (size= 0 ) PTS = 648000
+Write audio frame 472064(size= 0 )
+Write audio frame 473088(size= 0 )
+Write audio frame 474112(size= 0 )
+Write audio frame 475136(size= 0 )
 Write video frame (size= 0 ) PTS = 654000
+Write audio frame 476160(size= 0 )
+Write audio frame 477184(size= 0 )
+Write audio frame 478208(size= 0 )
+Write audio frame 479232(size= 0 )
 Write video frame (size= 0 ) PTS = 660000
 Write video frame (size= 0 ) PTS = 666000
+Write audio frame 480256(size= 0 )
+Write audio frame 481280(size= 0 )
+Write audio frame 482304(size= 0 )
+Write audio frame 483328(size= 0 )
 Write video frame (size= 0 ) PTS = 672000
+Write audio frame 484352(size= 0 )
+Write audio frame 485376(size= 0 )
+Write audio frame 486400(size= 0 )
+Write audio frame 487424(size= 0 )
 Write video frame (size= 0 ) PTS = 678000
 Write video frame (size= 0 ) PTS = 684000
+Write audio frame 488448(size= 0 )
+Write audio frame 489472(size= 0 )
+Write audio frame 490496(size= 0 )
+Write audio frame 491520(size= 0 )
 Write video frame (size= 0 ) PTS = 690000
+Write audio frame 492544(size= 0 )
+Write audio frame 493568(size= 0 )
+Write audio frame 494592(size= 0 )
+Write audio frame 495616(size= 0 )
 Write video frame (size= 0 ) PTS = 696000
+Write audio frame 496640(size= 0 )
+Write audio frame 497664(size= 0 )
+Write audio frame 498688(size= 0 )
+Write audio frame 499712(size= 0 )
 Write video frame (size= 0 ) PTS = 702000
 Write video frame (size= 0 ) PTS = 708000
+Write audio frame 500736(size= 0 )
+Write audio frame 501760(size= 0 )
+Write audio frame 502784(size= 0 )
+Write audio frame 503808(size= 0 )
 Write video frame (size= 0 ) PTS = 714000
+Write audio frame 504832(size= 0 )
+Write audio frame 505856(size= 0 )
+Write audio frame 506880(size= 0 )
+Write audio frame 507904(size= 0 )
 Write video frame (size= 0 ) PTS = 720000
-Write video frame (size= 320 ) PTS = 726000
-Write video frame (size= 0 ) PTS = 732000
+Write audio frame 508928(size= 0 )
+Write video frame (size= 167 ) PTS = 726000
+Write audio frame 509952(size= 0 )
+Write audio frame 510976(size= 0 )
+Write audio frame 512000(size= 0 )
+Write video frame (size= 1 ) PTS = 732000
+Write audio frame 513024(size= 0 )
+Write audio frame 514048(size= 0 )
+Write audio frame 515072(size= 0 )
+Write audio frame 516096(size= 0 )
 Write video frame (size= 0 ) PTS = 738000
+Write audio frame 517120(size= 0 )
+Write audio frame 518144(size= 0 )
+Write audio frame 519168(size= 0 )
+Write audio frame 520192(size= 0 )
 Write video frame (size= 0 ) PTS = 744000
 Write video frame (size= 0 ) PTS = 750000
+Write audio frame 521216(size= 0 )
+Write audio frame 522240(size= 0 )
+Write audio frame 523264(size= 0 )
+Write audio frame 524288(size= 0 )
 Write video frame (size= 0 ) PTS = 756000
+Write audio frame 525312(size= 0 )
+Write audio frame 526336(size= 0 )
+Write audio frame 527360(size= 0 )
+Write audio frame 528384(size= 0 )
 Write video frame (size= 0 ) PTS = 762000
+Write audio frame 529408(size= 0 )
+Write audio frame 530432(size= 0 )
+Write audio frame 531456(size= 0 )
+Write audio frame 532480(size= 0 )
 Write video frame (size= 0 ) PTS = 768000
 Write video frame (size= 0 ) PTS = 774000
+Write audio frame 533504(size= 0 )
+Write audio frame 534528(size= 0 )
+Write audio frame 535552(size= 0 )
+Write audio frame 536576(size= 0 )
 Write video frame (size= 0 ) PTS = 780000
+Write audio frame 537600(size= 0 )
+Write audio frame 538624(size= 0 )
+Write audio frame 539648(size= 0 )
+Write audio frame 540672(size= 0 )
 Write video frame (size= 0 ) PTS = 786000
 Write video frame (size= 0 ) PTS = 792000
-Write video frame (size= 0 ) PTS = 798000
+Write audio frame 541696(size= 0 )
+Write audio frame 542720(size= 0 )
+Write audio frame 543744(size= 0 )
+Write audio frame 544768(size= 0 )
+Write video frame (size= 17 ) PTS = 798000
+Write audio frame 545792(size= 0 )
+Write audio frame 546816(size= 0 )
+Write audio frame 547840(size= 0 )
+Write audio frame 548864(size= 0 )
 Write video frame (size= 0 ) PTS = 804000
+Write audio frame 549888(size= 0 )
+Write audio frame 550912(size= 0 )
+Write audio frame 551936(size= 0 )
+Write audio frame 552960(size= 0 )
 Write video frame (size= 0 ) PTS = 810000
 Write video frame (size= 0 ) PTS = 816000
+Write audio frame 553984(size= 0 )
+Write audio frame 555008(size= 0 )
+Write audio frame 556032(size= 0 )
+Write audio frame 557056(size= 0 )
 Write video frame (size= 0 ) PTS = 822000
+Write audio frame 558080(size= 0 )
+Write audio frame 559104(size= 0 )
+Write audio frame 560128(size= 0 )
+Write audio frame 561152(size= 0 )
 Write video frame (size= 0 ) PTS = 828000
 Write video frame (size= 0 ) PTS = 834000
+Write audio frame 562176(size= 0 )
+Write audio frame 563200(size= 0 )
+Write audio frame 564224(size= 0 )
+Write audio frame 565248(size= 0 )
 Write video frame (size= 0 ) PTS = 840000
+Write audio frame 566272(size= 0 )
+Write audio frame 567296(size= 0 )
+Write audio frame 568320(size= 0 )
+Write audio frame 569344(size= 0 )
 Write video frame (size= 0 ) PTS = 846000
+Write audio frame 570368(size= 0 )
+Write audio frame 571392(size= 0 )
+Write audio frame 572416(size= 0 )
+Write audio frame 573440(size= 0 )
 Write video frame (size= 0 ) PTS = 852000
 Write video frame (size= 0 ) PTS = 858000
+Write audio frame 574464(size= 0 )
+Write audio frame 575488(size= 0 )
+Write audio frame 576512(size= 0 )
+Write audio frame 577536(size= 0 )
 Write video frame (size= 0 ) PTS = 864000
+Write audio frame 578560(size= 0 )
+Write audio frame 579584(size= 0 )
+Write audio frame 580608(size= 0 )
+Write audio frame 581632(size= 0 )
 Write video frame (size= 0 ) PTS = 870000
 Write video frame (size= 0 ) PTS = 876000
+Write audio frame 582656(size= 0 )
+Write audio frame 583680(size= 0 )
+Write audio frame 584704(size= 0 )
+Write audio frame 585728(size= 0 )
 Write video frame (size= 0 ) PTS = 882000
+Write audio frame 586752(size= 0 )
+Write audio frame 587776(size= 0 )
+Write audio frame 588800(size= 0 )
+Write audio frame 589824(size= 0 )
 Write video frame (size= 0 ) PTS = 888000
+Write audio frame 590848(size= 0 )
+Write audio frame 591872(size= 0 )
+Write audio frame 592896(size= 0 )
+Write audio frame 593920(size= 0 )
 Write video frame (size= 0 ) PTS = 894000
 Write video frame (size= 0 ) PTS = 900000
-Write video frame (size= 320 ) PTS = 906000
-Write video frame (size= 0 ) PTS = 912000
+Write audio frame 594944(size= 0 )
+Write audio frame 595968(size= 0 )
+Write audio frame 596992(size= 0 )
+Write audio frame 598016(size= 0 )
+Write video frame (size= 162 ) PTS = 906000
+Write audio frame 599040(size= 0 )
+Write audio frame 600064(size= 0 )
+Write audio frame 601088(size= 0 )
+Write audio frame 602112(size= 0 )
+Write video frame (size= 1 ) PTS = 912000
 Write video frame (size= 0 ) PTS = 918000
+Write audio frame 603136(size= 0 )
+Write audio frame 604160(size= 0 )
+Write audio frame 605184(size= 0 )
+Write audio frame 606208(size= 0 )
 Write video frame (size= 0 ) PTS = 924000
+Write audio frame 607232(size= 0 )
+Write audio frame 608256(size= 0 )
+Write audio frame 609280(size= 0 )
+Write audio frame 610304(size= 0 )
 Write video frame (size= 0 ) PTS = 930000
+Write audio frame 611328(size= 0 )
+Write audio frame 612352(size= 0 )
+Write audio frame 613376(size= 0 )
+Write audio frame 614400(size= 0 )
 Write video frame (size= 0 ) PTS = 936000
 Write video frame (size= 0 ) PTS = 942000
+Write audio frame 615424(size= 0 )
+Write audio frame 616448(size= 0 )
+Write audio frame 617472(size= 0 )
+Write audio frame 618496(size= 0 )
 Write video frame (size= 0 ) PTS = 948000
+Write audio frame 619520(size= 0 )
+Write audio frame 620544(size= 0 )
+Write audio frame 621568(size= 0 )
+Write audio frame 622592(size= 0 )
 Write video frame (size= 0 ) PTS = 954000
 Write video frame (size= 0 ) PTS = 960000
+Write audio frame 623616(size= 0 )
+Write audio frame 624640(size= 0 )
+Write audio frame 625664(size= 0 )
+Write audio frame 626688(size= 0 )
 Write video frame (size= 0 ) PTS = 966000
+Write audio frame 627712(size= 0 )
+Write audio frame 628736(size= 0 )
+Write audio frame 629760(size= 0 )
+Write audio frame 630784(size= 0 )
 Write video frame (size= 0 ) PTS = 972000
+Write audio frame 631808(size= 0 )
+Write audio frame 632832(size= 0 )
+Write audio frame 633856(size= 0 )
+Write audio frame 634880(size= 0 )
 Write video frame (size= 0 ) PTS = 978000
 Write video frame (size= 0 ) PTS = 984000
+Write audio frame 635904(size= 0 )
+Write audio frame 636928(size= 0 )
+Write audio frame 637952(size= 0 )
+Write audio frame 638976(size= 0 )
 Write video frame (size= 0 ) PTS = 990000
+Write audio frame 640000(size= 0 )
+Write audio frame 641024(size= 0 )
+Write audio frame 642048(size= 0 )
+Write audio frame 643072(size= 0 )
 Write video frame (size= 0 ) PTS = 996000
 Write video frame (size= 0 ) PTS = 1002000
+Write audio frame 644096(size= 0 )
+Write audio frame 645120(size= 0 )
+Write audio frame 646144(size= 0 )
+Write audio frame 647168(size= 0 )
 Write video frame (size= 0 ) PTS = 1008000
+Write audio frame 648192(size= 0 )
+Write audio frame 649216(size= 0 )
+Write audio frame 650240(size= 0 )
+Write audio frame 651264(size= 0 )
 Write video frame (size= 0 ) PTS = 1014000
+Write audio frame 652288(size= 0 )
+Write audio frame 653312(size= 0 )
+Write audio frame 654336(size= 0 )
+Write audio frame 655360(size= 0 )
 Write video frame (size= 0 ) PTS = 1020000
 Write video frame (size= 0 ) PTS = 1026000
+Write audio frame 656384(size= 0 )
+Write audio frame 657408(size= 0 )
+Write audio frame 658432(size= 0 )
+Write audio frame 659456(size= 0 )
 Write video frame (size= 0 ) PTS = 1032000
+Write audio frame 660480(size= 0 )
+Write audio frame 661504(size= 0 )
+Write audio frame 662528(size= 0 )
+Write audio frame 663552(size= 0 )
 Write video frame (size= 0 ) PTS = 1038000
+Write audio frame 664576(size= 0 )
+Write audio frame 665600(size= 0 )
+Write audio frame 666624(size= 0 )
+Write audio frame 667648(size= 0 )
 Write video frame (size= 0 ) PTS = 1044000
 Write video frame (size= 0 ) PTS = 1050000
+Write audio frame 668672(size= 0 )
+Write audio frame 669696(size= 0 )
+Write audio frame 670720(size= 0 )
+Write audio frame 671744(size= 0 )
 Write video frame (size= 0 ) PTS = 1056000
+Write audio frame 672768(size= 0 )
+Write audio frame 673792(size= 0 )
+Write audio frame 674816(size= 0 )
+Write audio frame 675840(size= 0 )
 Write video frame (size= 0 ) PTS = 1062000
 Write video frame (size= 0 ) PTS = 1068000
+Write audio frame 676864(size= 0 )
+Write audio frame 677888(size= 0 )
+Write audio frame 678912(size= 0 )
+Write audio frame 679936(size= 0 )
 Write video frame (size= 0 ) PTS = 1074000
+Write audio frame 680960(size= 0 )
+Write audio frame 681984(size= 0 )
+Write audio frame 683008(size= 0 )
+Write audio frame 684032(size= 0 )
 Write video frame (size= 0 ) PTS = 1080000
-Write video frame (size= 320 ) PTS = 1086000
-Write video frame (size= 0 ) PTS = 1092000
+Write audio frame 685056(size= 0 )
+Write audio frame 686080(size= 0 )
+Write audio frame 687104(size= 0 )
+Write audio frame 688128(size= 0 )
+Write video frame (size= 159 ) PTS = 1086000
+Write video frame (size= 1 ) PTS = 1092000
+Write audio frame 689152(size= 0 )
+Write audio frame 690176(size= 0 )
+Write audio frame 691200(size= 0 )
+Write audio frame 692224(size= 0 )
 Write video frame (size= 0 ) PTS = 1098000
-Write video frame (size= 0 ) PTS = 1104000
-Write video frame (size= 0 ) PTS = 1110000
+Write audio frame 693248(size= 0 )
+Write audio frame 694272(size= 0 )
+Write audio frame 695296(size= 0 )
+Write audio frame 696320(size= 0 )
+Write video frame (size= 2 ) PTS = 1104000
+Write video frame (size= 14 ) PTS = 1110000
+Write audio frame 697344(size= 0 )
+Write audio frame 698368(size= 0 )
+Write audio frame 699392(size= 0 )
+Write audio frame 700416(size= 0 )
 Write video frame (size= 0 ) PTS = 1116000
+Write audio frame 701440(size= 0 )
+Write audio frame 702464(size= 0 )
+Write audio frame 703488(size= 0 )
+Write audio frame 704512(size= 0 )
 Write video frame (size= 0 ) PTS = 1122000
+Write audio frame 705536(size= 0 )
+Write audio frame 706560(size= 0 )
+Write audio frame 707584(size= 0 )
+Write audio frame 708608(size= 0 )
 Write video frame (size= 0 ) PTS = 1128000
 Write video frame (size= 0 ) PTS = 1134000
+Write audio frame 709632(size= 0 )
+Write audio frame 710656(size= 0 )
+Write audio frame 711680(size= 0 )
+Write audio frame 712704(size= 0 )
 Write video frame (size= 0 ) PTS = 1140000
-Write video frame (size= 0 ) PTS = 1146000
+Write audio frame 713728(size= 0 )
+Write audio frame 714752(size= 0 )
+Write audio frame 715776(size= 0 )
+Write audio frame 716800(size= 0 )
+Write video frame (size= 36 ) PTS = 1146000
 Write video frame (size= 0 ) PTS = 1152000
+Write audio frame 717824(size= 0 )
+Write audio frame 718848(size= 0 )
+Write audio frame 719872(size= 0 )
+Write audio frame 720896(size= 0 )
 Write video frame (size= 0 ) PTS = 1158000
+Write audio frame 721920(size= 0 )
+Write audio frame 722944(size= 0 )
+Write audio frame 723968(size= 0 )
+Write audio frame 724992(size= 0 )
 Write video frame (size= 0 ) PTS = 1164000
+Write audio frame 726016(size= 0 )
+Write audio frame 727040(size= 0 )
+Write audio frame 728064(size= 0 )
+Write audio frame 729088(size= 0 )
 Write video frame (size= 0 ) PTS = 1170000
 Write video frame (size= 0 ) PTS = 1176000
+Write audio frame 730112(size= 0 )
+Write audio frame 731136(size= 0 )
+Write audio frame 732160(size= 0 )
+Write audio frame 733184(size= 0 )
 Write video frame (size= 0 ) PTS = 1182000
+Write audio frame 734208(size= 0 )
+Write audio frame 735232(size= 0 )
+Write audio frame 736256(size= 0 )
+Write audio frame 737280(size= 0 )
 Write video frame (size= 0 ) PTS = 1188000
 Write video frame (size= 0 ) PTS = 1194000
+Write audio frame 738304(size= 0 )
+Write audio frame 739328(size= 0 )
+Write audio frame 740352(size= 0 )
+Write audio frame 741376(size= 0 )
+Write video frame (size= 0 ) PTS = 1200000
+Write audio frame 742400(size= 0 )
+Write audio frame 743424(size= 0 )
+Write audio frame 744448(size= 0 )
+Write audio frame 745472(size= 0 )
+Write video frame (size= 0 ) PTS = 1206000
+Write audio frame 746496(size= 0 )
+Write audio frame 747520(size= 0 )
+Write audio frame 748544(size= 0 )
+Write audio frame 749568(size= 0 )
+Write video frame (size= 0 ) PTS = 1212000
+Write video frame (size= 0 ) PTS = 1218000
+Write audio frame 750592(size= 0 )
+Write audio frame 751616(size= 0 )
+Write audio frame 752640(size= 0 )
+Write audio frame 753664(size= 0 )
+Write video frame (size= 0 ) PTS = 1224000
+Write audio frame 754688(size= 0 )
+Write audio frame 755712(size= 0 )
+Write audio frame 756736(size= 0 )
+Write audio frame 757760(size= 0 )
+Write video frame (size= 0 ) PTS = 1230000
+Write video frame (size= 0 ) PTS = 1236000
+Write audio frame 758784(size= 0 )
+Write audio frame 759808(size= 0 )
+Write audio frame 760832(size= 0 )
+Write audio frame 761856(size= 0 )
+Write video frame (size= 0 ) PTS = 1242000
+Write audio frame 762880(size= 0 )
+Write audio frame 763904(size= 0 )
+Write audio frame 764928(size= 0 )
+Write audio frame 765952(size= 0 )
+Write video frame (size= 0 ) PTS = 1248000
+Write audio frame 766976(size= 0 )
+Write audio frame 768000(size= 0 )
+Write audio frame 769024(size= 0 )
+Write audio frame 770048(size= 0 )
+Write video frame (size= 0 ) PTS = 1254000
+Write video frame (size= 0 ) PTS = 1260000
+Write audio frame 771072(size= 0 )
+Write audio frame 772096(size= 0 )
+Write audio frame 773120(size= 0 )
+Write audio frame 774144(size= 0 )
+Write video frame (size= 0 ) PTS = 1266000
+Write audio frame 775168(size= 0 )
+Write audio frame 776192(size= 0 )
+Write audio frame 777216(size= 0 )
+Write audio frame 778240(size= 0 )
+Write video frame (size= 0 ) PTS = 1272000
+Write video frame (size= 0 ) PTS = 1278000
+Write audio frame 779264(size= 0 )
+Write audio frame 780288(size= 0 )
+Write audio frame 781312(size= 0 )
+Write audio frame 782336(size= 0 )
+Write video frame (size= 47 ) PTS = 1284000
+Write audio frame 783360(size= 0 )
+Write audio frame 784384(size= 0 )
+Write audio frame 785408(size= 0 )
+Write audio frame 786432(size= 0 )
+Write video frame (size= 0 ) PTS = 1290000
+Write audio frame 787456(size= 0 )
+Write audio frame 788480(size= 0 )
+Write audio frame 789504(size= 0 )
+Write audio frame 790528(size= 0 )
+Write video frame (size= 0 ) PTS = 1296000
+Write video frame (size= 0 ) PTS = 1302000
+Write audio frame 791552(size= 0 )
+Write audio frame 792576(size= 0 )
+Write audio frame 793600(size= 0 )
+Write audio frame 794624(size= 0 )
+Write video frame (size= 0 ) PTS = 1308000
+Write audio frame 795648(size= 0 )
+Write audio frame 796672(size= 0 )
+Write audio frame 797696(size= 0 )
+Write audio frame 798720(size= 0 )
+Write video frame (size= 0 ) PTS = 1314000
+Write audio frame 799744(size= 0 )
+Write audio frame 800768(size= 0 )
+Write audio frame 801792(size= 0 )
+Write audio frame 802816(size= 0 )
+Write video frame (size= 0 ) PTS = 1320000
+Write video frame (size= 0 ) PTS = 1326000
+Write audio frame 803840(size= 0 )
+Write audio frame 804864(size= 0 )
+Write audio frame 805888(size= 0 )
+Write audio frame 806912(size= 0 )
+Write video frame (size= 0 ) PTS = 1332000
+Write audio frame 807936(size= 0 )
+Write audio frame 808960(size= 0 )
+Write audio frame 809984(size= 0 )
+Write audio frame 811008(size= 0 )
+Write video frame (size= 0 ) PTS = 1338000
+Write video frame (size= 0 ) PTS = 1344000
+Write audio frame 812032(size= 0 )
+Write audio frame 813056(size= 0 )
+Write audio frame 814080(size= 0 )
+Write audio frame 815104(size= 0 )
+Write video frame (size= 0 ) PTS = 1350000
+Write audio frame 816128(size= 0 )
+Write audio frame 817152(size= 0 )
+Write audio frame 818176(size= 0 )
+Write audio frame 819200(size= 0 )
+Write video frame (size= 0 ) PTS = 1356000
+Write audio frame 820224(size= 0 )
+Write audio frame 821248(size= 0 )
+Write audio frame 822272(size= 0 )
+Write audio frame 823296(size= 0 )
+Write video frame (size= 0 ) PTS = 1362000
+Write video frame (size= 0 ) PTS = 1368000
+Write audio frame 824320(size= 0 )
+Write audio frame 825344(size= 0 )
+Write audio frame 826368(size= 0 )
+Write audio frame 827392(size= 0 )
+Write video frame (size= 0 ) PTS = 1374000
+Write audio frame 828416(size= 0 )
+Write audio frame 829440(size= 0 )
+Write audio frame 830464(size= 0 )
+Write audio frame 831488(size= 0 )
+Write video frame (size= 0 ) PTS = 1380000
+Write video frame (size= 0 ) PTS = 1386000
+Write audio frame 832512(size= 0 )
+Write audio frame 833536(size= 0 )
+Write audio frame 834560(size= 0 )
+Write audio frame 835584(size= 0 )
+Write video frame (size= 0 ) PTS = 1392000
+Write audio frame 836608(size= 0 )
+Write audio frame 837632(size= 0 )
+Write audio frame 838656(size= 0 )
+Write audio frame 839680(size= 0 )
+Write video frame (size= 0 ) PTS = 1398000
+Write audio frame 840704(size= 0 )
+Write audio frame 841728(size= 0 )
+Write audio frame 842752(size= 0 )
+Write audio frame 843776(size= 0 )
+Write video frame (size= 0 ) PTS = 1404000
+Write video frame (size= 0 ) PTS = 1410000
+Write audio frame 844800(size= 0 )
+Write audio frame 845824(size= 0 )
+Write audio frame 846848(size= 0 )
+Write audio frame 847872(size= 0 )
+Write video frame (size= 0 ) PTS = 1416000
+Write audio frame 848896(size= 0 )
+Write audio frame 849920(size= 0 )
+Write audio frame 850944(size= 0 )
+Write audio frame 851968(size= 0 )
+Write video frame (size= 0 ) PTS = 1422000
+Write audio frame 852992(size= 0 )
+Write audio frame 854016(size= 0 )
+Write audio frame 855040(size= 0 )
+Write audio frame 856064(size= 0 )
+Write video frame (size= 0 ) PTS = 1428000
+Write video frame (size= 0 ) PTS = 1434000
+Write audio frame 857088(size= 0 )
+Write audio frame 858112(size= 0 )
+Write audio frame 859136(size= 0 )
+Write audio frame 860160(size= 0 )
+Write video frame (size= 0 ) PTS = 1440000
+Write audio frame 861184(size= 0 )
+Write audio frame 862208(size= 0 )
+Write audio frame 863232(size= 0 )
+Write audio frame 864256(size= 0 )
+Write video frame (size= 0 ) PTS = 1446000
+Write video frame (size= 0 ) PTS = 1452000
+Write audio frame 865280(size= 0 )
+Write audio frame 866304(size= 0 )
+Write audio frame 867328(size= 0 )
+Write audio frame 868352(size= 0 )
+Write video frame (size= 0 ) PTS = 1458000
+Write audio frame 869376(size= 0 )
+Write audio frame 870400(size= 0 )
+Write audio frame 871424(size= 0 )
+Write audio frame 872448(size= 0 )
+Write video frame (size= 47 ) PTS = 1464000
+Write video frame (size= 0 ) PTS = 1470000
+Write audio frame 873472(size= 0 )
+Write audio frame 874496(size= 0 )
+Write audio frame 875520(size= 0 )
+Write audio frame 876544(size= 0 )
+Write video frame (size= 0 ) PTS = 1476000
+Write audio frame 877568(size= 0 )
+Write audio frame 878592(size= 0 )
+Write audio frame 879616(size= 0 )
+Write audio frame 880640(size= 0 )
+Write video frame (size= 0 ) PTS = 1482000
+Write audio frame 881664(size= 0 )
+Write audio frame 882688(size= 0 )
+Write audio frame 883712(size= 0 )
+Write audio frame 884736(size= 0 )
+Write video frame (size= 0 ) PTS = 1488000
+Write video frame (size= 0 ) PTS = 1494000
+Write audio frame 885760(size= 0 )
+Write audio frame 886784(size= 0 )
+Write audio frame 887808(size= 0 )
+Write audio frame 888832(size= 0 )
+Write video frame (size= 0 ) PTS = 1500000
+Write audio frame 889856(size= 0 )
+Write audio frame 890880(size= 0 )
+Write audio frame 891904(size= 0 )
+Write audio frame 892928(size= 0 )
+Write video frame (size= 0 ) PTS = 1506000
+Write audio frame 893952(size= 0 )
+Write video frame (size= 0 ) PTS = 1512000
+Write audio frame 894976(size= 0 )
+Write audio frame 896000(size= 0 )
+Write audio frame 897024(size= 0 )
+Write video frame (size= 0 ) PTS = 1518000
+Write audio frame 898048(size= 0 )
+Write audio frame 899072(size= 0 )
+Write audio frame 900096(size= 0 )
+Write audio frame 901120(size= 0 )
+Write video frame (size= 0 ) PTS = 1524000
+Write audio frame 902144(size= 0 )
+Write audio frame 903168(size= 0 )
+Write audio frame 904192(size= 0 )
+Write audio frame 905216(size= 0 )
+Write video frame (size= 0 ) PTS = 1530000
+Write video frame (size= 0 ) PTS = 1536000
+Write audio frame 906240(size= 0 )
+Write audio frame 907264(size= 0 )
+Write audio frame 908288(size= 0 )
+Write audio frame 909312(size= 0 )
+Write video frame (size= 0 ) PTS = 1542000
+Write audio frame 910336(size= 0 )
+Write audio frame 911360(size= 0 )
+Write audio frame 912384(size= 0 )
+Write audio frame 913408(size= 0 )
+Write video frame (size= 0 ) PTS = 1548000
+Write audio frame 914432(size= 0 )
+Write audio frame 915456(size= 0 )
+Write audio frame 916480(size= 0 )
+Write audio frame 917504(size= 0 )
+Write video frame (size= 0 ) PTS = 1554000
+Write video frame (size= 0 ) PTS = 1560000
+Write audio frame 918528(size= 0 )
+Write audio frame 919552(size= 0 )
+Write audio frame 920576(size= 0 )
+Write audio frame 921600(size= 0 )
+Write video frame (size= 0 ) PTS = 1566000
+Write audio frame 922624(size= 0 )
+Write audio frame 923648(size= 0 )
+Write audio frame 924672(size= 0 )
+Write audio frame 925696(size= 0 )
+Write video frame (size= 0 ) PTS = 1572000
+Write video frame (size= 0 ) PTS = 1578000
+Write audio frame 926720(size= 0 )
+Write audio frame 927744(size= 0 )
+Write audio frame 928768(size= 0 )
+Write audio frame 929792(size= 0 )
+Write video frame (size= 0 ) PTS = 1584000
+Write audio frame 930816(size= 0 )
+Write audio frame 931840(size= 0 )
+Write audio frame 932864(size= 0 )
+Write audio frame 933888(size= 0 )
+Write video frame (size= 0 ) PTS = 1590000
+Write audio frame 934912(size= 0 )
+Write audio frame 935936(size= 0 )
+Write audio frame 936960(size= 0 )
+Write audio frame 937984(size= 0 )
+Write video frame (size= 0 ) PTS = 1596000
+Write video frame (size= 0 ) PTS = 1602000
+Write audio frame 939008(size= 0 )
+Write audio frame 940032(size= 0 )
+Write audio frame 941056(size= 0 )
+Write audio frame 942080(size= 0 )
+Write video frame (size= 0 ) PTS = 1608000
+Write audio frame 943104(size= 0 )
+Write audio frame 944128(size= 0 )
+Write audio frame 945152(size= 0 )
+Write audio frame 946176(size= 0 )
+Write video frame (size= 0 ) PTS = 1614000
+Write video frame (size= 0 ) PTS = 1620000
+Write audio frame 947200(size= 0 )
+Write audio frame 948224(size= 0 )
+Write audio frame 949248(size= 0 )
+Write audio frame 950272(size= 0 )
+Write video frame (size= 0 ) PTS = 1626000
+Write audio frame 951296(size= 0 )
+Write audio frame 952320(size= 0 )
+Write audio frame 953344(size= 0 )
+Write audio frame 954368(size= 0 )
+Write video frame (size= 0 ) PTS = 1632000
+Write audio frame 955392(size= 0 )
+Write audio frame 956416(size= 0 )
+Write audio frame 957440(size= 0 )
+Write audio frame 958464(size= 0 )
+Write video frame (size= 0 ) PTS = 1638000
+Write video frame (size= 46 ) PTS = 1644000
+Write audio frame 959488(size= 0 )
+Write audio frame 960512(size= 0 )
+Write audio frame 961536(size= 0 )
+Write audio frame 962560(size= 0 )
+Write video frame (size= 0 ) PTS = 1650000
+Write audio frame 963584(size= 0 )
+Write audio frame 964608(size= 0 )
+Write audio frame 965632(size= 0 )
+Write audio frame 966656(size= 0 )
+Write video frame (size= 0 ) PTS = 1656000
+Write video frame (size= 0 ) PTS = 1662000
+Write audio frame 967680(size= 0 )
+Write audio frame 968704(size= 0 )
+Write audio frame 969728(size= 0 )
+Write audio frame 970752(size= 0 )
+Write video frame (size= 0 ) PTS = 1668000
+Write audio frame 971776(size= 0 )
+Write audio frame 972800(size= 0 )
+Write audio frame 973824(size= 0 )
+Write audio frame 974848(size= 0 )
+Write video frame (size= 0 ) PTS = 1674000
+Write audio frame 975872(size= 0 )
+Write audio frame 976896(size= 0 )
+Write audio frame 977920(size= 0 )
+Write audio frame 978944(size= 0 )
+Write video frame (size= 0 ) PTS = 1680000
+Write video frame (size= 0 ) PTS = 1686000
+Write audio frame 979968(size= 0 )
+Write audio frame 980992(size= 0 )
+Write audio frame 982016(size= 0 )
+Write audio frame 983040(size= 0 )
+Write video frame (size= 0 ) PTS = 1692000
+Write audio frame 984064(size= 0 )
+Write audio frame 985088(size= 0 )
+Write audio frame 986112(size= 0 )
+Write audio frame 987136(size= 0 )
+Write video frame (size= 0 ) PTS = 1698000
+Write video frame (size= 0 ) PTS = 1704000
+Write audio frame 988160(size= 0 )
+Write audio frame 989184(size= 0 )
+Write audio frame 990208(size= 0 )
+Write audio frame 991232(size= 0 )
+Write video frame (size= 0 ) PTS = 1710000
+Write audio frame 992256(size= 0 )
+Write audio frame 993280(size= 0 )
+Write audio frame 994304(size= 0 )
+Write audio frame 995328(size= 0 )
+Write video frame (size= 0 ) PTS = 1716000
+Write audio frame 996352(size= 0 )
+Write audio frame 997376(size= 0 )
+Write audio frame 998400(size= 0 )
+Write audio frame 999424(size= 0 )
+Write video frame (size= 0 ) PTS = 1722000
+Write video frame (size= 0 ) PTS = 1728000
+Write audio frame 1000448(size= 0 )
+Write audio frame 1001472(size= 0 )
+Write audio frame 1002496(size= 0 )
+Write audio frame 1003520(size= 0 )
+Write video frame (size= 0 ) PTS = 1734000
+Write audio frame 1004544(size= 0 )
+Write audio frame 1005568(size= 0 )
+Write audio frame 1006592(size= 0 )
+Write audio frame 1007616(size= 0 )
+Write video frame (size= 0 ) PTS = 1740000
+Write audio frame 1008640(size= 0 )
+Write audio frame 1009664(size= 0 )
+Write audio frame 1010688(size= 0 )
+Write audio frame 1011712(size= 0 )
+Write video frame (size= 151 ) PTS = 1746000
+Write video frame (size= 187 ) PTS = 1752000
+Write audio frame 1012736(size= 0 )
+Write audio frame 1013760(size= 0 )
+Write audio frame 1014784(size= 0 )
+Write audio frame 1015808(size= 0 )
+Write video frame (size= 142 ) PTS = 1758000
+Write audio frame 1016832(size= 0 )
+Write audio frame 1017856(size= 0 )
+Write audio frame 1018880(size= 0 )
+Write audio frame 1019904(size= 0 )
+Write video frame (size= 1 ) PTS = 1764000
+Write video frame (size= 0 ) PTS = 1770000
+Write audio frame 1020928(size= 0 )
+Write audio frame 1021952(size= 0 )
+Write audio frame 1022976(size= 0 )
+Write audio frame 1024000(size= 0 )
+Write video frame (size= 0 ) PTS = 1776000
+Write audio frame 1025024(size= 0 )
+Write audio frame 1026048(size= 0 )
+Write audio frame 1027072(size= 0 )
+Write audio frame 1028096(size= 0 )
+Write video frame (size= 0 ) PTS = 1782000
+Write audio frame 1029120(size= 0 )
+Write audio frame 1030144(size= 0 )
+Write audio frame 1031168(size= 0 )
+Write audio frame 1032192(size= 0 )
+Write video frame (size= 0 ) PTS = 1788000
+Write video frame (size= 0 ) PTS = 1794000
+Write audio frame 1033216(size= 0 )
+Write audio frame 1034240(size= 0 )
+Write audio frame 1035264(size= 0 )
+Write audio frame 1036288(size= 0 )
+Write video frame (size= 0 ) PTS = 1800000
+Write audio frame 1037312(size= 0 )
+Write audio frame 1038336(size= 0 )
+Write audio frame 1039360(size= 0 )
+Write audio frame 1040384(size= 0 )
+Write video frame (size= 0 ) PTS = 1806000
+Write video frame (size= 0 ) PTS = 1812000
+Write audio frame 1041408(size= 0 )
+Write audio frame 1042432(size= 0 )
+Write audio frame 1043456(size= 0 )
+Write audio frame 1044480(size= 0 )
+Write video frame (size= 0 ) PTS = 1818000
+Write audio frame 1045504(size= 0 )
+Write audio frame 1046528(size= 0 )
+Write audio frame 1047552(size= 0 )
+Write audio frame 1048576(size= 0 )
+Write video frame (size= 1 ) PTS = 1824000
+Write audio frame 1049600(size= 0 )
+Write audio frame 1050624(size= 0 )
+Write audio frame 1051648(size= 0 )
+Write audio frame 1052672(size= 0 )
+Write video frame (size= 0 ) PTS = 1830000
+Write video frame (size= 0 ) PTS = 1836000
+Write audio frame 1053696(size= 0 )
+Write audio frame 1054720(size= 0 )
+Write audio frame 1055744(size= 0 )
+Write audio frame 1056768(size= 0 )
+Write video frame (size= 0 ) PTS = 1842000
+Write audio frame 1057792(size= 0 )
+Write audio frame 1058816(size= 0 )
+Write audio frame 1059840(size= 0 )
+Write audio frame 1060864(size= 0 )
+Write video frame (size= 0 ) PTS = 1848000
+Write video frame (size= 0 ) PTS = 1854000
+Write audio frame 1061888(size= 0 )
+Write audio frame 1062912(size= 0 )
+Write audio frame 1063936(size= 0 )
+Write audio frame 1064960(size= 0 )
+Write video frame (size= 0 ) PTS = 1860000
+Write audio frame 1065984(size= 0 )
+Write audio frame 1067008(size= 0 )
+Write audio frame 1068032(size= 0 )
+Write audio frame 1069056(size= 0 )
+Write video frame (size= 0 ) PTS = 1866000
+Write audio frame 1070080(size= 0 )
+Write audio frame 1071104(size= 0 )
+Write audio frame 1072128(size= 0 )
+Write audio frame 1073152(size= 0 )
+Write video frame (size= 0 ) PTS = 1872000
+Write video frame (size= 0 ) PTS = 1878000
+Write audio frame 1074176(size= 0 )
+Write audio frame 1075200(size= 0 )
+Write audio frame 1076224(size= 0 )
+Write audio frame 1077248(size= 0 )
+Write video frame (size= 0 ) PTS = 1884000
+Write audio frame 1078272(size= 0 )
+Write audio frame 1079296(size= 0 )
+Write audio frame 1080320(size= 0 )
+Write audio frame 1081344(size= 0 )
+Write video frame (size= 0 ) PTS = 1890000
+Write video frame (size= 0 ) PTS = 1896000
+Write audio frame 1082368(size= 0 )
+Write audio frame 1083392(size= 0 )
+Write audio frame 1084416(size= 0 )
+Write audio frame 1085440(size= 0 )
+Write video frame (size= 0 ) PTS = 1902000
+Write audio frame 1086464(size= 0 )
+Write audio frame 1087488(size= 0 )
+Write audio frame 1088512(size= 0 )
+Write audio frame 1089536(size= 0 )
+Write video frame (size= 0 ) PTS = 1908000
+Write audio frame 1090560(size= 0 )
+Write audio frame 1091584(size= 0 )
+Write audio frame 1092608(size= 0 )
+Write audio frame 1093632(size= 0 )
+Write video frame (size= 0 ) PTS = 1914000
+Write video frame (size= 0 ) PTS = 1920000
+Write audio frame 1094656(size= 0 )
+Write audio frame 1095680(size= 0 )
+Write audio frame 1096704(size= 0 )
+Write audio frame 1097728(size= 0 )
+Write video frame (size= 0 ) PTS = 1926000
+Write audio frame 1098752(size= 0 )
+Write audio frame 1099776(size= 0 )
+Write audio frame 1100800(size= 0 )
+Write audio frame 1101824(size= 0 )
+Write video frame (size= 167 ) PTS = 1932000
+Write video frame (size= 1 ) PTS = 1938000
+Write audio frame 1102848(size= 0 )
+Write audio frame 1103872(size= 0 )
+Write audio frame 1104896(size= 0 )
+Write audio frame 1105920(size= 0 )
+Write video frame (size= 0 ) PTS = 1944000
+Write audio frame 1106944(size= 0 )
+Write audio frame 1107968(size= 0 )
+Write audio frame 1108992(size= 0 )
+Write audio frame 1110016(size= 0 )
+Write video frame (size= 0 ) PTS = 1950000
+Write audio frame 1111040(size= 0 )
+Write audio frame 1112064(size= 0 )
+Write audio frame 1113088(size= 0 )
+Write audio frame 1114112(size= 0 )
+Write video frame (size= 0 ) PTS = 1956000
+Write video frame (size= 0 ) PTS = 1962000
+Write audio frame 1115136(size= 0 )
+Write audio frame 1116160(size= 0 )
+Write audio frame 1117184(size= 0 )
+Write audio frame 1118208(size= 0 )
+Write video frame (size= 0 ) PTS = 1968000
+Write audio frame 1119232(size= 0 )
+Write audio frame 1120256(size= 0 )
+Write audio frame 1121280(size= 0 )
+Write audio frame 1122304(size= 0 )
+Write video frame (size= 0 ) PTS = 1974000
+Write video frame (size= 0 ) PTS = 1980000
+Write audio frame 1123328(size= 0 )
+Write audio frame 1124352(size= 0 )
+Write audio frame 1125376(size= 0 )
+Write audio frame 1126400(size= 0 )
+Write video frame (size= 0 ) PTS = 1986000
+Write audio frame 1127424(size= 0 )
+Write audio frame 1128448(size= 0 )
+Write audio frame 1129472(size= 0 )
+Write audio frame 1130496(size= 0 )
+Write video frame (size= 0 ) PTS = 1992000
+Write audio frame 1131520(size= 0 )
+Write audio frame 1132544(size= 0 )
+Write audio frame 1133568(size= 0 )
+Write audio frame 1134592(size= 0 )
+Write video frame (size= 0 ) PTS = 1998000
+Write video frame (size= 0 ) PTS = 2004000
+Write audio frame 1135616(size= 0 )
+Write audio frame 1136640(size= 0 )
+Write audio frame 1137664(size= 0 )
+Write audio frame 1138688(size= 0 )
+Write video frame (size= 0 ) PTS = 2010000
+Write audio frame 1139712(size= 0 )
+Write audio frame 1140736(size= 0 )
+Write audio frame 1141760(size= 0 )
+Write audio frame 1142784(size= 0 )
+Write video frame (size= 0 ) PTS = 2016000
+Write audio frame 1143808(size= 0 )
+Write audio frame 1144832(size= 0 )
+Write audio frame 1145856(size= 0 )
+Write audio frame 1146880(size= 0 )
+Write video frame (size= 0 ) PTS = 2022000
+Write video frame (size= 0 ) PTS = 2028000
+Write audio frame 1147904(size= 0 )
+Write audio frame 1148928(size= 0 )
+Write audio frame 1149952(size= 0 )
+Write audio frame 1150976(size= 0 )
+Write video frame (size= 0 ) PTS = 2034000
+Write audio frame 1152000(size= 0 )
+Write audio frame 1153024(size= 0 )
+Write audio frame 1154048(size= 0 )
+Write audio frame 1155072(size= 0 )
+Write video frame (size= 0 ) PTS = 2040000
+Write video frame (size= 0 ) PTS = 2046000
+Write audio frame 1156096(size= 0 )
+Write audio frame 1157120(size= 0 )
+Write audio frame 1158144(size= 0 )
+Write audio frame 1159168(size= 0 )
+Write video frame (size= 0 ) PTS = 2052000
+Write audio frame 1160192(size= 0 )
+Write audio frame 1161216(size= 0 )
+Write audio frame 1162240(size= 0 )
+Write audio frame 1163264(size= 0 )
+Write video frame (size= 0 ) PTS = 2058000
+Write audio frame 1164288(size= 0 )
+Write audio frame 1165312(size= 0 )
+Write audio frame 1166336(size= 0 )
+Write audio frame 1167360(size= 0 )
+Write video frame (size= 0 ) PTS = 2064000
+Write video frame (size= 0 ) PTS = 2070000
+Write audio frame 1168384(size= 0 )
+Write audio frame 1169408(size= 0 )
+Write audio frame 1170432(size= 0 )
+Write audio frame 1171456(size= 0 )
+Write video frame (size= 0 ) PTS = 2076000
+Write audio frame 1172480(size= 0 )
+Write audio frame 1173504(size= 0 )
+Write audio frame 1174528(size= 0 )
+Write audio frame 1175552(size= 0 )
+Write video frame (size= 0 ) PTS = 2082000
+Write video frame (size= 0 ) PTS = 2088000
+Write audio frame 1176576(size= 0 )
+Write audio frame 1177600(size= 0 )
+Write audio frame 1178624(size= 0 )
+Write audio frame 1179648(size= 0 )
+Write video frame (size= 0 ) PTS = 2094000
+Write audio frame 1180672(size= 0 )
+Write audio frame 1181696(size= 0 )
+Write audio frame 1182720(size= 0 )
+Write audio frame 1183744(size= 0 )
+Write video frame (size= 0 ) PTS = 2100000
+Write audio frame 1184768(size= 0 )
+Write audio frame 1185792(size= 0 )
+Write audio frame 1186816(size= 0 )
+Write audio frame 1187840(size= 0 )
+Write video frame (size= 0 ) PTS = 2106000
+Write video frame (size= 167 ) PTS = 2112000
+Write audio frame 1188864(size= 0 )
+Write audio frame 1189888(size= 0 )
+Write audio frame 1190912(size= 0 )
+Write audio frame 1191936(size= 0 )
+Write video frame (size= 1 ) PTS = 2118000
+Write audio frame 1192960(size= 0 )
+Write audio frame 1193984(size= 0 )
+Write audio frame 1195008(size= 0 )
+Write audio frame 1196032(size= 0 )
+Write video frame (size= 0 ) PTS = 2124000
+Write video frame (size= 0 ) PTS = 2130000
+Write audio frame 1197056(size= 0 )
+Write audio frame 1198080(size= 0 )
+Write audio frame 1199104(size= 0 )
+Write audio frame 1200128(size= 0 )
+Write video frame (size= 0 ) PTS = 2136000
+Write audio frame 1201152(size= 0 )
+Write audio frame 1202176(size= 0 )
+Write audio frame 1203200(size= 0 )
+Write audio frame 1204224(size= 0 )
+Write video frame (size= 0 ) PTS = 2142000
+Write audio frame 1205248(size= 0 )
+Write audio frame 1206272(size= 0 )
+Write audio frame 1207296(size= 0 )
+Write audio frame 1208320(size= 0 )
+Write video frame (size= 0 ) PTS = 2148000
+Write video frame (size= 0 ) PTS = 2154000
+Write audio frame 1209344(size= 0 )
+Write audio frame 1210368(size= 0 )
+Write audio frame 1211392(size= 0 )
+Write audio frame 1212416(size= 0 )
+Write video frame (size= 0 ) PTS = 2160000
+Write audio frame 1213440(size= 0 )
+Write audio frame 1214464(size= 0 )
+Write audio frame 1215488(size= 0 )
+Write audio frame 1216512(size= 0 )
+Write video frame (size= 0 ) PTS = 2166000
+Write audio frame 1217536(size= 0 )
+Write audio frame 1218560(size= 0 )
+Write audio frame 1219584(size= 0 )
+Write video frame (size= 0 ) PTS = 2172000
+Write audio frame 1220608(size= 0 )
+Write video frame (size= 0 ) PTS = 2178000
+Write audio frame 1221632(size= 0 )
+Write audio frame 1222656(size= 0 )
+Write audio frame 1223680(size= 0 )
+Write audio frame 1224704(size= 0 )
+Write video frame (size= 0 ) PTS = 2184000
+Write audio frame 1225728(size= 0 )
+Write audio frame 1226752(size= 0 )
+Write audio frame 1227776(size= 0 )
+Write audio frame 1228800(size= 0 )
+Write video frame (size= 0 ) PTS = 2190000
+Write audio frame 1229824(size= 0 )
+Write audio frame 1230848(size= 0 )
+Write audio frame 1231872(size= 0 )
+Write audio frame 1232896(size= 0 )
+Write video frame (size= 0 ) PTS = 2196000
+Write video frame (size= 0 ) PTS = 2202000
+Write audio frame 1233920(size= 0 )
+Write audio frame 1234944(size= 0 )
+Write audio frame 1235968(size= 0 )
+Write audio frame 1236992(size= 0 )
+Write video frame (size= 0 ) PTS = 2208000
+Write video frame (size= 0 ) PTS = 2214000
+Write audio frame 1238016(size= 0 )
+Write audio frame 1239040(size= 0 )
+Write audio frame 1240064(size= 0 )
+Write audio frame 1241088(size= 0 )
+Write video frame (size= 0 ) PTS = 2220000
+Write audio frame 1242112(size= 0 )
+Write audio frame 1243136(size= 0 )
+Write audio frame 1244160(size= 0 )
+Write audio frame 1245184(size= 0 )
+Write video frame (size= 0 ) PTS = 2226000
+Write audio frame 1246208(size= 0 )
+Write audio frame 1247232(size= 0 )
+Write audio frame 1248256(size= 0 )
+Write audio frame 1249280(size= 0 )
+Write video frame (size= 0 ) PTS = 2232000
+Write video frame (size= 0 ) PTS = 2238000
+Write audio frame 1250304(size= 0 )
+Write audio frame 1251328(size= 0 )
+Write audio frame 1252352(size= 0 )
+Write audio frame 1253376(size= 0 )
+Write video frame (size= 0 ) PTS = 2244000
+Write audio frame 1254400(size= 0 )
+Write audio frame 1255424(size= 0 )
+Write audio frame 1256448(size= 0 )
+Write audio frame 1257472(size= 0 )
+Write video frame (size= 0 ) PTS = 2250000
+Write audio frame 1258496(size= 0 )
+Write audio frame 1259520(size= 0 )
+Write audio frame 1260544(size= 0 )
+Write audio frame 1261568(size= 0 )
+Write video frame (size= 0 ) PTS = 2256000
+Write video frame (size= 0 ) PTS = 2262000
+Write audio frame 1262592(size= 0 )
+Write audio frame 1263616(size= 0 )
+Write audio frame 1264640(size= 0 )
+Write audio frame 1265664(size= 0 )
+Write video frame (size= 0 ) PTS = 2268000
+Write audio frame 1266688(size= 0 )
+Write audio frame 1267712(size= 0 )
+Write audio frame 1268736(size= 0 )
+Write audio frame 1269760(size= 0 )
+Write video frame (size= 0 ) PTS = 2274000
+Write video frame (size= 0 ) PTS = 2280000
+Write audio frame 1270784(size= 0 )
+Write audio frame 1271808(size= 0 )
+Write audio frame 1272832(size= 0 )
+Write audio frame 1273856(size= 0 )
+Write video frame (size= 0 ) PTS = 2286000
+Write audio frame 1274880(size= 0 )
+Write audio frame 1275904(size= 0 )
+Write audio frame 1276928(size= 0 )
+Write audio frame 1277952(size= 0 )
+Write video frame (size= 167 ) PTS = 2292000
+Write audio frame 1278976(size= 0 )
+Write audio frame 1280000(size= 0 )
+Write audio frame 1281024(size= 0 )
+Write audio frame 1282048(size= 0 )
+Write video frame (size= 1 ) PTS = 2298000
+Write video frame (size= 0 ) PTS = 2304000
+Write audio frame 1283072(size= 0 )
+Write audio frame 1284096(size= 0 )
+Write audio frame 1285120(size= 0 )
+Write audio frame 1286144(size= 0 )
+Write video frame (size= 0 ) PTS = 2310000
+Write audio frame 1287168(size= 0 )
+Write audio frame 1288192(size= 0 )
+Write audio frame 1289216(size= 0 )
+Write audio frame 1290240(size= 0 )
+Write video frame (size= 0 ) PTS = 2316000
+Write video frame (size= 0 ) PTS = 2322000
+Write audio frame 1291264(size= 0 )
+Write audio frame 1292288(size= 0 )
+Write audio frame 1293312(size= 0 )
+Write audio frame 1294336(size= 0 )
+Write video frame (size= 0 ) PTS = 2328000
+Write audio frame 1295360(size= 0 )
+Write audio frame 1296384(size= 0 )
+Write audio frame 1297408(size= 0 )
+Write audio frame 1298432(size= 0 )
+Write video frame (size= 0 ) PTS = 2334000
+Write audio frame 1299456(size= 0 )
+Write audio frame 1300480(size= 0 )
+Write audio frame 1301504(size= 0 )
+Write audio frame 1302528(size= 0 )
+Write video frame (size= 0 ) PTS = 2340000
+Write video frame (size= 0 ) PTS = 2346000
+Write audio frame 1303552(size= 0 )
+Write audio frame 1304576(size= 0 )
+Write audio frame 1305600(size= 0 )
+Write audio frame 1306624(size= 0 )
+Write video frame (size= 0 ) PTS = 2352000
+Write audio frame 1307648(size= 0 )
+Write audio frame 1308672(size= 0 )
+Write audio frame 1309696(size= 0 )
+Write audio frame 1310720(size= 0 )
+Write video frame (size= 0 ) PTS = 2358000
+Write video frame (size= 0 ) PTS = 2364000
+Write audio frame 1311744(size= 0 )
+Write audio frame 1312768(size= 0 )
+Write audio frame 1313792(size= 0 )
+Write audio frame 1314816(size= 0 )
+Write video frame (size= 0 ) PTS = 2370000
+Write audio frame 1315840(size= 0 )
+Write audio frame 1316864(size= 0 )
+Write audio frame 1317888(size= 0 )
+Write audio frame 1318912(size= 0 )
+Write video frame (size= 0 ) PTS = 2376000
+Write audio frame 1319936(size= 0 )
+Write audio frame 1320960(size= 0 )
+Write audio frame 1321984(size= 0 )
+Write audio frame 1323008(size= 0 )
+Write video frame (size= 0 ) PTS = 2382000
+Write video frame (size= 0 ) PTS = 2388000
+Write audio frame 1324032(size= 0 )
+Write audio frame 1325056(size= 0 )
+Write audio frame 1326080(size= 0 )
+Write audio frame 1327104(size= 0 )
+Write video frame (size= 0 ) PTS = 2394000
+Write audio frame 1328128(size= 0 )
+Write audio frame 1329152(size= 0 )
+Write audio frame 1330176(size= 0 )
+Write audio frame 1331200(size= 0 )
+Write video frame (size= 0 ) PTS = 2400000
+Write video frame (size= 0 ) PTS = 2406000
+Write audio frame 1332224(size= 0 )
+Write audio frame 1333248(size= 0 )
+Write audio frame 1334272(size= 0 )
+Write audio frame 1335296(size= 0 )
+Write video frame (size= 0 ) PTS = 2412000
+Write audio frame 1336320(size= 0 )
+Write audio frame 1337344(size= 0 )
+Write audio frame 1338368(size= 0 )
+Write audio frame 1339392(size= 0 )
+Write video frame (size= 0 ) PTS = 2418000
+Write audio frame 1340416(size= 0 )
+Write audio frame 1341440(size= 0 )
+Write audio frame 1342464(size= 0 )
+Write audio frame 1343488(size= 0 )
+Write video frame (size= 0 ) PTS = 2424000
+Write video frame (size= 0 ) PTS = 2430000
+Write audio frame 1344512(size= 0 )
+Write audio frame 1345536(size= 0 )
+Write audio frame 1346560(size= 0 )
+Write audio frame 1347584(size= 0 )
+Write video frame (size= 0 ) PTS = 2436000
+Write audio frame 1348608(size= 0 )
+Write audio frame 1349632(size= 0 )
+Write audio frame 1350656(size= 0 )
+Write audio frame 1351680(size= 0 )
+Write video frame (size= 0 ) PTS = 2442000
+Write audio frame 1352704(size= 0 )
+Write audio frame 1353728(size= 0 )
+Write audio frame 1354752(size= 0 )
+Write audio frame 1355776(size= 0 )
+Write video frame (size= 0 ) PTS = 2448000
+Write video frame (size= 0 ) PTS = 2454000
+Write audio frame 1356800(size= 0 )
+Write audio frame 1357824(size= 0 )
+Write audio frame 1358848(size= 0 )
+Write audio frame 1359872(size= 0 )
+Write video frame (size= 0 ) PTS = 2460000
+Write audio frame 1360896(size= 0 )
+Write audio frame 1361920(size= 0 )
+Write audio frame 1362944(size= 0 )
+Write audio frame 1363968(size= 0 )
+Write video frame (size= 0 ) PTS = 2466000
+Write video frame (size= 161 ) PTS = 2472000
+Write audio frame 1364992(size= 0 )
+Write audio frame 1366016(size= 0 )
+Write audio frame 1367040(size= 0 )
+Write audio frame 1368064(size= 0 )
+Write video frame (size= 42 ) PTS = 2478000
+Write audio frame 1369088(size= 0 )
+Write audio frame 1370112(size= 0 )
+Write audio frame 1371136(size= 0 )
+Write audio frame 1372160(size= 0 )
+Write video frame (size= 0 ) PTS = 2484000
+Write video frame (size= 0 ) PTS = 2490000
+Write audio frame 1373184(size= 0 )
+Write audio frame 1374208(size= 0 )
+Write audio frame 1375232(size= 0 )
+Write audio frame 1376256(size= 0 )
+Write video frame (size= 0 ) PTS = 2496000
+Write audio frame 1377280(size= 0 )
+Write audio frame 1378304(size= 0 )
+Write audio frame 1379328(size= 0 )
+Write audio frame 1380352(size= 0 )
+Write video frame (size= 0 ) PTS = 2502000
+Write audio frame 1381376(size= 0 )
+Write audio frame 1382400(size= 0 )
+Write audio frame 1383424(size= 0 )
+Write audio frame 1384448(size= 0 )
+Write video frame (size= 0 ) PTS = 2508000
+Write video frame (size= 0 ) PTS = 2514000
+Write audio frame 1385472(size= 0 )
+Write audio frame 1386496(size= 0 )
+Write audio frame 1387520(size= 0 )
+Write audio frame 1388544(size= 0 )
+Write video frame (size= 15 ) PTS = 2520000
+Write audio frame 1389568(size= 0 )
+Write audio frame 1390592(size= 0 )
+Write audio frame 1391616(size= 0 )
+Write audio frame 1392640(size= 0 )
+Write video frame (size= 14 ) PTS = 2526000
+Write audio frame 1393664(size= 0 )
+Write audio frame 1394688(size= 0 )
+Write video frame (size= 45 ) PTS = 2532000
+Write audio frame 1395712(size= 0 )
+Write audio frame 1396736(size= 0 )
+Write video frame (size= 0 ) PTS = 2538000
+Write audio frame 1397760(size= 0 )
+Write audio frame 1398784(size= 0 )
+Write audio frame 1399808(size= 0 )
+Write audio frame 1400832(size= 0 )
+Write video frame (size= 0 ) PTS = 2544000
+Write audio frame 1401856(size= 0 )
+Write audio frame 1402880(size= 0 )
+Write audio frame 1403904(size= 0 )
+Write audio frame 1404928(size= 0 )
+Write video frame (size= 0 ) PTS = 2550000
+Write video frame (size= 0 ) PTS = 2556000
+Write audio frame 1405952(size= 0 )
+Write audio frame 1406976(size= 0 )
+Write audio frame 1408000(size= 0 )
+Write audio frame 1409024(size= 0 )
+Write video frame (size= 0 ) PTS = 2562000
+Write audio frame 1410048(size= 0 )
+Write audio frame 1411072(size= 0 )
+Write audio frame 1412096(size= 0 )
+Write audio frame 1413120(size= 0 )
+Write video frame (size= 0 ) PTS = 2568000
+Write audio frame 1414144(size= 0 )
+Write audio frame 1415168(size= 0 )
+Write audio frame 1416192(size= 0 )
+Write audio frame 1417216(size= 0 )
+Write video frame (size= 0 ) PTS = 2574000
+Write video frame (size= 0 ) PTS = 2580000
+Write audio frame 1418240(size= 0 )
+Write audio frame 1419264(size= 0 )
+Write audio frame 1420288(size= 0 )
+Write audio frame 1421312(size= 0 )
+Write video frame (size= 0 ) PTS = 2586000
+Write audio frame 1422336(size= 0 )
+Write audio frame 1423360(size= 0 )
+Write audio frame 1424384(size= 0 )
+Write audio frame 1425408(size= 0 )
+Write video frame (size= 0 ) PTS = 2592000
+Write video frame (size= 0 ) PTS = 2598000
+Write audio frame 1426432(size= 0 )
+Write audio frame 1427456(size= 0 )
+Write audio frame 1428480(size= 0 )
+Write audio frame 1429504(size= 0 )
+Write video frame (size= 0 ) PTS = 2604000
+Write audio frame 1430528(size= 0 )
+Write audio frame 1431552(size= 0 )
+Write audio frame 1432576(size= 0 )
+Write audio frame 1433600(size= 0 )
+Write video frame (size= 0 ) PTS = 2610000
+Write audio frame 1434624(size= 0 )
+Write audio frame 1435648(size= 0 )
+Write audio frame 1436672(size= 0 )
+Write audio frame 1437696(size= 0 )
+Write video frame (size= 0 ) PTS = 2616000
+Write video frame (size= 0 ) PTS = 2622000
+Write audio frame 1438720(size= 0 )
+Write audio frame 1439744(size= 0 )
+Write audio frame 1440768(size= 0 )
+Write audio frame 1441792(size= 0 )
+Write video frame (size= 0 ) PTS = 2628000
+Write audio frame 1442816(size= 0 )
+Write audio frame 1443840(size= 0 )
+Write audio frame 1444864(size= 0 )
+Write audio frame 1445888(size= 0 )
+Write video frame (size= 0 ) PTS = 2634000
+Write video frame (size= 0 ) PTS = 2640000
+Write audio frame 1446912(size= 0 )
+Write audio frame 1447936(size= 0 )
+Write audio frame 1448960(size= 0 )
+Write audio frame 1449984(size= 0 )
+Write video frame (size= 0 ) PTS = 2646000
+Write audio frame 1451008(size= 0 )
+Write audio frame 1452032(size= 0 )
+Write audio frame 1453056(size= 0 )
+Write audio frame 1454080(size= 0 )
+Write video frame (size= 131 ) PTS = 2652000
+Write audio frame 1455104(size= 0 )
+Write audio frame 1456128(size= 0 )
+Write audio frame 1457152(size= 0 )
+Write audio frame 1458176(size= 0 )
+Write video frame (size= 1 ) PTS = 2658000
+Write video frame (size= 0 ) PTS = 2664000
+Write audio frame 1459200(size= 0 )
+Write audio frame 1460224(size= 0 )
+Write audio frame 1461248(size= 0 )
+Write audio frame 1462272(size= 0 )
+Write video frame (size= 0 ) PTS = 2670000
+Write audio frame 1463296(size= 0 )
+Write audio frame 1464320(size= 0 )
+Write audio frame 1465344(size= 0 )
+Write audio frame 1466368(size= 0 )
+Write video frame (size= 0 ) PTS = 2676000
+Write video frame (size= 0 ) PTS = 2682000
+Write audio frame 1467392(size= 0 )
+Write audio frame 1468416(size= 0 )
+Write audio frame 1469440(size= 0 )
+Write audio frame 1470464(size= 0 )
+Write video frame (size= 0 ) PTS = 2688000
+Write audio frame 1471488(size= 0 )
+Write audio frame 1472512(size= 0 )
+Write audio frame 1473536(size= 0 )
+Write audio frame 1474560(size= 0 )
+Write video frame (size= 0 ) PTS = 2694000
+Write audio frame 1475584(size= 0 )
+Write audio frame 1476608(size= 0 )
+Write audio frame 1477632(size= 0 )
+Write audio frame 1478656(size= 0 )
+Write video frame (size= 0 ) PTS = 2700000
+Write video frame (size= 0 ) PTS = 2706000
+Write audio frame 1479680(size= 0 )
+Write audio frame 1480704(size= 0 )
+Write audio frame 1481728(size= 0 )
+Write audio frame 1482752(size= 0 )
+Write video frame (size= 0 ) PTS = 2712000
+Write audio frame 1483776(size= 0 )
+Write audio frame 1484800(size= 0 )
+Write audio frame 1485824(size= 0 )
+Write audio frame 1486848(size= 0 )
+Write video frame (size= 0 ) PTS = 2718000
+Write video frame (size= 5 ) PTS = 2724000
+Write audio frame 1487872(size= 0 )
+Write audio frame 1488896(size= 0 )
+Write audio frame 1489920(size= 0 )
+Write audio frame 1490944(size= 0 )
+Write video frame (size= 0 ) PTS = 2730000
+Write audio frame 1491968(size= 0 )
+Write audio frame 1492992(size= 0 )
+Write audio frame 1494016(size= 0 )
+Write audio frame 1495040(size= 0 )
+Write video frame (size= 0 ) PTS = 2736000
+Write audio frame 1496064(size= 0 )
+Write audio frame 1497088(size= 0 )
+Write audio frame 1498112(size= 0 )
+Write audio frame 1499136(size= 0 )
+Write video frame (size= 0 ) PTS = 2742000
+Write video frame (size= 0 ) PTS = 2748000
+Write audio frame 1500160(size= 0 )
+Write audio frame 1501184(size= 0 )
+Write audio frame 1502208(size= 0 )
+Write audio frame 1503232(size= 0 )
+Write video frame (size= 0 ) PTS = 2754000
+Write audio frame 1504256(size= 0 )
+Write audio frame 1505280(size= 0 )
+Write audio frame 1506304(size= 0 )
+Write audio frame 1507328(size= 0 )
+Write video frame (size= 15 ) PTS = 2760000
+Write audio frame 1508352(size= 0 )
+Write audio frame 1509376(size= 0 )
+Write audio frame 1510400(size= 0 )
+Write audio frame 1511424(size= 0 )
+Write video frame (size= 1 ) PTS = 2766000
+Write video frame (size= 0 ) PTS = 2772000
+Write audio frame 1512448(size= 0 )
+Write audio frame 1513472(size= 0 )
+Write audio frame 1514496(size= 0 )
+Write audio frame 1515520(size= 0 )
+Write video frame (size= 0 ) PTS = 2778000
+Write audio frame 1516544(size= 0 )
+Write audio frame 1517568(size= 0 )
+Write audio frame 1518592(size= 0 )
+Write audio frame 1519616(size= 0 )
+Write video frame (size= 0 ) PTS = 2784000
+Write video frame (size= 0 ) PTS = 2790000
+Write audio frame 1520640(size= 0 )
+Write audio frame 1521664(size= 0 )
+Write audio frame 1522688(size= 0 )
+Write audio frame 1523712(size= 0 )
+Write video frame (size= 0 ) PTS = 2796000
+Write audio frame 1524736(size= 0 )
+Write audio frame 1525760(size= 0 )
+Write audio frame 1526784(size= 0 )
+Write audio frame 1527808(size= 0 )
+Write video frame (size= 0 ) PTS = 2802000
+Write audio frame 1528832(size= 0 )
+Write audio frame 1529856(size= 0 )
+Write audio frame 1530880(size= 0 )
+Write audio frame 1531904(size= 0 )
+Write video frame (size= 0 ) PTS = 2808000
+Write video frame (size= 0 ) PTS = 2814000
+Write audio frame 1532928(size= 0 )
+Write audio frame 1533952(size= 0 )
+Write audio frame 1534976(size= 0 )
+Write audio frame 1536000(size= 0 )
+Write video frame (size= 0 ) PTS = 2820000
+Write audio frame 1537024(size= 0 )
+Write audio frame 1538048(size= 0 )
+Write audio frame 1539072(size= 0 )
+Write audio frame 1540096(size= 0 )
+Write video frame (size= 0 ) PTS = 2826000
+Write video frame (size= 107 ) PTS = 2832000
+Write audio frame 1541120(size= 0 )
+Write audio frame 1542144(size= 0 )
+Write audio frame 1543168(size= 0 )
+Write audio frame 1544192(size= 0 )
+Write video frame (size= 1 ) PTS = 2838000
+Write audio frame 1545216(size= 0 )
+Write audio frame 1546240(size= 0 )
+Write audio frame 1547264(size= 0 )
+Write audio frame 1548288(size= 0 )
+Write video frame (size= 0 ) PTS = 2844000
+Write audio frame 1549312(size= 0 )
+Write audio frame 1550336(size= 0 )
+Write audio frame 1551360(size= 0 )
+Write audio frame 1552384(size= 0 )
+Write video frame (size= 0 ) PTS = 2850000
+Write video frame (size= 0 ) PTS = 2856000
+Write audio frame 1553408(size= 0 )
+Write audio frame 1554432(size= 0 )
+Write audio frame 1555456(size= 0 )
+Write audio frame 1556480(size= 0 )
+Write video frame (size= 0 ) PTS = 2862000
+Write audio frame 1557504(size= 0 )
+Write audio frame 1558528(size= 0 )
+Write audio frame 1559552(size= 0 )
+Write audio frame 1560576(size= 0 )
+Write video frame (size= 0 ) PTS = 2868000
+Write video frame (size= 0 ) PTS = 2874000
+Write audio frame 1561600(size= 0 )
+Write audio frame 1562624(size= 0 )
+Write audio frame 1563648(size= 0 )
+Write audio frame 1564672(size= 0 )
+Write video frame (size= 0 ) PTS = 2880000
+Write audio frame 1565696(size= 0 )
+Write audio frame 1566720(size= 0 )
+Write audio frame 1567744(size= 0 )
+Write audio frame 1568768(size= 0 )
+Write video frame (size= 0 ) PTS = 2886000
+Write audio frame 1569792(size= 0 )
+Write audio frame 1570816(size= 0 )
+Write audio frame 1571840(size= 0 )
+Write audio frame 1572864(size= 0 )
+Write video frame (size= 0 ) PTS = 2892000
+Write video frame (size= 0 ) PTS = 2898000
+Write audio frame 1573888(size= 0 )
+Write audio frame 1574912(size= 0 )
+Write audio frame 1575936(size= 0 )
+Write audio frame 1576960(size= 0 )
+Write video frame (size= 0 ) PTS = 2904000
+Write audio frame 1577984(size= 0 )
+Write audio frame 1579008(size= 0 )
+Write audio frame 1580032(size= 0 )
+Write audio frame 1581056(size= 0 )
+Write video frame (size= 0 ) PTS = 2910000
+Write video frame (size= 0 ) PTS = 2916000
+Write audio frame 1582080(size= 0 )
+Write audio frame 1583104(size= 0 )
+Write audio frame 1584128(size= 0 )
+Write audio frame 1585152(size= 0 )
+Write video frame (size= 0 ) PTS = 2922000
+Write audio frame 1586176(size= 0 )
+Write audio frame 1587200(size= 0 )
+Write audio frame 1588224(size= 0 )
+Write audio frame 1589248(size= 0 )
+Write video frame (size= 0 ) PTS = 2928000
+Write audio frame 1590272(size= 0 )
+Write audio frame 1591296(size= 0 )
+Write audio frame 1592320(size= 0 )
+Write audio frame 1593344(size= 0 )
+Write video frame (size= 0 ) PTS = 2934000
+Write video frame (size= 0 ) PTS = 2940000
+Write audio frame 1594368(size= 0 )
+Write audio frame 1595392(size= 0 )
+Write audio frame 1596416(size= 0 )
+Write audio frame 1597440(size= 0 )
+Write video frame (size= 0 ) PTS = 2946000
+Write audio frame 1598464(size= 0 )
+Write audio frame 1599488(size= 0 )
+Write audio frame 1600512(size= 0 )
+Write audio frame 1601536(size= 0 )
+Write video frame (size= 0 ) PTS = 2952000
+Write audio frame 1602560(size= 0 )
+Write audio frame 1603584(size= 0 )
+Write audio frame 1604608(size= 0 )
+Write audio frame 1605632(size= 0 )
+Write video frame (size= 0 ) PTS = 2958000
+Write video frame (size= 0 ) PTS = 2964000
+Write audio frame 1606656(size= 0 )
+Write audio frame 1607680(size= 0 )
+Write audio frame 1608704(size= 0 )
+Write audio frame 1609728(size= 0 )
+Write video frame (size= 0 ) PTS = 2970000
+Write audio frame 1610752(size= 0 )
+Write audio frame 1611776(size= 0 )
+Write audio frame 1612800(size= 0 )
+Write audio frame 1613824(size= 0 )
+Write video frame (size= 0 ) PTS = 2976000
+Write video frame (size= 0 ) PTS = 2982000
+Write audio frame 1614848(size= 0 )
+Write audio frame 1615872(size= 0 )
+Write audio frame 1616896(size= 0 )
+Write audio frame 1617920(size= 0 )
+Write video frame (size= 0 ) PTS = 2988000
+Write audio frame 1618944(size= 0 )
+Write audio frame 1619968(size= 0 )
+Write audio frame 1620992(size= 0 )
+Write audio frame 1622016(size= 0 )
+Write video frame (size= 0 ) PTS = 2994000
+Write audio frame 1623040(size= 0 )
+Write audio frame 1624064(size= 0 )
+Write audio frame 1625088(size= 0 )
+Write audio frame 1626112(size= 0 )
+Write video frame (size= 0 ) PTS = 3000000
+Write video frame (size= 0 ) PTS = 3006000
+Write audio frame 1627136(size= 0 )
+Write audio frame 1628160(size= 0 )
+Write audio frame 1629184(size= 0 )
+Write audio frame 1630208(size= 0 )
+Write video frame (size= 107 ) PTS = 3012000
+Write audio frame 1631232(size= 0 )
+Write audio frame 1632256(size= 0 )
+Write audio frame 1633280(size= 0 )
+Write audio frame 1634304(size= 0 )
+Write video frame (size= 8 ) PTS = 3018000
+Write video frame (size= 0 ) PTS = 3024000
+Write audio frame 1635328(size= 0 )
+Write audio frame 1636352(size= 0 )
+Write audio frame 1637376(size= 0 )
+Write audio frame 1638400(size= 0 )
+Write video frame (size= 0 ) PTS = 3030000
+Write audio frame 1639424(size= 0 )
+Write audio frame 1640448(size= 0 )
+Write audio frame 1641472(size= 0 )
+Write audio frame 1642496(size= 0 )
+Write video frame (size= 0 ) PTS = 3036000
+Write audio frame 1643520(size= 0 )
+Write audio frame 1644544(size= 0 )
+Write audio frame 1645568(size= 0 )
+Write audio frame 1646592(size= 0 )
+Write video frame (size= 0 ) PTS = 3042000
+Write video frame (size= 0 ) PTS = 3048000
+Write audio frame 1647616(size= 0 )
+Write audio frame 1648640(size= 0 )
+Write audio frame 1649664(size= 0 )
+Write audio frame 1650688(size= 0 )
+Write video frame (size= 0 ) PTS = 3054000
+Write audio frame 1651712(size= 0 )
+Write audio frame 1652736(size= 0 )
+Write audio frame 1653760(size= 0 )
+Write audio frame 1654784(size= 0 )
+Write video frame (size= 0 ) PTS = 3060000
+Write video frame (size= 0 ) PTS = 3066000
+Write audio frame 1655808(size= 0 )
+Write audio frame 1656832(size= 0 )
+Write audio frame 1657856(size= 0 )
+Write audio frame 1658880(size= 0 )
+Write video frame (size= 0 ) PTS = 3072000
+Write audio frame 1659904(size= 0 )
+Write audio frame 1660928(size= 0 )
+Write audio frame 1661952(size= 0 )
+Write audio frame 1662976(size= 0 )
+Write video frame (size= 0 ) PTS = 3078000
+Write audio frame 1664000(size= 0 )
+Write audio frame 1665024(size= 0 )
+Write audio frame 1666048(size= 0 )
+Write audio frame 1667072(size= 0 )
+Write video frame (size= 30 ) PTS = 3084000
+Write video frame (size= 7 ) PTS = 3090000
+Write audio frame 1668096(size= 0 )
+Write audio frame 1669120(size= 0 )
+Write audio frame 1670144(size= 0 )
+Write audio frame 1671168(size= 0 )
+Write video frame (size= 0 ) PTS = 3096000
+Write audio frame 1672192(size= 0 )
+Write audio frame 1673216(size= 0 )
+Write audio frame 1674240(size= 0 )
+Write audio frame 1675264(size= 0 )
+Write video frame (size= 1 ) PTS = 3102000
+Write video frame (size= 6 ) PTS = 3108000
+Write audio frame 1676288(size= 0 )
+Write audio frame 1677312(size= 0 )
+Write audio frame 1678336(size= 0 )
+Write audio frame 1679360(size= 0 )
+Write video frame (size= 0 ) PTS = 3114000
+Write audio frame 1680384(size= 0 )
+Write audio frame 1681408(size= 0 )
+Write audio frame 1682432(size= 0 )
+Write audio frame 1683456(size= 0 )
+Write video frame (size= 0 ) PTS = 3120000
+Write audio frame 1684480(size= 0 )
+Write audio frame 1685504(size= 0 )
+Write audio frame 1686528(size= 0 )
+Write audio frame 1687552(size= 0 )
+Write video frame (size= 0 ) PTS = 3126000
+Write video frame (size= 48 ) PTS = 3132000
+Write audio frame 1688576(size= 0 )
+Write audio frame 1689600(size= 0 )
+Write audio frame 1690624(size= 0 )
+Write audio frame 1691648(size= 0 )
+Write video frame (size= 0 ) PTS = 3138000
+Write audio frame 1692672(size= 0 )
+Write audio frame 1693696(size= 0 )
+Write audio frame 1694720(size= 0 )
+Write audio frame 1695744(size= 0 )
+Write video frame (size= 0 ) PTS = 3144000
+Write audio frame 1696768(size= 0 )
+Write audio frame 1697792(size= 0 )
+Write audio frame 1698816(size= 0 )
+Write audio frame 1699840(size= 0 )
+Write video frame (size= 0 ) PTS = 3150000
+Write video frame (size= 0 ) PTS = 3156000
+Write audio frame 1700864(size= 0 )
+Write audio frame 1701888(size= 0 )
+Write audio frame 1702912(size= 0 )
+Write audio frame 1703936(size= 0 )
+Write video frame (size= 0 ) PTS = 3162000
+Write audio frame 1704960(size= 0 )
+Write audio frame 1705984(size= 0 )
+Write audio frame 1707008(size= 0 )
+Write audio frame 1708032(size= 0 )
+Write video frame (size= 0 ) PTS = 3168000
+Write video frame (size= 0 ) PTS = 3174000
+Write audio frame 1709056(size= 0 )
+Write audio frame 1710080(size= 0 )
+Write audio frame 1711104(size= 0 )
+Write audio frame 1712128(size= 0 )
+Write video frame (size= 0 ) PTS = 3180000
+Write audio frame 1713152(size= 0 )
+Write audio frame 1714176(size= 0 )
+Write audio frame 1715200(size= 0 )
+Write audio frame 1716224(size= 0 )
+Write video frame (size= 0 ) PTS = 3186000
+Write video frame (size= 107 ) PTS = 3192000
+Write audio frame 1717248(size= 0 )
+Write audio frame 1718272(size= 0 )
+Write audio frame 1719296(size= 0 )
+Write audio frame 1720320(size= 0 )
+Write video frame (size= 44 ) PTS = 3198000
+Write audio frame 1721344(size= 0 )
+Write audio frame 1722368(size= 0 )
+Write audio frame 1723392(size= 0 )
+Write audio frame 1724416(size= 0 )
+Write video frame (size= 1 ) PTS = 3204000
+Write audio frame 1725440(size= 0 )
+Write audio frame 1726464(size= 0 )
+Write audio frame 1727488(size= 0 )
+Write audio frame 1728512(size= 0 )
+Write video frame (size= 6 ) PTS = 3210000
+Write video frame (size= 0 ) PTS = 3216000
+Write audio frame 1729536(size= 0 )
+Write audio frame 1730560(size= 0 )
+Write audio frame 1731584(size= 0 )
+Write audio frame 1732608(size= 0 )
+Write video frame (size= 0 ) PTS = 3222000
+Write audio frame 1733632(size= 0 )
+Write audio frame 1734656(size= 0 )
+Write audio frame 1735680(size= 0 )
+Write audio frame 1736704(size= 0 )
+Write video frame (size= 0 ) PTS = 3228000
+Write audio frame 1737728(size= 0 )
+Write audio frame 1738752(size= 0 )
+Write audio frame 1739776(size= 0 )
+Write audio frame 1740800(size= 0 )
+Write video frame (size= 0 ) PTS = 3234000
+Write video frame (size= 0 ) PTS = 3240000
+Write audio frame 1741824(size= 0 )
+Write audio frame 1742848(size= 0 )
+Write audio frame 1743872(size= 0 )
+Write audio frame 1744896(size= 0 )
+Write video frame (size= 0 ) PTS = 3246000
+Write audio frame 1745920(size= 0 )
+Write audio frame 1746944(size= 0 )
+Write audio frame 1747968(size= 0 )
+Write audio frame 1748992(size= 0 )
+Write video frame (size= 277 ) PTS = 3252000
+Write video frame (size= 0 ) PTS = 3258000
+Write audio frame 1750016(size= 0 )
+Write audio frame 1751040(size= 0 )
+Write audio frame 1752064(size= 0 )
+Write audio frame 1753088(size= 0 )
+Write video frame (size= 0 ) PTS = 3264000
+Write audio frame 1754112(size= 0 )
+Write audio frame 1755136(size= 0 )
+Write audio frame 1756160(size= 0 )
+Write audio frame 1757184(size= 0 )
+Write video frame (size= 0 ) PTS = 3270000
+Write audio frame 1758208(size= 0 )
+Write audio frame 1759232(size= 0 )
+Write audio frame 1760256(size= 0 )
+Write audio frame 1761280(size= 0 )
+Write video frame (size= 0 ) PTS = 3276000
+Write video frame (size= 0 ) PTS = 3282000
+Write audio frame 1762304(size= 0 )
+Write audio frame 1763328(size= 0 )
+Write audio frame 1764352(size= 0 )
+Write audio frame 1765376(size= 0 )
+Write video frame (size= 0 ) PTS = 3288000
+Write audio frame 1766400(size= 0 )
+Write audio frame 1767424(size= 0 )
+Write audio frame 1768448(size= 0 )
+Write audio frame 1769472(size= 0 )
+Write video frame (size= 0 ) PTS = 3294000
+Write video frame (size= 266 ) PTS = 3300000
+Write audio frame 1770496(size= 0 )
+Write audio frame 1771520(size= 0 )
+Write audio frame 1772544(size= 0 )
+Write audio frame 1773568(size= 0 )
+Write video frame (size= 237 ) PTS = 3306000
+Write audio frame 1774592(size= 0 )
+Write audio frame 1775616(size= 0 )
+Write audio frame 1776640(size= 0 )
+Write audio frame 1777664(size= 0 )
+Write video frame (size= 0 ) PTS = 3312000
+Write audio frame 1778688(size= 0 )
+Write audio frame 1779712(size= 0 )
+Write audio frame 1780736(size= 0 )
+Write audio frame 1781760(size= 0 )
+Write video frame (size= 28 ) PTS = 3318000
+Write video frame (size= 40 ) PTS = 3324000
+Write audio frame 1782784(size= 0 )
+Write audio frame 1783808(size= 0 )
+Write audio frame 1784832(size= 0 )
+Write audio frame 1785856(size= 0 )
+Write video frame (size= 0 ) PTS = 3330000
+Write audio frame 1786880(size= 0 )
+Write audio frame 1787904(size= 0 )
+Write audio frame 1788928(size= 0 )
+Write audio frame 1789952(size= 0 )
+Write video frame (size= 1 ) PTS = 3336000
+Write video frame (size= 0 ) PTS = 3342000
+Write audio frame 1790976(size= 0 )
+Write audio frame 1792000(size= 0 )
+Write audio frame 1793024(size= 0 )
+Write audio frame 1794048(size= 0 )
+Write video frame (size= 0 ) PTS = 3348000
+Write audio frame 1795072(size= 0 )
+Write audio frame 1796096(size= 0 )
+Write audio frame 1797120(size= 0 )
+Write audio frame 1798144(size= 0 )
+Write video frame (size= 0 ) PTS = 3354000
+Write audio frame 1799168(size= 0 )
+Write audio frame 1800192(size= 0 )
+Write audio frame 1801216(size= 0 )
+Write audio frame 1802240(size= 0 )
+Write video frame (size= 0 ) PTS = 3360000
+Write video frame (size= 0 ) PTS = 3366000
+Write audio frame 1803264(size= 0 )
+Write audio frame 1804288(size= 0 )
+Write audio frame 1805312(size= 0 )
+Write audio frame 1806336(size= 0 )
+Write video frame (size= 0 ) PTS = 3372000
+Write audio frame 1807360(size= 0 )
+Write audio frame 1808384(size= 0 )
+Write audio frame 1809408(size= 0 )
+Write audio frame 1810432(size= 0 )
+Write video frame (size= 0 ) PTS = 3378000
+Write video frame (size= 0 ) PTS = 3384000
+Write audio frame 1811456(size= 0 )
+Write audio frame 1812480(size= 0 )
+Write audio frame 1813504(size= 0 )
+Write audio frame 1814528(size= 0 )
+Write video frame (size= 0 ) PTS = 3390000
+Write audio frame 1815552(size= 0 )
+Write audio frame 1816576(size= 0 )
+Write audio frame 1817600(size= 0 )
+Write audio frame 1818624(size= 0 )
+Write video frame (size= 0 ) PTS = 3396000
+Write audio frame 1819648(size= 0 )
+Write audio frame 1820672(size= 0 )
+Write audio frame 1821696(size= 0 )
+Write audio frame 1822720(size= 0 )
+Write video frame (size= 33 ) PTS = 3402000
+Write video frame (size= 0 ) PTS = 3408000
+Write audio frame 1823744(size= 0 )
+Write audio frame 1824768(size= 0 )
+Write audio frame 1825792(size= 0 )
+Write audio frame 1826816(size= 0 )
+Write video frame (size= 0 ) PTS = 3414000
+Write audio frame 1827840(size= 0 )
+Write audio frame 1828864(size= 0 )
+Write audio frame 1829888(size= 0 )
+Write audio frame 1830912(size= 0 )
+Write video frame (size= 0 ) PTS = 3420000
+Write video frame (size= 0 ) PTS = 3426000
+Write audio frame 1831936(size= 0 )
+Write audio frame 1832960(size= 0 )
+Write audio frame 1833984(size= 0 )
+Write audio frame 1835008(size= 0 )
+Write video frame (size= 0 ) PTS = 3432000
+Write audio frame 1836032(size= 0 )
+Write audio frame 1837056(size= 0 )
+Write audio frame 1838080(size= 0 )
+Write audio frame 1839104(size= 0 )
+Write video frame (size= 0 ) PTS = 3438000
+Write audio frame 1840128(size= 0 )
+Write audio frame 1841152(size= 0 )
+Write audio frame 1842176(size= 0 )
+Write audio frame 1843200(size= 0 )
+Write video frame (size= 0 ) PTS = 3444000
+Write video frame (size= 0 ) PTS = 3450000
+Write audio frame 1844224(size= 0 )
+Write audio frame 1845248(size= 0 )
+Write audio frame 1846272(size= 0 )
+Write audio frame 1847296(size= 0 )
+Write video frame (size= 8 ) PTS = 3456000
+Write audio frame 1848320(size= 0 )
+Write audio frame 1849344(size= 0 )
+Write audio frame 1850368(size= 0 )
+Write audio frame 1851392(size= 0 )
+Write video frame (size= 3 ) PTS = 3462000
+Write audio frame 1852416(size= 0 )
+Write audio frame 1853440(size= 0 )
+Write audio frame 1854464(size= 0 )
+Write audio frame 1855488(size= 0 )
+Write video frame (size= 1 ) PTS = 3468000
+Write video frame (size= 0 ) PTS = 3474000
+Write audio frame 1856512(size= 0 )
+Write audio frame 1857536(size= 0 )
+Write audio frame 1858560(size= 0 )
+Write audio frame 1859584(size= 0 )
+Write video frame (size= 315 ) PTS = 3480000
+Write audio frame 1860608(size= 0 )
+Write audio frame 1861632(size= 0 )
+Write audio frame 1862656(size= 0 )
+Write audio frame 1863680(size= 0 )
+Write video frame (size= 1 ) PTS = 3486000
+Write video frame (size= 0 ) PTS = 3492000
+Write audio frame 1864704(size= 0 )
+Write audio frame 1865728(size= 0 )
+Write audio frame 1866752(size= 0 )
+Write audio frame 1867776(size= 0 )
+Write video frame (size= 0 ) PTS = 3498000
+Write audio frame 1868800(size= 0 )
+Write audio frame 1869824(size= 0 )
+Write audio frame 1870848(size= 0 )
+Write audio frame 1871872(size= 0 )
+Write video frame (size= 0 ) PTS = 3504000
+Write audio frame 1872896(size= 0 )
+Write audio frame 1873920(size= 0 )
+Write audio frame 1874944(size= 0 )
+Write audio frame 1875968(size= 0 )
+Write video frame (size= 0 ) PTS = 3510000
+Write video frame (size= 0 ) PTS = 3516000
+Write audio frame 1876992(size= 0 )
+Write audio frame 1878016(size= 0 )
+Write audio frame 1879040(size= 0 )
+Write audio frame 1880064(size= 0 )
+Write video frame (size= 0 ) PTS = 3522000
+Write audio frame 1881088(size= 0 )
+Write audio frame 1882112(size= 0 )
+Write audio frame 1883136(size= 0 )
+Write audio frame 1884160(size= 0 )
+Write video frame (size= 0 ) PTS = 3528000
+Write video frame (size= 0 ) PTS = 3534000
+Write audio frame 1885184(size= 0 )
+Write audio frame 1886208(size= 0 )
+Write audio frame 1887232(size= 0 )
+Write audio frame 1888256(size= 0 )
+Write video frame (size= 0 ) PTS = 3540000
+Write audio frame 1889280(size= 0 )
+Write audio frame 1890304(size= 0 )
+Write audio frame 1891328(size= 0 )
+Write audio frame 1892352(size= 0 )
+Write video frame (size= 0 ) PTS = 3546000
+Write audio frame 1893376(size= 0 )
+Write audio frame 1894400(size= 0 )
+Write audio frame 1895424(size= 0 )
+Write audio frame 1896448(size= 0 )
+Write video frame (size= 5 ) PTS = 3552000
+Write video frame (size= 1 ) PTS = 3558000
+Write audio frame 1897472(size= 0 )
+Write audio frame 1898496(size= 0 )
+Write audio frame 1899520(size= 0 )
+Write audio frame 1900544(size= 0 )
+Write video frame (size= 0 ) PTS = 3564000
+Write audio frame 1901568(size= 0 )
+Write audio frame 1902592(size= 0 )
+Write audio frame 1903616(size= 0 )
+Write audio frame 1904640(size= 0 )
+Write video frame (size= 0 ) PTS = 3570000
+Write video frame (size= 0 ) PTS = 3576000
+Write audio frame 1905664(size= 0 )
+Write audio frame 1906688(size= 0 )
+Write audio frame 1907712(size= 0 )
+Write audio frame 1908736(size= 0 )
+Write video frame (size= 0 ) PTS = 3582000
+Write audio frame 1909760(size= 0 )
+Write audio frame 1910784(size= 0 )
+Write audio frame 1911808(size= 0 )
+Write audio frame 1912832(size= 0 )
+Write video frame (size= 45 ) PTS = 3588000
+Write audio frame 1913856(size= 0 )
+Write audio frame 1914880(size= 0 )
+Write audio frame 1915904(size= 0 )
+Write audio frame 1916928(size= 0 )
+Write video frame (size= 5 ) PTS = 3594000
+Write video frame (size= 2 ) PTS = 3600000
+Write audio frame 1917952(size= 0 )
+Write audio frame 1918976(size= 0 )
+Write audio frame 1920000(size= 0 )
+Write audio frame 1921024(size= 0 )
+Write video frame (size= 1 ) PTS = 3606000
+Write audio frame 1922048(size= 0 )
+Write audio frame 1923072(size= 0 )
+Write audio frame 1924096(size= 0 )
+Write audio frame 1925120(size= 0 )
+Write video frame (size= 0 ) PTS = 3612000
+Write video frame (size= 0 ) PTS = 3618000
+Write audio frame 1926144(size= 0 )
+Write audio frame 1927168(size= 0 )
+Write audio frame 1928192(size= 0 )
+Write audio frame 1929216(size= 0 )
+Write video frame (size= 180 ) PTS = 3624000
+Write audio frame 1930240(size= 0 )
+Write audio frame 1931264(size= 0 )
+Write audio frame 1932288(size= 0 )
+Write audio frame 1933312(size= 0 )
+Write video frame (size= 153 ) PTS = 3630000
+Write audio frame 1934336(size= 0 )
+Write audio frame 1935360(size= 0 )
+Write audio frame 1936384(size= 0 )
+Write audio frame 1937408(size= 0 )
+Write video frame (size= 144 ) PTS = 3636000
+Write video frame (size= 33 ) PTS = 3642000
+Write audio frame 1938432(size= 0 )
+Write audio frame 1939456(size= 0 )
+Write audio frame 1940480(size= 0 )
+Write audio frame 1941504(size= 0 )
+Write video frame (size= 74 ) PTS = 3648000
+Write audio frame 1942528(size= 0 )
+Write audio frame 1943552(size= 0 )
+Write audio frame 1944576(size= 0 )
+Write audio frame 1945600(size= 0 )
+Write video frame (size= 0 ) PTS = 3654000
+Write video frame (size= 0 ) PTS = 3660000
+Write audio frame 1946624(size= 0 )
+Write audio frame 1947648(size= 0 )
+Write audio frame 1948672(size= 0 )
+Write audio frame 1949696(size= 0 )
+Write video frame (size= 0 ) PTS = 3666000
+Write audio frame 1950720(size= 0 )
+Write audio frame 1951744(size= 0 )
+Write audio frame 1952768(size= 0 )
+Write audio frame 1953792(size= 0 )
+Write video frame (size= 0 ) PTS = 3672000
+Write audio frame 1954816(size= 0 )
+Write audio frame 1955840(size= 0 )
+Write audio frame 1956864(size= 0 )
+Write audio frame 1957888(size= 0 )
+Write video frame (size= 0 ) PTS = 3678000
+Write video frame (size= 0 ) PTS = 3684000
+Write audio frame 1958912(size= 0 )
+Write audio frame 1959936(size= 0 )
+Write audio frame 1960960(size= 0 )
+Write audio frame 1961984(size= 0 )
+Write video frame (size= 0 ) PTS = 3690000
+Write audio frame 1963008(size= 0 )
+Write audio frame 1964032(size= 0 )
+Write audio frame 1965056(size= 0 )
+Write audio frame 1966080(size= 0 )
+Write video frame (size= 0 ) PTS = 3696000
+Write video frame (size= 0 ) PTS = 3702000
+Write audio frame 1967104(size= 0 )
+Write audio frame 1968128(size= 0 )
+Write audio frame 1969152(size= 0 )
+Write audio frame 1970176(size= 0 )
+Write video frame (size= 0 ) PTS = 3708000
+Write audio frame 1971200(size= 0 )
+Write audio frame 1972224(size= 0 )
+Write audio frame 1973248(size= 0 )
+Write audio frame 1974272(size= 0 )
+Write video frame (size= 7 ) PTS = 3714000
+Write audio frame 1975296(size= 0 )
+Write audio frame 1976320(size= 0 )
+Write audio frame 1977344(size= 0 )
+Write audio frame 1978368(size= 0 )
+Write video frame (size= 100 ) PTS = 3720000
+Write video frame (size= 185 ) PTS = 3726000
+Write audio frame 1979392(size= 0 )
+Write audio frame 1980416(size= 0 )
+Write audio frame 1981440(size= 0 )
+Write audio frame 1982464(size= 0 )
+Write video frame (size= 175 ) PTS = 3732000
+Write audio frame 1983488(size= 0 )
+Write audio frame 1984512(size= 0 )
+Write audio frame 1985536(size= 0 )
+Write audio frame 1986560(size= 0 )
+Write video frame (size= 289 ) PTS = 3738000
+Write audio frame 1987584(size= 0 )
+Write audio frame 1988608(size= 0 )
+Write audio frame 1989632(size= 0 )
+Write audio frame 1990656(size= 0 )
+Write video frame (size= 10 ) PTS = 3744000
+Write video frame (size= 0 ) PTS = 3750000
+Write audio frame 1991680(size= 0 )
+Write audio frame 1992704(size= 0 )
+Write audio frame 1993728(size= 0 )
+Write audio frame 1994752(size= 0 )
+Write video frame (size= 0 ) PTS = 3756000
+Write audio frame 1995776(size= 0 )
+Write audio frame 1996800(size= 0 )
+Write audio frame 1997824(size= 0 )
+Write audio frame 1998848(size= 0 )
+Write video frame (size= 0 ) PTS = 3762000
+Write video frame (size= 285 ) PTS = 3768000
+Write audio frame 1999872(size= 0 )
+Write audio frame 2000896(size= 0 )
+Write audio frame 2001920(size= 0 )
+Write audio frame 2002944(size= 0 )
+Write video frame (size= 174 ) PTS = 3774000
+Write audio frame 2003968(size= 0 )
+Write audio frame 2004992(size= 0 )
+Write audio frame 2006016(size= 0 )
+Write audio frame 2007040(size= 0 )
+Write video frame (size= 12 ) PTS = 3780000
+Write audio frame 2008064(size= 0 )
+Write audio frame 2009088(size= 0 )
+Write audio frame 2010112(size= 0 )
+Write audio frame 2011136(size= 0 )
+Write video frame (size= 0 ) PTS = 3786000
+Write video frame (size= 0 ) PTS = 3792000
+Write audio frame 2012160(size= 0 )
+Write audio frame 2013184(size= 0 )
+Write audio frame 2014208(size= 0 )
+Write audio frame 2015232(size= 0 )
+Write video frame (size= 0 ) PTS = 3798000
+Write audio frame 2016256(size= 0 )
+Write audio frame 2017280(size= 0 )
+Write audio frame 2018304(size= 0 )
+Write audio frame 2019328(size= 0 )
+Write video frame (size= 0 ) PTS = 3804000
+Write video frame (size= 0 ) PTS = 3810000
+Write audio frame 2020352(size= 0 )
+Write audio frame 2021376(size= 0 )
+Write audio frame 2022400(size= 0 )
+Write audio frame 2023424(size= 0 )
+Write video frame (size= 0 ) PTS = 3816000
+Write audio frame 2024448(size= 0 )
+Write audio frame 2025472(size= 0 )
+Write audio frame 2026496(size= 0 )
+Write audio frame 2027520(size= 0 )
+Write video frame (size= 182 ) PTS = 3822000
+Write audio frame 2028544(size= 0 )
+Write audio frame 2029568(size= 0 )
+Write audio frame 2030592(size= 0 )
+Write audio frame 2031616(size= 0 )
+Write video frame (size= 185 ) PTS = 3828000
+Write video frame (size= 156 ) PTS = 3834000
+Write audio frame 2032640(size= 0 )
+Write audio frame 2033664(size= 0 )
+Write audio frame 2034688(size= 0 )
+Write audio frame 2035712(size= 0 )
+Write video frame (size= 158 ) PTS = 3840000
+Write audio frame 2036736(size= 0 )
+Write audio frame 2037760(size= 0 )
+Write audio frame 2038784(size= 0 )
+Write audio frame 2039808(size= 0 )
+Write video frame (size= 201 ) PTS = 3846000
+Write video frame (size= 133 ) PTS = 3852000
+Write audio frame 2040832(size= 0 )
+Write audio frame 2041856(size= 0 )
+Write audio frame 2042880(size= 0 )
+Write audio frame 2043904(size= 0 )
+Write video frame (size= 134 ) PTS = 3858000
+Write audio frame 2044928(size= 0 )
+Write audio frame 2045952(size= 0 )
+Write audio frame 2046976(size= 0 )
+Write audio frame 2048000(size= 0 )
+Write video frame (size= 129 ) PTS = 3864000
+Write audio frame 2049024(size= 0 )
+Write audio frame 2050048(size= 0 )
+Write audio frame 2051072(size= 0 )
+Write audio frame 2052096(size= 0 )
+Write video frame (size= 0 ) PTS = 3870000
+Write video frame (size= 0 ) PTS = 3876000
+Write audio frame 2053120(size= 0 )
+Write audio frame 2054144(size= 0 )
+Write audio frame 2055168(size= 0 )
+Write audio frame 2056192(size= 0 )
+Write video frame (size= 0 ) PTS = 3882000
+Write audio frame 2057216(size= 0 )
+Write audio frame 2058240(size= 0 )
+Write audio frame 2059264(size= 0 )
+Write audio frame 2060288(size= 0 )
+Write video frame (size= 0 ) PTS = 3888000
+Write video frame (size= 0 ) PTS = 3894000
+Write audio frame 2061312(size= 0 )
+Write audio frame 2062336(size= 0 )
+Write audio frame 2063360(size= 0 )
+Write audio frame 2064384(size= 0 )
+Write video frame (size= 0 ) PTS = 3900000
+Write audio frame 2065408(size= 0 )
+Write audio frame 2066432(size= 0 )
+Write audio frame 2067456(size= 0 )
+Write audio frame 2068480(size= 0 )
+Write video frame (size= 0 ) PTS = 3906000
+Write audio frame 2069504(size= 0 )
+Write audio frame 2070528(size= 0 )
+Write audio frame 2071552(size= 0 )
+Write audio frame 2072576(size= 0 )
+Write video frame (size= 0 ) PTS = 3912000
+Write video frame (size= 0 ) PTS = 3918000
+Write audio frame 2073600(size= 0 )
+Write audio frame 2074624(size= 0 )
+Write audio frame 2075648(size= 0 )
+Write audio frame 2076672(size= 0 )
+Write video frame (size= 0 ) PTS = 3924000
+Write audio frame 2077696(size= 0 )
+Write audio frame 2078720(size= 0 )
+Write audio frame 2079744(size= 0 )
+Write audio frame 2080768(size= 0 )
+Write video frame (size= 0 ) PTS = 3930000
+Write video frame (size= 0 ) PTS = 3936000
+Write audio frame 2081792(size= 0 )
+Write audio frame 2082816(size= 0 )
+Write audio frame 2083840(size= 0 )
+Write audio frame 2084864(size= 0 )
+Write video frame (size= 0 ) PTS = 3942000
+Write audio frame 2085888(size= 0 )
+Write audio frame 2086912(size= 0 )
+Write audio frame 2087936(size= 0 )
+Write audio frame 2088960(size= 0 )
+Write video frame (size= 0 ) PTS = 3948000
+Write audio frame 2089984(size= 0 )
+Write audio frame 2091008(size= 0 )
+Write audio frame 2092032(size= 0 )
+Write audio frame 2093056(size= 0 )
+Write video frame (size= 0 ) PTS = 3954000
+Write video frame (size= 0 ) PTS = 3960000
+Write audio frame 2094080(size= 0 )
+Write audio frame 2095104(size= 0 )
+Write audio frame 2096128(size= 0 )
+Write audio frame 2097152(size= 0 )
+Write video frame (size= 0 ) PTS = 3966000
+Write audio frame 2098176(size= 0 )
+Write audio frame 2099200(size= 0 )
+Write audio frame 2100224(size= 0 )
+Write audio frame 2101248(size= 0 )
+Write video frame (size= 0 ) PTS = 3972000
+Write audio frame 2102272(size= 0 )
+Write audio frame 2103296(size= 0 )
+Write audio frame 2104320(size= 0 )
+Write audio frame 2105344(size= 0 )
+Write video frame (size= 0 ) PTS = 3978000
+Write video frame (size= 0 ) PTS = 3984000
+Write audio frame 2106368(size= 0 )
+Write audio frame 2107392(size= 0 )
+Write audio frame 2108416(size= 0 )
+Write audio frame 2109440(size= 0 )
+Write video frame (size= 0 ) PTS = 3990000
+Write audio frame 2110464(size= 0 )
+Write audio frame 2111488(size= 0 )
+Write audio frame 2112512(size= 0 )
+Write audio frame 2113536(size= 0 )
+Write video frame (size= 0 ) PTS = 3996000
+Write video frame (size= 0 ) PTS = 4002000
+Write audio frame 2114560(size= 0 )
+Write audio frame 2115584(size= 0 )
+Write audio frame 2116608(size= 0 )
+Write audio frame 2117632(size= 0 )
+Write video frame (size= 0 ) PTS = 4008000
+Write audio frame 2118656(size= 0 )
+Write audio frame 2119680(size= 0 )
+Write audio frame 2120704(size= 0 )
+Write audio frame 2121728(size= 0 )
+Write video frame (size= 0 ) PTS = 4014000
+Write audio frame 2122752(size= 0 )
+Write audio frame 2123776(size= 0 )
+Write audio frame 2124800(size= 0 )
+Write audio frame 2125824(size= 0 )
+Write video frame (size= 0 ) PTS = 4020000
+Write video frame (size= 175 ) PTS = 4026000
+Write audio frame 2126848(size= 0 )
+Write audio frame 2127872(size= 0 )
+Write audio frame 2128896(size= 0 )
+Write audio frame 2129920(size= 0 )
+Write video frame (size= 0 ) PTS = 4032000
+Write audio frame 2130944(size= 0 )
+Write audio frame 2131968(size= 0 )
+Write audio frame 2132992(size= 0 )
+Write audio frame 2134016(size= 0 )
+Write video frame (size= 0 ) PTS = 4038000
+Write video frame (size= 0 ) PTS = 4044000
+Write audio frame 2135040(size= 0 )
+Write audio frame 2136064(size= 0 )
+Write audio frame 2137088(size= 0 )
+Write audio frame 2138112(size= 0 )
+Write video frame (size= 0 ) PTS = 4050000
+Write audio frame 2139136(size= 0 )
+Write audio frame 2140160(size= 0 )
+Write audio frame 2141184(size= 0 )
+Write audio frame 2142208(size= 0 )
+Write video frame (size= 0 ) PTS = 4056000
+Write audio frame 2143232(size= 0 )
+Write audio frame 2144256(size= 0 )
+Write audio frame 2145280(size= 0 )
+Write audio frame 2146304(size= 0 )
+Write video frame (size= 0 ) PTS = 4062000
+Write video frame (size= 0 ) PTS = 4068000
+Write audio frame 2147328(size= 0 )
+Write audio frame 2148352(size= 0 )
+Write audio frame 2149376(size= 0 )
+Write audio frame 2150400(size= 0 )
+Write video frame (size= 0 ) PTS = 4074000
+Write audio frame 2151424(size= 0 )
+Write audio frame 2152448(size= 0 )
+Write audio frame 2153472(size= 0 )
+Write audio frame 2154496(size= 0 )
+Write video frame (size= 0 ) PTS = 4080000
+Write video frame (size= 0 ) PTS = 4086000
+Write audio frame 2155520(size= 0 )
+Write audio frame 2156544(size= 0 )
+Write audio frame 2157568(size= 0 )
+Write audio frame 2158592(size= 0 )
+Write video frame (size= 0 ) PTS = 4092000
+Write audio frame 2159616(size= 0 )
+Write audio frame 2160640(size= 0 )
+Write audio frame 2161664(size= 0 )
+Write audio frame 2162688(size= 0 )
+Write video frame (size= 10 ) PTS = 4098000
+Write audio frame 2163712(size= 0 )
+Write audio frame 2164736(size= 0 )
+Write audio frame 2165760(size= 0 )
+Write audio frame 2166784(size= 0 )
+Write video frame (size= 0 ) PTS = 4104000
+Write video frame (size= 0 ) PTS = 4110000
+Write audio frame 2167808(size= 0 )
+Write audio frame 2168832(size= 0 )
+Write audio frame 2169856(size= 0 )
+Write audio frame 2170880(size= 0 )
+Write video frame (size= 0 ) PTS = 4116000
+Write audio frame 2171904(size= 0 )
+Write audio frame 2172928(size= 0 )
+Write audio frame 2173952(size= 0 )
+Write audio frame 2174976(size= 0 )
+Write video frame (size= 0 ) PTS = 4122000
+Write video frame (size= 0 ) PTS = 4128000
+Write audio frame 2176000(size= 0 )
+Write audio frame 2177024(size= 0 )
+Write audio frame 2178048(size= 0 )
+Write audio frame 2179072(size= 0 )
+Write video frame (size= 0 ) PTS = 4134000
+Write audio frame 2180096(size= 0 )
+Write audio frame 2181120(size= 0 )
+Write audio frame 2182144(size= 0 )
+Write audio frame 2183168(size= 0 )
+Write video frame (size= 0 ) PTS = 4140000
+Write audio frame 2184192(size= 0 )
+Write audio frame 2185216(size= 0 )
+Write audio frame 2186240(size= 0 )
+Write audio frame 2187264(size= 0 )
+Write video frame (size= 0 ) PTS = 4146000
+Write video frame (size= 0 ) PTS = 4152000
+Write audio frame 2188288(size= 0 )
+Write audio frame 2189312(size= 0 )
+Write audio frame 2190336(size= 0 )
+Write audio frame 2191360(size= 0 )
+Write video frame (size= 0 ) PTS = 4158000
+Write audio frame 2192384(size= 0 )
+Write audio frame 2193408(size= 0 )
+Write audio frame 2194432(size= 0 )
+Write audio frame 2195456(size= 0 )
+Write video frame (size= 0 ) PTS = 4164000
+Write video frame (size= 0 ) PTS = 4170000
+Write audio frame 2196480(size= 0 )
+Write audio frame 2197504(size= 0 )
+Write audio frame 2198528(size= 0 )
+Write audio frame 2199552(size= 0 )
+Write video frame (size= 0 ) PTS = 4176000
+Write audio frame 2200576(size= 0 )
+Write audio frame 2201600(size= 0 )
+Write audio frame 2202624(size= 0 )
+Write audio frame 2203648(size= 0 )
+Write video frame (size= 0 ) PTS = 4182000
+Write audio frame 2204672(size= 0 )
+Write audio frame 2205696(size= 0 )
+Write audio frame 2206720(size= 0 )
+Write audio frame 2207744(size= 0 )
+Write video frame (size= 0 ) PTS = 4188000
+Write video frame (size= 0 ) PTS = 4194000
+Write audio frame 2208768(size= 0 )
+Write audio frame 2209792(size= 0 )
+Write audio frame 2210816(size= 0 )
+Write audio frame 2211840(size= 0 )
+Write video frame (size= 0 ) PTS = 4200000
+Write audio frame 2212864(size= 0 )
+Write audio frame 2213888(size= 0 )
+Write audio frame 2214912(size= 0 )
+Write audio frame 2215936(size= 0 )
+Write video frame (size= 178 ) PTS = 4206000
+Write audio frame 2216960(size= 0 )
+Write audio frame 2217984(size= 0 )
+Write audio frame 2219008(size= 0 )
+Write audio frame 2220032(size= 0 )
+Write video frame (size= 1 ) PTS = 4212000
+Write video frame (size= 0 ) PTS = 4218000
+Write audio frame 2221056(size= 0 )
+Write audio frame 2222080(size= 0 )
+Write audio frame 2223104(size= 0 )
+Write audio frame 2224128(size= 0 )
+Write video frame (size= 0 ) PTS = 4224000
+Write audio frame 2225152(size= 0 )
+Write audio frame 2226176(size= 0 )
+Write audio frame 2227200(size= 0 )
+Write audio frame 2228224(size= 0 )
+Write video frame (size= 0 ) PTS = 4230000
+Write video frame (size= 0 ) PTS = 4236000
+Write audio frame 2229248(size= 0 )
+Write audio frame 2230272(size= 0 )
+Write audio frame 2231296(size= 0 )
+Write audio frame 2232320(size= 0 )
+Write video frame (size= 0 ) PTS = 4242000
+Write audio frame 2233344(size= 0 )
+Write audio frame 2234368(size= 0 )
+Write audio frame 2235392(size= 0 )
+Write audio frame 2236416(size= 0 )
+Write video frame (size= 0 ) PTS = 4248000
+Write audio frame 2237440(size= 0 )
+Write audio frame 2238464(size= 0 )
+Write audio frame 2239488(size= 0 )
+Write video frame (size= 0 ) PTS = 4254000
+Write audio frame 2240512(size= 0 )
+Write video frame (size= 0 ) PTS = 4260000
+Write audio frame 2241536(size= 0 )
+Write audio frame 2242560(size= 0 )
+Write audio frame 2243584(size= 0 )
+Write audio frame 2244608(size= 0 )
+Write video frame (size= 0 ) PTS = 4266000
+Write audio frame 2245632(size= 0 )
+Write audio frame 2246656(size= 0 )
+Write audio frame 2247680(size= 0 )
+Write audio frame 2248704(size= 0 )
+Write video frame (size= 0 ) PTS = 4272000
+Write video frame (size= 0 ) PTS = 4278000
+Write audio frame 2249728(size= 0 )
+Write audio frame 2250752(size= 0 )
+Write audio frame 2251776(size= 0 )
+Write audio frame 2252800(size= 0 )
+Write video frame (size= 0 ) PTS = 4284000
+Write audio frame 2253824(size= 0 )
+Write audio frame 2254848(size= 0 )
+Write audio frame 2255872(size= 0 )
+Write audio frame 2256896(size= 0 )
+Write video frame (size= 0 ) PTS = 4290000
+Write audio frame 2257920(size= 0 )
+Write audio frame 2258944(size= 0 )
+Write audio frame 2259968(size= 0 )
+Write audio frame 2260992(size= 0 )
+Write video frame (size= 0 ) PTS = 4296000
+Write video frame (size= 0 ) PTS = 4302000
+Write audio frame 2262016(size= 0 )
+Write audio frame 2263040(size= 0 )
+Write audio frame 2264064(size= 0 )
+Write audio frame 2265088(size= 0 )
+Write video frame (size= 0 ) PTS = 4308000
+Write audio frame 2266112(size= 0 )
+Write audio frame 2267136(size= 0 )
+Write audio frame 2268160(size= 0 )
+Write audio frame 2269184(size= 0 )
+Write video frame (size= 0 ) PTS = 4314000
+Write video frame (size= 0 ) PTS = 4320000
+Write audio frame 2270208(size= 0 )
+Write audio frame 2271232(size= 0 )
+Write audio frame 2272256(size= 0 )
+Write audio frame 2273280(size= 0 )
+Write video frame (size= 0 ) PTS = 4326000
+Write audio frame 2274304(size= 0 )
+Write audio frame 2275328(size= 0 )
+Write audio frame 2276352(size= 0 )
+Write audio frame 2277376(size= 0 )
+Write video frame (size= 0 ) PTS = 4332000
+Write audio frame 2278400(size= 0 )
+Write audio frame 2279424(size= 0 )
+Write audio frame 2280448(size= 0 )
+Write audio frame 2281472(size= 0 )
+Write video frame (size= 0 ) PTS = 4338000
+Write video frame (size= 0 ) PTS = 4344000
+Write audio frame 2282496(size= 0 )
+Write audio frame 2283520(size= 0 )
+Write audio frame 2284544(size= 0 )
+Write audio frame 2285568(size= 0 )
+Write video frame (size= 0 ) PTS = 4350000
+Write audio frame 2286592(size= 0 )
+Write audio frame 2287616(size= 0 )
+Write audio frame 2288640(size= 0 )
+Write audio frame 2289664(size= 0 )
+Write video frame (size= 0 ) PTS = 4356000
+Write video frame (size= 0 ) PTS = 4362000
+Write audio frame 2290688(size= 0 )
+Write audio frame 2291712(size= 0 )
+Write audio frame 2292736(size= 0 )
+Write audio frame 2293760(size= 0 )
+Write video frame (size= 0 ) PTS = 4368000
+Write audio frame 2294784(size= 0 )
+Write audio frame 2295808(size= 0 )
+Write audio frame 2296832(size= 0 )
+Write audio frame 2297856(size= 0 )
+Write video frame (size= 0 ) PTS = 4374000
+Write audio frame 2298880(size= 0 )
+Write audio frame 2299904(size= 0 )
+Write audio frame 2300928(size= 0 )
+Write audio frame 2301952(size= 0 )
+Write video frame (size= 0 ) PTS = 4380000
+Write video frame (size= 180 ) PTS = 4386000
+Write audio frame 2302976(size= 0 )
+Write audio frame 2304000(size= 0 )
+Write audio frame 2305024(size= 0 )
+Write audio frame 2306048(size= 0 )
+Write video frame (size= 0 ) PTS = 4392000
+Write audio frame 2307072(size= 0 )
+Write audio frame 2308096(size= 0 )
+Write audio frame 2309120(size= 0 )
+Write audio frame 2310144(size= 0 )
+Write video frame (size= 0 ) PTS = 4398000
+Write video frame (size= 0 ) PTS = 4404000
+Write audio frame 2311168(size= 0 )
+Write audio frame 2312192(size= 0 )
+Write audio frame 2313216(size= 0 )
+Write audio frame 2314240(size= 0 )
+Write video frame (size= 0 ) PTS = 4410000
+Write audio frame 2315264(size= 0 )
+Write audio frame 2316288(size= 0 )
+Write audio frame 2317312(size= 0 )
+Write audio frame 2318336(size= 0 )
+Write video frame (size= 0 ) PTS = 4416000
+Write audio frame 2319360(size= 0 )
+Write audio frame 2320384(size= 0 )
+Write audio frame 2321408(size= 0 )
+Write audio frame 2322432(size= 0 )
+Write video frame (size= 0 ) PTS = 4422000
+Write video frame (size= 0 ) PTS = 4428000
+Write audio frame 2323456(size= 0 )
+Write audio frame 2324480(size= 0 )
+Write audio frame 2325504(size= 0 )
+Write audio frame 2326528(size= 0 )
+Write video frame (size= 0 ) PTS = 4434000
+Write audio frame 2327552(size= 0 )
+Write audio frame 2328576(size= 0 )
+Write audio frame 2329600(size= 0 )
+Write audio frame 2330624(size= 0 )
+Write video frame (size= 0 ) PTS = 4440000
+Write video frame (size= 0 ) PTS = 4446000
+Write audio frame 2331648(size= 0 )
+Write audio frame 2332672(size= 0 )
+Write audio frame 2333696(size= 0 )
+Write audio frame 2334720(size= 0 )
+Write video frame (size= 0 ) PTS = 4452000
+Write audio frame 2335744(size= 0 )
+Write audio frame 2336768(size= 0 )
+Write audio frame 2337792(size= 0 )
+Write audio frame 2338816(size= 0 )
+Write video frame (size= 0 ) PTS = 4458000
+Write audio frame 2339840(size= 0 )
+Write audio frame 2340864(size= 0 )
+Write audio frame 2341888(size= 0 )
+Write audio frame 2342912(size= 0 )
+Write video frame (size= 0 ) PTS = 4464000
+Write video frame (size= 0 ) PTS = 4470000
+Write audio frame 2343936(size= 0 )
+Write audio frame 2344960(size= 0 )
+Write audio frame 2345984(size= 0 )
+Write audio frame 2347008(size= 0 )
+Write video frame (size= 0 ) PTS = 4476000
+Write audio frame 2348032(size= 0 )
+Write audio frame 2349056(size= 0 )
+Write audio frame 2350080(size= 0 )
+Write audio frame 2351104(size= 0 )
+Write video frame (size= 0 ) PTS = 4482000
+Write audio frame 2352128(size= 0 )
+Write audio frame 2353152(size= 0 )
+Write audio frame 2354176(size= 0 )
+Write audio frame 2355200(size= 0 )
+Write video frame (size= 0 ) PTS = 4488000
+Write video frame (size= 0 ) PTS = 4494000
+Write audio frame 2356224(size= 0 )
+Write audio frame 2357248(size= 0 )
+Write audio frame 2358272(size= 0 )
+Write audio frame 2359296(size= 0 )
+Write video frame (size= 0 ) PTS = 4500000
+Write audio frame 2360320(size= 0 )
+Write audio frame 2361344(size= 0 )
+Write audio frame 2362368(size= 0 )
+Write audio frame 2363392(size= 0 )
+Write video frame (size= 0 ) PTS = 4506000
+Write video frame (size= 0 ) PTS = 4512000
+Write audio frame 2364416(size= 0 )
+Write audio frame 2365440(size= 0 )
+Write audio frame 2366464(size= 0 )
+Write audio frame 2367488(size= 0 )
+Write video frame (size= 0 ) PTS = 4518000
+Write audio frame 2368512(size= 0 )
+Write audio frame 2369536(size= 0 )
+Write audio frame 2370560(size= 0 )
+Write audio frame 2371584(size= 0 )
+Write video frame (size= 0 ) PTS = 4524000
+Write audio frame 2372608(size= 0 )
+Write audio frame 2373632(size= 0 )
+Write audio frame 2374656(size= 0 )
+Write audio frame 2375680(size= 0 )
+Write video frame (size= 0 ) PTS = 4530000
+Write video frame (size= 0 ) PTS = 4536000
+Write audio frame 2376704(size= 0 )
+Write audio frame 2377728(size= 0 )
+Write audio frame 2378752(size= 0 )
+Write audio frame 2379776(size= 0 )
+Write video frame (size= 0 ) PTS = 4542000
+Write audio frame 2380800(size= 0 )
+Write audio frame 2381824(size= 0 )
+Write audio frame 2382848(size= 0 )
+Write audio frame 2383872(size= 0 )
+Write video frame (size= 0 ) PTS = 4548000
+Write video frame (size= 0 ) PTS = 4554000
+Write audio frame 2384896(size= 0 )
+Write audio frame 2385920(size= 0 )
+Write audio frame 2386944(size= 0 )
+Write audio frame 2387968(size= 0 )
+Write video frame (size= 0 ) PTS = 4560000
+Write audio frame 2388992(size= 0 )
+Write audio frame 2390016(size= 0 )
+Write audio frame 2391040(size= 0 )
+Write audio frame 2392064(size= 0 )
+Write video frame (size= 177 ) PTS = 4566000
+Write audio frame 2393088(size= 0 )
+Write audio frame 2394112(size= 0 )
+Write audio frame 2395136(size= 0 )
+Write audio frame 2396160(size= 0 )
+Write video frame (size= 0 ) PTS = 4572000
+Write video frame (size= 0 ) PTS = 4578000
+Write audio frame 2397184(size= 0 )
+Write audio frame 2398208(size= 0 )
+Write audio frame 2399232(size= 0 )
+Write audio frame 2400256(size= 0 )
+Write video frame (size= 0 ) PTS = 4584000
+Write audio frame 2401280(size= 0 )
+Write audio frame 2402304(size= 0 )
+Write audio frame 2403328(size= 0 )
+Write audio frame 2404352(size= 0 )
+Write video frame (size= 0 ) PTS = 4590000
+Write video frame (size= 0 ) PTS = 4596000
+Write audio frame 2405376(size= 0 )
+Write audio frame 2406400(size= 0 )
+Write audio frame 2407424(size= 0 )
+Write audio frame 2408448(size= 0 )
+Write video frame (size= 0 ) PTS = 4602000
+Write audio frame 2409472(size= 0 )
+Write audio frame 2410496(size= 0 )
+Write audio frame 2411520(size= 0 )
+Write audio frame 2412544(size= 0 )
+Write video frame (size= 0 ) PTS = 4608000
+Write audio frame 2413568(size= 0 )
+Write audio frame 2414592(size= 0 )
+Write audio frame 2415616(size= 0 )
+Write audio frame 2416640(size= 0 )
+Write video frame (size= 0 ) PTS = 4614000
+Write video frame (size= 0 ) PTS = 4620000
+Write audio frame 2417664(size= 0 )
+Write audio frame 2418688(size= 0 )
+Write audio frame 2419712(size= 0 )
+Write audio frame 2420736(size= 0 )
+Write video frame (size= 0 ) PTS = 4626000
+Write audio frame 2421760(size= 0 )
+Write audio frame 2422784(size= 0 )
+Write audio frame 2423808(size= 0 )
+Write audio frame 2424832(size= 0 )
+Write video frame (size= 0 ) PTS = 4632000
+Write video frame (size= 0 ) PTS = 4638000
+Write audio frame 2425856(size= 0 )
+Write audio frame 2426880(size= 0 )
+Write audio frame 2427904(size= 0 )
+Write audio frame 2428928(size= 0 )
+Write video frame (size= 0 ) PTS = 4644000
+Write audio frame 2429952(size= 0 )
+Write audio frame 2430976(size= 0 )
+Write audio frame 2432000(size= 0 )
+Write audio frame 2433024(size= 0 )
+Write video frame (size= 0 ) PTS = 4650000
+Write audio frame 2434048(size= 0 )
+Write audio frame 2435072(size= 0 )
+Write audio frame 2436096(size= 0 )
+Write audio frame 2437120(size= 0 )
+Write video frame (size= 0 ) PTS = 4656000
+Write video frame (size= 0 ) PTS = 4662000
+Write audio frame 2438144(size= 0 )
+Write audio frame 2439168(size= 0 )
+Write audio frame 2440192(size= 0 )
+Write audio frame 2441216(size= 0 )
+Write video frame (size= 0 ) PTS = 4668000
+Write audio frame 2442240(size= 0 )
+Write audio frame 2443264(size= 0 )
+Write audio frame 2444288(size= 0 )
+Write audio frame 2445312(size= 0 )
+Write video frame (size= 131 ) PTS = 4674000
+Write video frame (size= 2 ) PTS = 4680000
+Write audio frame 2446336(size= 0 )
+Write audio frame 2447360(size= 0 )
+Write audio frame 2448384(size= 0 )
+Write audio frame 2449408(size= 0 )
+Write video frame (size= 0 ) PTS = 4686000
+Write audio frame 2450432(size= 0 )
+Write audio frame 2451456(size= 0 )
+Write audio frame 2452480(size= 0 )
+Write audio frame 2453504(size= 0 )
+Write video frame (size= 1 ) PTS = 4692000
+Write audio frame 2454528(size= 0 )
+Write audio frame 2455552(size= 0 )
+Write audio frame 2456576(size= 0 )
+Write audio frame 2457600(size= 0 )
+Write video frame (size= 0 ) PTS = 4698000
+Write video frame (size= 0 ) PTS = 4704000
+Write audio frame 2458624(size= 0 )
+Write audio frame 2459648(size= 0 )
+Write audio frame 2460672(size= 0 )
+Write audio frame 2461696(size= 0 )
+Write video frame (size= 0 ) PTS = 4710000
+Write audio frame 2462720(size= 0 )
+Write audio frame 2463744(size= 0 )
+Write audio frame 2464768(size= 0 )
+Write audio frame 2465792(size= 0 )
+Write video frame (size= 0 ) PTS = 4716000
+Write audio frame 2466816(size= 0 )
+Write audio frame 2467840(size= 0 )
+Write audio frame 2468864(size= 0 )
+Write audio frame 2469888(size= 0 )
+Write video frame (size= 0 ) PTS = 4722000
+Write video frame (size= 0 ) PTS = 4728000
+Write audio frame 2470912(size= 0 )
+Write audio frame 2471936(size= 0 )
+Write audio frame 2472960(size= 0 )
+Write audio frame 2473984(size= 0 )
+Write video frame (size= 0 ) PTS = 4734000
+Write audio frame 2475008(size= 0 )
+Write audio frame 2476032(size= 0 )
+Write audio frame 2477056(size= 0 )
+Write audio frame 2478080(size= 0 )
+Write video frame (size= 0 ) PTS = 4740000
+Write video frame (size= 0 ) PTS = 4746000
+Write audio frame 2479104(size= 0 )
+Write audio frame 2480128(size= 0 )
+Write audio frame 2481152(size= 0 )
+Write audio frame 2482176(size= 0 )
+Write video frame (size= 0 ) PTS = 4752000
+Write audio frame 2483200(size= 0 )
+Write audio frame 2484224(size= 0 )
+Write audio frame 2485248(size= 0 )
+Write audio frame 2486272(size= 0 )
+Write video frame (size= 0 ) PTS = 4758000
+Write audio frame 2487296(size= 0 )
+Write audio frame 2488320(size= 0 )
+Write audio frame 2489344(size= 0 )
+Write audio frame 2490368(size= 0 )
+Write video frame (size= 0 ) PTS = 4764000
+Write video frame (size= 0 ) PTS = 4770000
+Write audio frame 2491392(size= 0 )
+Write audio frame 2492416(size= 0 )
+Write audio frame 2493440(size= 0 )
+Write audio frame 2494464(size= 0 )
+Write video frame (size= 0 ) PTS = 4776000
+Write audio frame 2495488(size= 0 )
+Write audio frame 2496512(size= 0 )
+Write audio frame 2497536(size= 0 )
+Write audio frame 2498560(size= 0 )
+Write video frame (size= 0 ) PTS = 4782000
+Write video frame (size= 0 ) PTS = 4788000
+Write audio frame 2499584(size= 0 )
+Write audio frame 2500608(size= 0 )
+Write audio frame 2501632(size= 0 )
+Write audio frame 2502656(size= 0 )
+Write video frame (size= 0 ) PTS = 4794000
+Write audio frame 2503680(size= 0 )
+Write audio frame 2504704(size= 0 )
+Write audio frame 2505728(size= 0 )
+Write audio frame 2506752(size= 0 )
+--- flushing video encoder ---
+--- flushing video encoder ---
+--- flushing video encoder ---
+--- flushing video encoder ---
 --- flushing video encoder ---
 --- flushing video encoder ---
 --- flushing video encoder ---

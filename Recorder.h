@@ -115,17 +115,13 @@ class Recorder {
     bool videoReady = false;
     bool audioReady = false;
     bool videoEnd = false;
-    bool audioEnd = false;
-    bool firstVideoPacket = false;
     bool crashed = false;
 
     mutex _lock;
     mutex write_lock;
-    mutex pause_lock;
     mutex queue_lock;
     mutex _videoEnd;
-    mutex _audio;
-    mutex _video;
+    mutex _sync;
     condition_variable cv_start, cv_pause, cv_video, cv_audio;
 
     /** LOG **/
@@ -158,7 +154,6 @@ public:
     void encodeDecodeVideoStream();
     bool isEndVideo();
     void endVideo();
-    void endAudio();
     void synchWithAudio();
     void synchWithVideo();
 
